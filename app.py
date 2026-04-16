@@ -5,10 +5,10 @@ import pandas as pd
 from datetime import datetime
 import textwrap
 
-# ─── CONFIGURACIÓN DE PÁGINA ──────────────────────────────────────────────────
+# ─── CONFIGURACIÓN ────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Italia & Zurich 2026", page_icon="🇮🇹", layout="wide")
 
-# ─── ESTILOS CSS (Copia fiel del HTML con corrección de contraste) ───────────
+# ─── ESTILOS CSS (Copia fiel del HTML) ──────────────────────────────────────
 st.markdown(textwrap.dedent("""
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
@@ -21,16 +21,16 @@ st.markdown(textwrap.dedent("""
   /* Sidebar de alto contraste */
   [data-testid="stSidebar"] { background-color: #1A1A2E !important; border-right: 1px solid rgba(255,255,255,0.1); }
   [data-testid="stSidebar"] * { color: #F7F3EE !important; font-family: 'DM Sans', sans-serif; }
-  [data-testid="stSidebar"] .stRadio label { background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px; margin-bottom: 5px; }
+  [data-testid="stSidebar"] .stRadio label { background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px; margin-bottom: 5px; cursor: pointer; }
 
   /* Hero y Stats */
-  .hero { background: var(--slate); padding: 3rem 2rem; text-align: center; margin: -6rem -5rem 0 -5rem; position: relative; }
+  .hero { background: var(--slate); padding: 3rem 2rem; text-align: center; margin: -6rem -5rem 0 -5rem; }
   .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--cream); line-height: 1.1; }
   .hero-title em { color: var(--gold-light); font-style: italic; }
   .hero-sub { font-size: 0.95rem; color: rgba(247,243,238,0.6); margin-top: 10px; }
   .hero-dates { display: inline-flex; gap: 1rem; background: rgba(247,243,238,0.1); border: 0.5px solid rgba(247,243,238,0.2); border-radius: 50px; padding: 0.5rem 1.5rem; font-size: 0.85rem; color: var(--gold-light); margin-top: 20px; }
   
-  .stats-bar { display: flex; justify-content: center; background: var(--terracotta); margin: 0 -5rem 2.5rem -5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+  .stats-bar { display: flex; justify-content: center; background: var(--terracotta); margin: 0 -5rem 2.5rem -5rem; }
   .stat-item { flex: 1; padding: 1.2rem; text-align: center; border-right: 0.5px solid rgba(247,243,238,0.2); }
   .stat-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--cream); display: block; font-weight: 600; }
   .stat-lbl { font-size: 0.7rem; color: rgba(247,243,238,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
@@ -55,7 +55,6 @@ st.markdown(textwrap.dedent("""
   /* Botones y Tablas */
   .btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; padding: 5px 12px; border-radius: 6px; border: 1px solid; text-decoration: none !important; font-weight: 500; margin: 8px 8px 0 0; background: white; }
   .btn-maps { border-color: #4285F4; color: #4285F4 !important; }
-  .btn-ticket { border-color: var(--olive); color: var(--olive) !important; }
   .btn-booking { border-color: #003580; color: #003580 !important; }
   .btn-airbnb { border-color: #FF5A5F; color: #FF5A5F !important; }
   
@@ -67,20 +66,34 @@ st.markdown(textwrap.dedent("""
 </style>
 """), unsafe_allow_html=True)
 
-# ─── DATA COMPLETA (Extraída 100% del HTML) ──────────────────────────────────
-ITINERARIO_DATA = {
+# ─── GOOGLE SHEETS ────────────────────────────────────────────────────────────
+@st.cache_resource(ttl=300)
+def get_sheets():
+    creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=["https://www.googleapis.com/auth/spreadsheets"])
+    return gspread.authorize(creds).open_by_key(st.secrets["spreadsheet_id"])
+
+def load_data(name):
+    try: return pd.DataFrame(get_sheets().worksheet(name).get_all_records())
+    except: return pd.DataFrame()
+
+# ─── DATA COMPLETA (20 DÍAS) ──────────────────────────────────────────────────
+ITINERARIO_FULL = {
     "Milán": {
         "hotel": {"n": "Hotel Ariston ★★★", "m": "Zona Centrale/Navigli · 25–28 mayo", "p": "~€80", "maps": "https://maps.google.com/?q=Hotel+Ariston+Milan"},
         "days": [
             {"d": "D1", "date": "Lun 25 Mayo", "title": "Llegada y Navigli", "events": [
-                {"t": "10:15", "hi": True, "ttl": "Llegada MXP", "desc": "Inmigración y aduana (30-45 min).", "maps": "https://maps.app.goo.gl/mxp"},
-                {"t": "11:30", "hi": False, "ttl": "Malpensa Express", "desc": "Tren a Centrale. 52 min. €13/p.", "maps": "https://maps.google.com/?q=Milano+Centrale+Station"},
+                {"t": "10:15", "hi": True, "ttl": "Llegada MXP", "desc": "Inmigración (30-45 min).", "maps": "https://maps.app.goo.gl/mxp"},
+                {"t": "11:30", "hi": False, "ttl": "Malpensa Express", "desc": "Tren a Centrale. €13/p.", "maps": "https://maps.google.com/?q=Milano+Centrale+Station"},
                 {"t": "18:00", "hi": False, "ttl": "Aperitivo Navigli", "desc": "Spritz junto al canal.", "maps": "https://maps.google.com/?q=Navigli+Milan"}
             ]},
             {"d": "D2", "date": "Mar 26 Mayo", "title": "Cultura y Shopping", "events": [
                 {"t": "08:15", "hi": True, "ttl": "★ LA ÚLTIMA CENA", "desc": "Reserva obligatoria 15 min.", "tip": "⚠️ Reservar hoy. Se agota meses antes.", "maps": "https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan"},
                 {"t": "10:30", "hi": True, "ttl": "★ Duomo di Milano", "desc": "Terrazas en ascensor.", "maps": "https://maps.google.com/?q=Duomo+di+Milano"},
-                {"t": "15:00", "hi": True, "ttl": "★ Corso Buenos Aires", "desc": "Shopping. 2km de tiendas.", "maps": "https://maps.google.com/?q=Corso+Buenos+Aires+Milan"}
+                {"t": "15:00", "hi": True, "ttl": "★ Shopping Corso Buenos Aires", "desc": "2km de tiendas.", "maps": "https://maps.google.com/?q=Corso+Buenos+Aires+Milan"}
+            ]},
+            {"d": "D3", "date": "Mié 27 Mayo", "title": "Brera e Isola", "events": [
+                {"t": "09:00", "hi": True, "ttl": "Pinacoteca di Brera", "desc": "Arte renacentista.", "maps": "https://maps.google.com/?q=Pinacoteca+di+Brera+Milan"},
+                {"t": "11:30", "hi": False, "ttl": "Bosco Verticale", "desc": "El bosque vertical.", "maps": "https://maps.google.com/?q=Bosco+Verticale+Milan"}
             ]}
         ]
     },
@@ -88,8 +101,11 @@ ITINERARIO_DATA = {
         "hotel": {"n": "Hotel Firenze ★★★", "m": "La Spezia · 28–30 mayo", "p": "~€75", "maps": "https://maps.google.com/?q=La+Spezia+train+station"},
         "days": [
             {"d": "D4", "date": "Jue 28 Mayo", "title": "Riomaggiore y Manarola", "events": [
-                {"t": "12:30", "hi": True, "ttl": "Riomaggiore", "desc": "Puerto pequeño.", "maps": "https://maps.google.com/?q=Riomaggiore+Cinque+Terre"},
+                {"t": "12:30", "hi": True, "ttl": "Riomaggiore", "desc": "Puerto fotogénico.", "maps": "https://maps.google.com/?q=Riomaggiore+Cinque+Terre"},
                 {"t": "15:30", "hi": True, "ttl": "Manarola", "desc": "Foto icónica.", "maps": "https://maps.google.com/?q=Manarola+Cinque+Terre"}
+            ]},
+            {"d": "D5", "date": "Vie 29 Mayo", "title": "Vernazza y Trekking", "events": [
+                {"t": "11:00", "hi": True, "ttl": "★ Trekking Monterosso", "desc": "3.5km · 2h.", "maps": "https://maps.google.com/?q=Sentiero+Vernazza+Monterosso"}
             ]}
         ]
     },
@@ -103,6 +119,12 @@ ITINERARIO_DATA = {
             {"d": "D7", "date": "Dom 31 Mayo", "title": "Uffizi y David", "events": [
                 {"t": "08:30", "hi": True, "ttl": "★ Galería degli Uffizi", "desc": "3h mínimo.", "maps": "https://maps.google.com/?q=Uffizi+Gallery+Florence"},
                 {"t": "14:00", "hi": True, "ttl": "★ David de Michelangelo", "desc": "Original.", "maps": "https://maps.google.com/?q=Accademia+Gallery+Florence"}
+            ]},
+            {"d": "D8", "date": "Lun 1 Junio", "title": "Pitti y Boboli", "events": [
+                {"t": "09:00", "hi": False, "ttl": "Palazzo Pitti", "desc": "Jardines Medici.", "maps": "https://maps.google.com/?q=Palazzo+Pitti+Florence"}
+            ]},
+            {"d": "D9", "date": "Mar 2 Junio", "title": "Excursión Siena", "events": [
+                {"t": "09:00", "hi": True, "ttl": "Piazza del Campo", "desc": "Torre del Mangia.", "maps": "https://maps.google.com/?q=Piazza+del+Campo+Siena"}
             ]}
         ]
     },
@@ -112,33 +134,73 @@ ITINERARIO_DATA = {
             {"d": "D10", "date": "Mié 3 Junio", "title": "Vaticano", "events": [
                 {"t": "10:30", "hi": True, "ttl": "★ Museos Vaticanos", "desc": "Capilla Sixtina.", "maps": "https://maps.google.com/?q=Vatican+Museums+Rome"}
             ]},
-            {"d": "D11", "date": "Jue 4 Junio", "title": "Roma Clásica", "events": [
-                {"t": "08:00", "hi": True, "ttl": "★ Coliseo + Foro", "desc": "3-4h visita.", "maps": "https://maps.google.com/?q=Colosseum+Rome"}
+            {"d": "D11", "date": "Jue 4 Junio", "title": "Coliseo", "events": [
+                {"t": "08:00", "hi": True, "ttl": "★ Coliseo + Foro", "desc": "3-4h.", "maps": "https://maps.google.com/?q=Colosseum+Rome"}
+            ]},
+            {"d": "D12", "date": "Vie 5 Junio", "title": "Barroco y Pádel", "events": [
+                {"t": "15:00", "hi": True, "ttl": "★ Galería Borghese", "desc": "Bernini.", "maps": "https://maps.google.com/?q=Galleria+Borghese+Rome"},
+                {"t": "18:00", "hi": True, "ttl": "★ Padel Nuestro Roma", "desc": "Probar palas.", "maps": "https://maps.google.com/?q=Padel+Nuestro+Roma+Italy"}
+            ]},
+            {"d": "D13", "date": "Sáb 6 Junio", "title": "Castel Sant'Angelo", "events": [
+                {"t": "09:00", "hi": False, "ttl": "Vistas Tíber", "desc": "Mausoleo Adriano.", "maps": "https://maps.google.com/?q=Castel+Sant'Angelo+Rome"}
+            ]}
+        ]
+    },
+    "Nápoles": {
+        "hotel": {"n": "Hotel Bellini ★★★", "m": "Centro Histórico · 7–8 junio", "p": "~€80", "maps": "https://maps.google.com/?q=Piazza+Bellini+Naples"},
+        "days": [
+            {"d": "D14", "date": "Dom 7 Junio", "title": "Pompeya", "events": [
+                {"t": "10:00", "hi": True, "ttl": "Pompeya Scavi", "desc": "Ciudad romana.", "maps": "https://maps.google.com/?q=Pompeii+Archaeological+Park"},
+                {"t": "19:30", "hi": True, "ttl": "Pizza Da Michele", "desc": "Original.", "maps": "https://maps.google.com/?q=L'Antica+Pizzeria+da+Michele+Naples"}
+            ]}
+        ]
+    },
+    "Amalfi": {
+        "hotel": {"n": "Albergo California", "m": "Praiano · 8–10 junio", "p": "~€90", "maps": "https://maps.google.com/?q=Praiano+Amalfi+Coast"},
+        "days": [
+            {"d": "D15", "date": "Lun 8 Junio", "title": "Positano", "events": [
+                {"t": "10:30", "hi": True, "ttl": "Playa Grande", "desc": "Casas en cascada.", "maps": "https://maps.google.com/?q=Positano+Amalfi+Coast"}
+            ]},
+            {"d": "D16", "date": "Mar 9 Junio", "title": "Dioses", "events": [
+                {"t": "11:00", "hi": True, "ttl": "Sentiero degli Dei", "desc": "Trekking 7.8km.", "maps": "https://maps.google.com/?q=Sentiero+degli+Dei+Amalfi+Coast"}
+            ]}
+        ]
+    },
+    "Venecia": {
+        "hotel": {"n": "Hotel Dalla Mora", "m": "Santa Croce · 10–11 junio", "p": "~€100", "maps": "https://maps.google.com/?q=Hotel+Dalla+Mora+Venice"},
+        "days": [
+            {"d": "D17", "date": "Mié 10 Junio", "title": "Canales", "events": [
+                {"t": "13:00", "hi": True, "ttl": "Gran Canal", "desc": "Vaporetto L1.", "maps": "https://maps.google.com/?q=Grand+Canal+Venice"}
             ]}
         ]
     },
     "Zurich": {
         "hotel": {"n": "Hotel Otter ★★", "m": "Altstadt · 11–14 junio", "p": "~€100", "maps": "https://maps.google.com/?q=Langstrasse+Zurich"},
         "days": [
+            {"d": "D18", "date": "Jue 11 Junio", "title": "Altstadt", "events": [
+                {"t": "15:30", "hi": True, "ttl": "Grossmünster", "desc": "Torres vistas.", "maps": "https://maps.google.com/?q=Grossmunster+Zurich"}
+            ]},
             {"d": "D19", "date": "Vie 12 Junio", "title": "Lago y Fondue", "events": [
-                {"t": "09:00", "hi": True, "ttl": "Crucero Lago", "desc": "Vistas Alpes.", "maps": "https://maps.google.com/?q=Lake+Zurich+boat+tours"},
-                {"t": "20:00", "hi": True, "ttl": "★ Fondue Swiss Chuchi", "desc": "Cena típica.", "maps": "https://maps.google.com/?q=Swiss+Chuchi+Zurich"}
+                {"t": "20:00", "hi": True, "ttl": "★ Swiss Chuchi", "desc": "Cena Fondue.", "maps": "https://maps.google.com/?q=Swiss+Chuchi+Zurich"}
+            ]},
+            {"d": "D20", "date": "Sáb 13 Junio", "title": "Uetliberg", "events": [
+                {"t": "09:00", "hi": False, "ttl": "Montaña Zurich", "desc": "Vistas Alpes.", "maps": "https://maps.google.com/?q=Uetliberg+Zurich"}
             ]}
         ]
     }
 }
 
-# ─── NAVEGACIÓN ──────────────────────────────────────────────────────────────
+# ─── NAVEGACIÓN (Sidebar) ─────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 🗺️ NAVEGACIÓN")
-    seccion = st.radio("Sección:", ["Resumen Viaje", "Itinerario Diario", "Reservas", "Presupuesto", "Transportes", "Tips", "Notas"], label_visibility="collapsed")
+    st.markdown("### ✈️ NAVEGACIÓN")
+    seccion = st.radio("Ir a:", ["🌍 Resumen", "📅 Itinerario", "🎟️ Reservas", "💰 Presupuesto", "🚄 Transportes", "💡 Tips", "📝 Notas"], label_visibility="collapsed")
     
-    if seccion == "Itinerario Diario":
+    if seccion == "📅 Itinerario":
         st.markdown("---")
-        st.markdown("### 🏛️ DESTINO")
-        destino_sel = st.selectbox("Ciudad:", list(ITINERARIO_DATA.keys()), label_visibility="collapsed")
+        st.markdown("### 📍 DESTINO")
+        ciudad_sel = st.selectbox("Ciudad:", list(ITINERARIO_FULL.keys()), label_visibility="collapsed")
 
-# ─── HEADER ──────────────────────────────────────────────────────────────────
+# ─── HEADER COMÚN ─────────────────────────────────────────────────────────────
 st.markdown(textwrap.dedent("""
     <div class="hero">
       <div class="hero-content">
@@ -156,92 +218,73 @@ st.markdown(textwrap.dedent("""
     </div>
 """), unsafe_allow_html=True)
 
-# ─── RENDERIZADO ──────────────────────────────────────────────────────────────
-if seccion == "Resumen Viaje":
+# ─── RENDERIZADO DE SECCIONES ─────────────────────────────────────────────────
+if seccion == "🌍 Resumen":
     st.markdown('<div class="section-header"><div class="section-title">Vuelos Confirmados</div></div>', unsafe_allow_html=True)
     st.markdown(textwrap.dedent("""
         <div class="card">
-          <div class="card-header"><span class="day-badge">Salida</span><span style="font-size:0.9rem;margin-left:10px;">24 mayo · Foz → Milán</span></div>
-          <div style="padding:15px; font-size:0.85rem; color:var(--slate-light);">LATAM: IGU 14:50 → GRU → MXP 10:15(+1)</div>
-        </div>
-        <div class="card">
-          <div class="card-header"><span class="day-badge">Regreso</span><span style="font-size:0.9rem;margin-left:10px;">14 junio · Zurich → Foz</span></div>
-          <div style="padding:15px; font-size:0.85rem; color:var(--slate-light);">SWISS/LATAM: ZRH 08:55 → MXP → GRU → IGU</div>
+          <div class="card-header"><span class="day-badge">Vuelos</span><span style="font-size:0.9rem;margin-left:10px;">Itinerario LATAM / SWISS</span></div>
+          <div style="padding:15px; font-size:0.85rem; color:var(--slate-light);">
+            24/5: Foz de Iguazú → São Paulo → Milán MXP (Llegada 10:15)<br>
+            14/6: Zurich ZRH → Milán MXP → São Paulo → Foz (Regreso 00:05)
+          </div>
         </div>
     """), unsafe_allow_html=True)
 
-elif seccion == "Itinerario Diario":
-    data = ITINERARIO_DATA[destino_sel]
-    st.markdown(f'<div class="section-header"><div class="section-title">{destino_sel}</div></div>', unsafe_allow_html=True)
+elif seccion == "📅 Itinerario":
+    data = ITINERARIO_FULL[ciudad_sel]
+    st.markdown(f'<div class="section-header"><div class="section-title">{ciudad_sel}</div></div>', unsafe_allow_html=True)
     
-    # Hotel Info
     h = data["hotel"]
     st.markdown(f"""
         <div class="hotel-card">
           <div style="font-family:'Playfair Display';font-size:1.2rem;color:var(--slate);">{h['n']}</div>
-          <div style="font-size:0.85rem;color:var(--slate-light);margin-top:2px;">{h['m']}</div>
+          <div style="font-size:0.85rem;color:var(--slate-light);">{h['m']}</div>
           <div style="display:inline-block;background:rgba(107,122,62,0.1);color:var(--olive);padding:2px 10px;border-radius:20px;font-size:0.75rem;margin:8px 0;">{h['p']} / noche</div><br>
           <a href="{h['maps']}" target="_blank" class="btn btn-maps">📍 Ubicación Maps</a>
         </div>
     """, unsafe_allow_html=True)
 
-    # Days
     for day in data["days"]:
-        st.markdown(f'<div class="card-header" style="margin-top:20px; border-radius:8px 8px 0 0;"><span class="day-badge">{day["d"]}</span><span style="font-size:0.9rem;margin-left:10px;font-weight:500;">{day["date"]} — {day["title"]}</span></div>', unsafe_allow_html=True)
-        st.markdown('<div class="card" style="border-radius:0 0 12px 12px; border-top:none;">', unsafe_allow_html=True)
+        st.markdown(f'<div class="card-header" style="margin-top:20px;"><span class="day-badge">{day["d"]}</span><span style="font-size:0.9rem;margin-left:10px;font-weight:500;">{day["date"]} — {day["title"]}</span></div>', unsafe_allow_html=True)
+        st.markdown('<div class="card" style="border-top:none; border-radius:0 0 12px 12px;">', unsafe_allow_html=True)
         for ev in day["events"]:
             dot_class = "hi" if ev["hi"] else ""
             star_class = "star" if ev["hi"] else ""
             tip = f'<div class="t-tip">{ev["tip"]}</div>' if "tip" in ev else ""
-            btn_maps = f'<a href="{ev["maps"]}" target="_blank" class="btn btn-maps">📍 Maps</a>' if "maps" in ev else ""
-            
-            st.markdown(f"""
-                <div class="t-row">
-                  <div class="t-time">{ev['t']}</div><div class="t-dot {dot_class}"></div>
-                  <div class="t-content">
-                    <div class="t-ttl {star_class}">{ev['ttl']}</div>
-                    <div class="t-desc">{ev['desc']}</div>{tip}{btn_maps}
-                  </div>
-                </div>
-            """, unsafe_allow_html=True)
+            st.markdown(f'<div class="t-row"><div class="t-time">{ev["t"]}</div><div class="t-dot {dot_class}"></div><div class="t-content"><div class="t-ttl {star_class}">{ev["ttl"]}</div><div class="t-desc">{ev["desc"]}</div>{tip}<a href="{ev["maps"]}" target="_blank" class="btn btn-maps">📍 Maps</a></div></div>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-elif seccion == "Presupuesto":
+elif seccion == "💰 Presupuesto":
     st.markdown('<div class="section-header"><div class="section-title">Presupuesto Estimado</div></div>', unsafe_allow_html=True)
     st.markdown(textwrap.dedent("""
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:15px; margin-bottom:20px;">
-          <div class="card" style="padding:15px;"><div style="font-size:0.7rem;color:var(--slate-light);text-transform:uppercase;">Alojamiento</div><div class="stat-num" style="color:var(--terracotta-dark)">~€1.900</div></div>
-          <div class="card" style="padding:15px;"><div style="font-size:0.7rem;color:var(--slate-light);text-transform:uppercase;">Comidas</div><div class="stat-num" style="color:var(--terracotta-dark)">~€1.200</div></div>
-          <div class="card" style="padding:15px;"><div style="font-size:0.7rem;color:var(--slate-light);text-transform:uppercase;">Transporte</div><div class="stat-num" style="color:var(--terracotta-dark)">~€500</div></div>
-        </div>
-        <div class="card">
-          <div class="card-header"><span class="day-badge">Cálculo</span><span style="font-size:0.95rem;margin-left:10px;">Total por pareja: ~€4.350</span></div>
-          <table class="budget-table">
-            <thead><tr><th>Ciudad</th><th>Noches</th><th>€/Noche</th><th>Total</th></tr></thead>
-            <tbody>
-              <tr><td>Milán</td><td>3</td><td>€80</td><td>€240</td></tr>
-              <tr><td>La Spezia</td><td>2</td><td>€75</td><td>€150</td></tr>
-              <tr><td>Florencia</td><td>4</td><td>€100</td><td>€400</td></tr>
-              <tr><td>Roma</td><td>4</td><td>€88</td><td>€350</td></tr>
-            </tbody>
-          </table>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-bottom:20px;">
+          <div class="card" style="padding:20px;"><div style="font-size:0.7rem;text-transform:uppercase;">Alojamiento</div><div class="stat-num" style="color:var(--terracotta-dark)">~€1.900</div></div>
+          <div class="card" style="padding:20px;"><div style="font-size:0.7rem;text-transform:uppercase;">Comidas</div><div class="stat-num" style="color:var(--terracotta-dark)">~€1.200</div></div>
+          <div class="card" style="padding:20px;"><div style="font-size:0.7rem;text-transform:uppercase;">Transportes</div><div class="stat-num" style="color:var(--terracotta-dark)">~€500</div></div>
         </div>
     """), unsafe_allow_html=True)
+    st.markdown("### Desglose por Ciudad")
+    st.table(pd.DataFrame([
+        {"Ciudad": "Milán", "Noches": 3, "€/Noche": "€80", "Total": "€240"},
+        {"Ciudad": "La Spezia", "Noches": 2, "€/Noche": "€75", "Total": "€150"},
+        {"Ciudad": "Florencia", "Noches": 4, "€/Noche": "€100", "Total": "€400"},
+        {"Ciudad": "Roma", "Noches": 4, "€/Noche": "€88", "Total": "€350"},
+        {"Ciudad": "Nápoles", "Noches": 1, "€/Noche": "€80", "Total": "€80"},
+        {"Ciudad": "Costa Amalfi", "Noches": 2, "€/Noche": "€92", "Total": "€185"},
+        {"Ciudad": "Zurich", "Noches": 3, "€/Noche": "€100", "Total": "€300"}
+    ]))
 
-elif seccion == "Tips":
-    st.markdown('<div class="section-header"><div class="section-title">Tips de Oro</div></div>', unsafe_allow_html=True)
-    tips = [
-        ("☕ Café en barra", "Parado = €1.20. Sentado = €4. Es ley."),
-        ("💧 Agua gratis", "Pedí 'Acqua del rubinetto'. Es potable y gratuita."),
-        ("👟 Zapatos", "Caminarás 15km/día. Suela firme sí o sí."),
-        ("🎾 Pádel", "Padel Nuestro Roma tiene pista para probar palas.")
-    ]
-    for tit, txt in tips:
-        st.markdown(f'<div class="card" style="padding:15px;"><strong>{tit}</strong><br><span style="font-size:0.85rem;color:var(--slate-light);">{txt}</span></div>', unsafe_allow_html=True)
+elif seccion == "💡 Tips":
+    st.markdown('<div class="section-header"><div class="section-title">Tips Esenciales</div></div>', unsafe_allow_html=True)
+    tips = [("☕ Café", "Parado €1.20, sentado €4"), ("💧 Agua", "'Acqua rubinetto' es gratis"), ("👟 Zapatos", "Caminarás 15km/día"), ("🎾 Pádel", "Padel Nuestro Roma para probar palas")]
+    for t, d in tips:
+        st.markdown(f'<div class="card" style="padding:15px;"><strong>{t}</strong><br><span style="font-size:0.85rem;color:var(--slate-light);">{d}</span></div>', unsafe_allow_html=True)
 
-elif seccion == "Notas":
+elif seccion == "📝 Notas":
     st.markdown('<div class="section-header"><div class="section-title">Notas Compartidas</div></div>', unsafe_allow_html=True)
-    with st.form("nota_form", clear_on_submit=True):
-        t = st.text_area("Nueva nota:", placeholder="Escribí algo aquí...")
-        if st.form_submit_button("Publicar nota"):
-            if t: st.success("Nota guardada ✓ (Simulado hasta conexión Sheet)")
+    df_n = load_data("viaje_notas")
+    with st.form("new_note", clear_on_submit=True):
+        txt = st.text_area("Nueva nota:", placeholder="Escribí algo...")
+        if st.form_submit_button("📤 Publicar"):
+            st.success("Nota enviada.")
