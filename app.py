@@ -4,6 +4,7 @@ from google.oauth2.service_account import Credentials
 import pandas as pd
 from datetime import datetime
 import json
+import textwrap
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -117,7 +118,6 @@ def get_workbook():
     return client.open_by_key(st.secrets["spreadsheet_id"])
 
 def ensure_sheets(wb):
-    """Crear las hojas del viaje si no existen."""
     existing = [s.title for s in wb.worksheets()]
     needed = {
         "viaje_reservas": ["id","estado","url_reserva","confirmacion","monto","notas","updated"],
@@ -132,7 +132,6 @@ def ensure_sheets(wb):
 
 @st.cache_data(ttl=20)
 def load_sheet_data(sheet_key):
-    """Cargar datos de una hoja específica."""
     try:
         wb = get_workbook()
         sheets = ensure_sheets(wb)
@@ -251,7 +250,7 @@ ITINERARIO = [
         {"n":"D2","date":"Mar 26 mayo","title":"Última Cena, Duomo y Shopping","events":[
             {"t":"08:15","hi":True,"ttl":"★ LA ÚLTIMA CENA","desc":"RESERVA OBLIGATORIA. 25 personas cada 15 min. 15 min exactos de visita.","tip":"Reservar en cenacolodavincimilano.vivaticket.com — urgente","maps":"https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan"},
             {"t":"10:00","hi":True,"ttl":"★ Duomo di Milano — terrazas","desc":"Ascensor a los 135 chapiteles. Reservar online.","maps":"https://maps.google.com/?q=Duomo+di+Milano"},
-            {"t":"11:30","hi":False,"ttl":"Galleria Vittorio Emanuele II","desc":"Pisar el toro y girar el talón — trae suerte.","maps":"https://maps.google.com/?q=Galleria+Vittorio+Emanuele+II"},
+            {"t":"11:30","hi":False,"ttl":"Galleria Vittorio Enemuele II","desc":"Pisar el toro y girar el talón — trae suerte.","maps":"https://maps.google.com/?q=Galleria+Vittorio+Emanuele+II"},
             {"t":"13:00","hi":False,"ttl":"Almuerzo en Brera","desc":"Menú del giorno: primer + segundo + agua = €12–15.","maps":"https://maps.google.com/?q=Brera+Milan"},
             {"t":"15:00","hi":True,"ttl":"★ Corso Buenos Aires — shopping","desc":"La calle comercial más larga de Italia. Zara, H&M, Bershka, marcas italianas. 2km de tiendas.","maps":"https://maps.google.com/?q=Corso+Buenos+Aires+Milan"},
             {"t":"17:30","hi":False,"ttl":"Padel Nuestro Milano (opcional)","desc":"Bullpadel, Siux, Adidas, Nox. Pista interior para probar palas.","tip":"Más conveniente ir a Padel Nuestro Roma (más central). Esta cierra 19:30.","maps":"https://maps.google.com/?q=Padel+Nuestro+Milan"},
@@ -413,7 +412,7 @@ def get_reserva_data(res_id):
 ok_count = sum(1 for r in RESERVAS_DEF if get_reserva_data(r["id"]).get("estado") in ("confirmed","paid"))
 total_gas = df_gas["monto"].astype(float).sum() if not df_gas.empty and "monto" in df_gas.columns else 0
 
-st.markdown(f"""
+st.markdown(textwrap.dedent(f"""
 <div class="hero-box">
     <div class="hero-title">🇮🇹 Italia & Zurich 2026 🇨🇭</div>
     <div class="hero-sub">Luna de Miel · 25 mayo → 14 junio · Compartido en tiempo real</div>
@@ -424,7 +423,7 @@ st.markdown(f"""
         <div><span class="hstat-n">9</span><span class="hstat-l">Ciudades</span></div>
     </div>
 </div>
-""", unsafe_allow_html=True)
+"""), unsafe_allow_html=True)
 
 if sheets_ok:
     st.markdown('<span class="sync-ok">🟢 Google Sheets conectado — visible para ambos en tiempo real</span>', unsafe_allow_html=True)
@@ -460,7 +459,7 @@ with tab_res:
         card_class = "res-card-urgente" if r["urgente"] else "res-card-ok"
 
         with st.container():
-            st.markdown(f"""
+            st.markdown(textwrap.dedent(f"""
             <div class="res-card {card_class}">
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
                     <span style="font-size:0.75rem;padding:2px 8px;border-radius:20px;
@@ -470,7 +469,7 @@ with tab_res:
                 </div>
                 <div style="font-size:0.78rem;color:#6B7A8D;margin:4px 0 8px">{r["fecha"]}</div>
             </div>
-            """, unsafe_allow_html=True)
+            """), unsafe_allow_html=True)
 
             col1, col2, col3 = st.columns([3, 2, 1])
             with col1:
@@ -523,7 +522,7 @@ with tab_itin:
         with st.expander(f"**{day['n']}** · {day['date']} — {day['title']}", expanded=(day == city_data["days"][0])):
             for ev in day["events"]:
                 dot = "🟠" if ev["hi"] else "⚪"
-                st.markdown(f"""
+                st.markdown(textwrap.dedent(f"""
                 <div class="t-row">
                     <span class="t-time">{ev['t']}</span>
                     <span>{dot}</span>
@@ -533,10 +532,10 @@ with tab_itin:
                         {f'<div class="t-tip">⚠️ {ev["tip"]}</div>' if ev.get("tip") else ""}
                     </div>
                 </div>
-                """, unsafe_allow_html=True)
+                """), unsafe_allow_html=True)
 
                 if ev.get("maps"):
-                    st.markdown(f'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{ev["maps"]}" target="_blank" style="font-size:0.78rem;color:#0056B3">📍 Abrir en Maps</a>', unsafe_allow_html=True)
+                    st.markdown(f'       <a href="{ev["maps"]}" target="_blank" style="font-size:0.78rem;color:#0056B3">📍 Abrir en Maps</a>', unsafe_allow_html=True)
 
 # ════════════════════════════════════════════════════════════════
 # TAB TRANSPORTES
@@ -552,7 +551,7 @@ with tab_trans:
     for icon, route, detail, price, url in TRANSPORTES:
         col1, col2 = st.columns([4, 1])
         with col1:
-            st.markdown(f"""
+            st.markdown(textwrap.dedent(f"""
             <div class="trans-card">
                 <span style="font-size:1.2rem">{icon}</span>
                 <div>
@@ -561,7 +560,7 @@ with tab_trans:
                 </div>
                 <span style="margin-left:auto;font-weight:500;color:#C4693A">{price}</span>
             </div>
-            """, unsafe_allow_html=True)
+            """), unsafe_allow_html=True)
         with col2:
             st.markdown(f'<a href="{url}" target="_blank">🔗 Comprar</a>', unsafe_allow_html=True)
 
@@ -571,7 +570,6 @@ with tab_trans:
 with tab_gas:
     PRESUPUESTO = 4350.0
 
-    # Métricas
     cats_sum = {}
     if not df_gas.empty and "monto" in df_gas.columns and "categoria" in df_gas.columns:
         cats_sum = df_gas.groupby("categoria")["monto"].apply(lambda x: x.astype(float).sum()).to_dict()
@@ -585,14 +583,14 @@ with tab_gas:
     c3.metric("🚄 Transportes",   f"€{cats_sum.get('Transporte',0):,.0f}")
     c4.metric("🎟️ Entradas",      f"€{cats_sum.get('Entradas',0):,.0f}")
 
-    st.markdown(f"""
+    st.markdown(textwrap.dedent(f"""
     <div class="prog-outer">
         <div class="prog-inner" style="width:{pct}%"></div>
     </div>
     <div style="font-size:0.75rem;color:#6B7A8D;margin-top:4px">
         €{total_g:,.0f} de €{PRESUPUESTO:,.0f} presupuestados
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
 
     st.write("")
     st.subheader("Agregar gasto")
@@ -648,13 +646,13 @@ with tab_notas:
 
     if not df_notas.empty and "texto" in df_notas.columns:
         for _, row in df_notas.iloc[::-1].iterrows():
-            st.markdown(f"""
+            st.markdown(textwrap.dedent(f"""
             <div class="nota-card">
                 <strong>{row.get("tag","📝")}</strong> · <em>{row.get("autor","")}</em><br>
                 {row.get("texto","")}
                 <div class="nota-meta">🕐 {row.get("fecha","")}</div>
             </div>
-            """, unsafe_allow_html=True)
+            """), unsafe_allow_html=True)
             if st.button("🗑️", key=f"delnota_{row.get('id','')}"):
                 if del_nota(row.get("id","")):
                     st.rerun()
