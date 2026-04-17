@@ -544,7 +544,7 @@ st.markdown(f"""
 <div class="hero-inner">
   <div class="hero-flag">🇮🇹 🇨🇭</div>
   <div class="hero-title">Italia & <em>Zurich</em></div>
-  <div class="hero-sub">Luna de Miel · Mayo–Junio 2026 · Compartido en tiempo real</div>
+  <div class="hero-sub">Mirtha & Adilson · Mayo–Junio 2026 · Compartido en tiempo real</div>
   <div class="hero-dates"><span>✈ Sale 24 mayo · IGU</span><span>·</span><span>Regresa 14 junio · ZRH</span></div>
 </div>
 </div>
