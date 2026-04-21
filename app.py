@@ -28,9 +28,13 @@ div[data-testid="stRadio"]>div>label p{color:var(--ink)!important;font-weight:60
 div[data-testid="stRadio"]>div>label[data-checked="true"]{background:var(--te)!important;}
 div[data-testid="stRadio"]>div>label[data-checked="true"] p{color:var(--w)!important;}
 div[data-testid="stRadio"] div[role="radiogroup"] label>div:first-child{display:none!important;}
-.stTextInput>div>div>input,.stTextArea>div>div>textarea,.stNumberInput>div>div>input{background:var(--w)!important;color:var(--ink)!important;border:1px solid var(--pa)!important;border-radius:8px!important;font-family:'DM Sans',sans-serif!important;}
+.stTextInput>div>div>input,.stTextArea>div>div>textarea,.stNumberInput>div>div>input{background:#ffffff!important;color:#1A1A2E!important;border:1px solid #EDE7DC!important;border-radius:8px!important;font-family:'DM Sans',sans-serif!important;}
+[data-testid="stNumberInput"] input,[data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:#ffffff!important;color:#1A1A2E!important;}
+[data-baseweb="base-input"]{background:#ffffff!important;}
+[data-baseweb="base-input"] input,[data-baseweb="base-input"] textarea{background:#ffffff!important;color:#1A1A2E!important;}
+input[type="number"],input[type="text"],textarea{background:#ffffff!important;color:#1A1A2E!important;}
 .stTextInput label,.stTextArea label,.stSelectbox label,.stNumberInput label{color:#3D4A5C!important;font-size:0.82rem!important;font-weight:500!important;}
-.stSelectbox>div>div,[data-baseweb="select"],[data-baseweb="select"] *{background:var(--w)!important;color:var(--ink)!important;}
+.stSelectbox>div>div,[data-baseweb="select"],[data-baseweb="select"] *{background:#ffffff!important;color:#1A1A2E!important;}
 .stButton>button{background:var(--te)!important;color:var(--w)!important;border:none!important;border-radius:8px!important;font-weight:600!important;}
 .stButton>button:hover{background:var(--td)!important;}
 [data-testid="stMetric"]{background:var(--w);border:1px solid var(--pa);border-radius:10px;padding:0.75rem!important;}
@@ -265,7 +269,8 @@ def del_nota(nid):
 CIUDADES_CLIMA = {
     "Milán":       {"lat":45.46,"lon":9.19,"fecha":"2026-05-25"},
     "Cinque Terre":{"lat":44.12,"lon":9.74,"fecha":"2026-05-28"},
-    "Florencia":   {"lat":43.77,"lon":11.25,"fecha":"2026-05-30"},
+    "Pisa":        {"lat":43.72,"lon":10.40,"fecha":"2026-05-30"},
+    "Florencia":   {"lat":43.77,"lon":11.25,"fecha":"2026-05-31"},
     "Roma":        {"lat":41.90,"lon":12.49,"fecha":"2026-06-03"},
     "Nápoles":     {"lat":40.85,"lon":14.27,"fecha":"2026-06-07"},
     "Amalfi":      {"lat":40.63,"lon":14.60,"fecha":"2026-06-08"},
@@ -305,6 +310,7 @@ def get_clima(lat, lon, fecha):
 RUTA_MAPA = [
     {"city":"Milán","lat":45.4654,"lon":9.1859,"dias":"D1–3","emoji":"🏛️","color":"#C4693A"},
     {"city":"Cinque Terre","lat":44.1461,"lon":9.6439,"dias":"D4–5","emoji":"🌊","color":"#6B7A3E"},
+    {"city":"Pisa","lat":43.7228,"lon":10.4017,"dias":"D6 excursión","emoji":"🗼","color":"#C9A84C"},
     {"city":"Florencia","lat":43.7696,"lon":11.2558,"dias":"D6–9","emoji":"🌸","color":"#C4693A"},
     {"city":"Siena","lat":43.3188,"lon":11.3307,"dias":"D9 excursión","emoji":"🏰","color":"#C9A84C"},
     {"city":"Roma","lat":41.9028,"lon":12.4964,"dias":"D10–13","emoji":"🏟️","color":"#6B7A3E"},
@@ -408,11 +414,24 @@ def render_florencia():
     _hotel("Hotel Davanzati ★★★ (recomendado)","A 2 min del Duomo y Uffizi · Servicio excelente · Desayuno muy bueno<br>Alternativa: B&B Machiavelli (zona Oltrarno, ~€75/noche)","~€95–110 / noche · 4 noches",
            "https://www.booking.com/searchresults.es.html?ss=Florence&checkin=2026-05-30&checkout=2026-06-03&group_adults=2",
            "https://www.airbnb.com/s/Florence--Italy/homes?checkin=2026-05-30&checkout=2026-06-03&adults=2","https://maps.google.com/?q=Hotel+Davanzati+Florence")
-    _card("Día 6","Sábado 30 mayo — Duomo + Cúpula + Piazzale","Florencia",
-        _ev("11:00",True,"Duomo + Cúpula de Brunelleschi","463 escalones. Reservar turno online — sin reserva la fila puede ser 2–3 horas.",acts='<span class="tag tm">⛪ Pase ~€20</span><a href="https://www.ilgrandemuseodelduomo.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Duomo+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Mercato Centrale — almuerzo","Piso superior con puestos de comida. Probar lampredotto o pasta fresca.",acts='<a href="https://maps.google.com/?q=Mercato+Centrale+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("16:30",False,"Ponte Vecchio → Oltrarno","El puente más antiguo de Florencia con joyerías desde el siglo XVI.",acts='<span class="tag tw">🌉 Paseo</span><a href="https://maps.google.com/?q=Ponte+Vecchio+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:30",True,"Piazzale Michelangelo — atardecer","EL punto de vista de Florencia al atardecer. Llegar 30 min antes del sunset.",acts='<span class="tag tw">🌅 Gratis</span><a href="https://maps.google.com/?q=Piazzale+Michelangelo+Florence" target="_blank" class="lb bm">📍 Maps</a>'))
+    _card("Día 6","Sábado 30 mayo — Pisa + Piazzale Michelangelo","Florencia / Pisa",
+        _ev("08:30",True,"Tren Florencia → Pisa Centrale","Tren Regional · 1h · Sale frecuentemente desde SMN. En Pisa Centrale tomar el bus LAM Rossa (€1.50) o 20 min a pie hasta la Piazza dei Miracoli.",
+            acts='<span class="tag tr2">🚄 1h · ~€10</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
+        _ev("10:00",True,"★ Piazza dei Miracoli — La Torre de Pisa","La famosa plaza de los milagros con la Torre Inclinada, el Duomo y el Baptisterio. Subir a la Torre: 294 escalones en espiral, 56 metros de altura. La inclinación se siente al caminar. RESERVAR online.",
+            tip="⚠️ La Torre requiere reserva obligatoria en opapisa.it. Sin reserva puede no quedar cupos. Llegar 15 min antes del horario reservado.",
+            acts='<span class="tag tm">🗼 Torre €20</span><a href="https://www.opapisa.it" target="_blank" class="lb bt">🎟️ Reservar Torre</a><a href="https://maps.google.com/?q=Piazza+dei+Miracoli+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("11:30",False,"Duomo di Pisa + Baptisterio","El Duomo de Pisa (siglo XI) es uno de los mejores ejemplos del románico italiano. El Baptisterio tiene una acústtica increíble — el guarda suele demostrarla cantando. Ambos se pueden visitar con el mismo pase.",
+            acts='<span class="tag tm">⛪ Pase €7</span><a href="https://maps.google.com/?q=Duomo+di+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("13:00",False,"Almuerzo en Pisa — Borgo Stretto","Alejarse 5 minutos de la Piazza dei Miracoli para comer bien y barato. La calle Borgo Stretto tiene trattorias con menú del día. Probar: cecina (torta de garbanzo, especialidad de Pisa, €2) y schiacciata.",
+            acts='<span class="tag tf">🍽️ Cecina €2</span><a href="https://maps.google.com/?q=Borgo+Stretto+Pisa" target="_blank" class="lb bm">📍 Borgo Stretto</a>') +
+        _ev("14:30",False,"Camposanto Monumentale + Museo delle Sinopie","El Camposanto es un cementerio medieval con frescos impresionantes. El Museo de las Sinopias muestra los bocetos preparatorios de los frescos — menos visitado y muy interesante.",
+            acts='<span class="tag tm">🏛️ €5</span><a href="https://maps.google.com/?q=Camposanto+Monumentale+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("15:30",False,"Lungarni — paseo por el río Arno","Los paseos junto al Arno en Pisa son muy bonitos y sin turistas. Caminar desde el Ponte di Mezzo hasta el Palazzo Blu (exposiciones temporales interesantes). La ciudad medieval más allá de la Torre merece ser explorada.",
+            acts='<span class="tag tw">🚶 Gratis</span><a href="https://maps.google.com/?q=Lungarno+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:00",False,"Tren Pisa → Florencia","Tren Regional de vuelta · 1h · Hay trenes frecuentes.",
+            acts='<span class="tag tr2">🚄 1h</span>') +
+        _ev("18:30",True,"Piazzale Michelangelo — atardecer","EL punto de vista de Florencia al atardecer. Vista panorámica de toda la ciudad. Llegar 30 min antes del sunset.",
+            acts='<span class="tag tw">🌅 Gratis</span><a href="https://maps.google.com/?q=Piazzale+Michelangelo+Florence" target="_blank" class="lb bm">📍 Maps</a>'))
     _card("Día 7","Domingo 31 mayo — Uffizi + David + San Miniato","Florencia",
         _ev("08:30",True,"Galería degli Uffizi — Botticelli, Leonardo, Caravaggio","El museo de arte renacentista más importante del mundo. 3h mínimo. RESERVA OBLIGATORIA.",acts='<span class="tag tm">🎨 €20 + €4 reserva</span><a href="https://www.uffizi.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Uffizi+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
         _ev("14:00",True,"David de Michelangelo — Accademia","5.17 metros de mármol perfecto, tallado entre 1501 y 1504. El original — el de la Piazza es una copia. 1.5h.",acts='<span class="tag tm">🗿 €12 + reserva</span><a href="https://www.uffizi.it/en/the-accademia-gallery" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Accademia+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
@@ -519,7 +538,7 @@ RESERVAS_MUSEOS = [
     {"id":"m01","title":"La Última Cena — Da Vinci","city":"Milán","fecha":"26 mayo · 08:15","urgente":True,"url":"https://cenacolodavincimilano.vivaticket.com","maps":"https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan"},
     {"id":"m02","title":"Galería Borghese — Bernini","city":"Roma","fecha":"5 junio · tarde","urgente":True,"url":"https://www.galleriaborghese.it","maps":"https://maps.google.com/?q=Galleria+Borghese+Rome"},
     {"id":"m03","title":"Museos Vaticanos + Capilla Sixtina","city":"Roma","fecha":"3 junio · 08:00","urgente":True,"url":"https://www.museivaticani.va","maps":"https://maps.google.com/?q=Vatican+Museums+Rome"},
-    {"id":"m04","title":"Cúpula Brunelleschi — Duomo Florencia","city":"Florencia","fecha":"30 mayo","urgente":True,"url":"https://www.ilgrandemuseodelduomo.it","maps":"https://maps.google.com/?q=Duomo+Florence"},
+    {"id":"m04","title":"Torre de Pisa — Subida (RESERVAR)","city":"Pisa","fecha":"30 mayo","urgente":True,"url":"https://www.opapisa.it","maps":"https://maps.google.com/?q=Torre+di+Pisa"},
     {"id":"m05","title":"David — Accademia Florencia","city":"Florencia","fecha":"31 mayo · 14:00","urgente":False,"url":"https://www.uffizi.it/en/the-accademia-gallery","maps":"https://maps.google.com/?q=Accademia+Gallery+Florence"},
     {"id":"m06","title":"Galería degli Uffizi","city":"Florencia","fecha":"31 mayo · 08:30","urgente":False,"url":"https://www.uffizi.it","maps":"https://maps.google.com/?q=Uffizi+Gallery+Florence"},
     {"id":"m07","title":"Coliseo + Foro Romano + Palatino","city":"Roma","fecha":"4 junio · 08:00","urgente":False,"url":"https://www.coopculture.it","maps":"https://maps.google.com/?q=Colosseum+Rome"},
