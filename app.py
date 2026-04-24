@@ -1013,7 +1013,10 @@ with tab_clima:
             clima = get_clima(datos["lat"],datos["lon"],datos["fecha"])
             if clima:
                 desc = WMO_CODES.get(clima["code"],"🌤️")
-                M(f'<div class="clima-card"><div style="font-size:1.4rem">{desc.split()[0]}</div><div class="clima-temp">{clima["max"]}°</div><div style="font-size:0.72rem;color:#6B7A8D">Mín {clima["min"]}°C · Máx {clima["max"]}°C</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div class="clima-desc">{" ".join(desc.split()[1:])}</div>{f\'<div style="font-size:0.7rem;color:#4285F4;margin-top:3px">Lluvia: {clima["rain"]}%</div>\' if clima["rain"] else ""}</div>')
+                desc_icon = desc.split()[0]
+                desc_text = " ".join(desc.split()[1:])
+                rain_html = f'<div style="font-size:0.7rem;color:#4285F4;margin-top:3px">Lluvia: {clima["rain"]}%</div>' if clima["rain"] else ""
+                M(f'<div class="clima-card"><div style="font-size:1.4rem">{desc_icon}</div><div class="clima-temp">{clima["max"]}°</div><div style="font-size:0.72rem;color:#6B7A8D">Mín {clima["min"]}°C · Máx {clima["max"]}°C</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div class="clima-desc">{desc_text}</div>{rain_html}</div>')
             else:
                 M(f'<div class="clima-card"><div style="font-size:1.4rem">🌤️</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div style="font-size:0.72rem;color:#6B7A8D;margin-top:4px">Disponible cuando se acerque la fecha</div></div>')
             st.write("")
