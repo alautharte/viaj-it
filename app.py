@@ -28,7 +28,6 @@ div[data-testid="stRadio"]>div>label p{color:var(--ink)!important;font-weight:60
 div[data-testid="stRadio"]>div>label[data-checked="true"]{background:var(--te)!important;}
 div[data-testid="stRadio"]>div>label[data-checked="true"] p{color:var(--w)!important;}
 div[data-testid="stRadio"] div[role="radiogroup"] label>div:first-child{display:none!important;}
-/* INPUTS FONDO BLANCO — todos los selectores posibles */
 .stTextInput>div>div>input,.stTextArea>div>div>textarea,.stNumberInput>div>div>input{background:#ffffff!important;color:#1A1A2E!important;border:1px solid #EDE7DC!important;border-radius:8px!important;font-family:'DM Sans',sans-serif!important;}
 [data-testid="stNumberInput"] input,[data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:#ffffff!important;color:#1A1A2E!important;}
 [data-baseweb="base-input"]{background:#ffffff!important;}
@@ -45,7 +44,6 @@ input[type="number"],input[type="text"],textarea{background:#ffffff!important;co
 [data-testid="stExpander"]{border:1px solid var(--pa)!important;border-radius:10px!important;background:var(--w)!important;}
 [data-testid="stExpander"] summary p{color:var(--ink)!important;font-weight:600!important;}
 @media(max-width:640px){[data-testid="block-container"]{padding:0.5rem!important;}}
-/* HERO */
 .hero{background:linear-gradient(135deg,#3D4A5C 0%,#1A1A2E 100%);border-radius:14px 14px 0 0;padding:1.75rem 1.25rem 1.5rem;text-align:center;}
 .htitle{font-family:'Playfair Display',serif!important;font-size:2.2rem!important;color:#F7F3EE!important;margin-bottom:4px;line-height:1.1;}
 .htitle em{color:#E8C96A!important;font-style:italic;}
@@ -64,7 +62,6 @@ input[type="number"],input[type="text"],textarea{background:#ffffff!important;co
 .sh-m{font-size:0.82rem!important;color:var(--sl)!important;margin-top:1px;}
 .sok{background:#D4EDDA;color:#1A6B32!important;padding:3px 12px;border-radius:20px;font-size:0.72rem;font-weight:600;display:inline-block;margin-bottom:0.75rem;}
 .serr{background:#F8D7DA;color:#721C24!important;padding:3px 12px;border-radius:20px;font-size:0.72rem;font-weight:600;display:inline-block;margin-bottom:0.75rem;}
-/* CARDS TIMELINE */
 .dc{background:var(--w);border-radius:12px;border:1px solid var(--pa);margin-bottom:0.75rem;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05);}
 .dh{display:flex;align-items:center;gap:8px;padding:0.6rem 1rem;background:var(--pa);flex-wrap:wrap;}
 .dn{background:var(--te);color:#fff!important;font-size:0.7rem;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;}
@@ -82,36 +79,30 @@ input[type="number"],input[type="text"],textarea{background:#ffffff!important;co
 .ed{font-size:0.78rem!important;color:var(--sl)!important;line-height:1.5;word-wrap:break-word;}
 .etip{font-size:0.73rem!important;color:var(--td)!important;background:rgba(196,105,58,0.07);border-left:3px solid #E8956D;padding:4px 8px;margin-top:5px;border-radius:0 4px 4px 0;line-height:1.4;}
 .acts{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;align-items:center;}
-/* TAGS */
 .tag{display:inline-block;font-size:0.68rem;padding:2px 8px;border-radius:20px;font-weight:600;}
 .tr2{background:#E8F0FB;color:#2A5FAC!important;}.tw{background:#EBF5E1;color:#3A6B18!important;}
 .tf{background:#FDE8DE;color:#8B3E1E!important;}.tm{background:#F5E8F5;color:#7A3A8C!important;}
 .ts{background:#FFF0E0;color:#8B5010!important;}.tb{background:#E0F4EF;color:#0F6E56!important;}
 .tsl{background:#EEF0FD;color:#4A50B0!important;}.tbu{background:#FEF3E2;color:#8B5E10!important;}
 .tpa{background:#E8F5E8;color:#2A6B2A!important;}.tkt{background:#FCEBEB;color:#A32D2D!important;}
-/* LINK BUTTONS */
 a.lb{display:inline-block;font-size:0.7rem;padding:3px 9px;border-radius:6px;border:1.5px solid;text-decoration:none!important;font-weight:600;background:var(--w);}
 a.bm{border-color:#4285F4;color:#4285F4!important;}a.bk{border-color:#003580;color:#003580!important;}
 a.ba{border-color:#FF5A5F;color:#FF5A5F!important;}a.bt{border-color:var(--ol);color:var(--ol)!important;}
 a.btr{border-color:#B8000A;color:#B8000A!important;}
-/* HOTEL */
 .hc{border:1px solid var(--pa);border-radius:12px;padding:1rem;margin-bottom:1rem;background:var(--w);}
 .hn{font-family:'Playfair Display',serif!important;font-size:0.95rem!important;color:#3D4A5C!important;margin-bottom:3px;font-weight:600;}
 .hm{font-size:0.76rem!important;color:var(--sl)!important;line-height:1.55;margin-bottom:5px;}
 .hp{display:inline-block;font-size:0.78rem!important;font-weight:700;background:rgba(107,122,62,0.1);color:var(--ol)!important;padding:2px 10px;border-radius:20px;margin-bottom:7px;}
-/* TRANSPORT */
 .tc3{background:var(--w);border:1px solid var(--pa);border-radius:10px;padding:9px 12px;margin-bottom:5px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .tr3{font-size:0.86rem!important;font-weight:700;color:#3D4A5C!important;}
 .td3{font-size:0.74rem!important;color:var(--sl)!important;}
 .tp3{font-size:0.84rem!important;font-weight:700;color:var(--te)!important;margin-left:auto;}
-/* ALERTS */
 .al{background:rgba(196,105,58,0.08);border:1px solid rgba(196,105,58,0.3);border-radius:9px;padding:0.75rem 0.9rem;font-size:0.79rem!important;color:var(--td)!important;margin-bottom:0.75rem;line-height:1.55;}
 .al strong{color:var(--td)!important;}
 .alg{background:rgba(107,122,62,0.08);border-color:rgba(107,122,62,0.3);color:var(--ol)!important;}
 .alg strong{color:var(--ol)!important;}
 .alb{background:#EBF4FF;border-color:#90C4F9;color:#1A4A8A!important;}
 .alb strong{color:#1A4A8A!important;}
-/* RESERVAS */
 .rc{background:var(--w);border:1px solid var(--pa);border-left:4px solid;border-radius:0 10px 10px 0;padding:0.85rem 1rem;margin-bottom:0.4rem;}
 .rc.urg{border-left-color:var(--te);}.rc.ok{border-left-color:var(--ol);}
 .rc.done{border-left-color:#1A6B32;background:#F8FFF8;}
@@ -121,7 +112,6 @@ a.btr{border-color:#B8000A;color:#B8000A!important;}
 .bc{background:#D4EDDA;color:#1A6B32!important;padding:2px 8px;border-radius:20px;font-size:0.68rem;font-weight:700;}
 .bpa{background:#CCE5FF;color:#0056B3!important;padding:2px 8px;border-radius:20px;font-size:0.68rem;font-weight:700;}
 .usaved{font-size:0.72rem!important;color:#0056B3!important;word-break:break-all;}
-/* MISC */
 .ncard{background:var(--cr);border-radius:8px;padding:9px 12px;margin-bottom:6px;border-left:3px solid var(--go);font-size:0.82rem!important;}
 .nmeta{font-size:0.68rem!important;color:var(--sl)!important;margin-top:4px;}
 .prog-o{background:var(--pa);border-radius:4px;height:7px;overflow:hidden;margin:5px 0;}
@@ -182,15 +172,71 @@ def load_chk():
     try: return pd.DataFrame(get_wb().worksheet("viaje_checklist").get_all_records())
     except: return pd.DataFrame()
 
+# Mapa de descripciones para sincronización automática de alojamientos → gastos
+ALOJ_DESC_MAP = {
+    "a01": "Alojamiento Milán",
+    "a02": "Alojamiento La Spezia",
+    "a03": "Alojamiento Florencia",
+    "a04": "Alojamiento Roma",
+    "a05": "Alojamiento Nápoles",
+    "a06": "Alojamiento Costa Amalfi",
+    "a07": "Alojamiento Venecia",
+    "a08": "Alojamiento Zurich",
+}
+
 def save_res(rid, estado, tipo, url, conf, monto, notas):
+    """
+    Guarda una reserva en viaje_reservas.
+    Si el rid es de alojamiento (a01–a08) y tiene monto > 0,
+    sincroniza automáticamente en viaje_gastos con id 'res_{rid}'.
+    """
     try:
-        ws = ensure_sheets()["viaje_reservas"]; recs = ws.get_all_records()
-        now = datetime.now().strftime("%Y-%m-%d %H:%M"); row = [rid,estado,tipo,url,conf,monto,notas,now]
+        ws = ensure_sheets()["viaje_reservas"]
+        recs = ws.get_all_records()
+        now = datetime.now().strftime("%Y-%m-%d %H:%M")
+        row = [rid, estado, tipo, url, conf, monto, notas, now]
+
+        # Actualizar o insertar en viaje_reservas
+        found = False
         for i, r in enumerate(recs, start=2):
             if r.get("id") == rid:
-                ws.update(f"A{i}:H{i}", [row]); st.cache_data.clear(); return True
-        ws.append_row(row); st.cache_data.clear(); return True
-    except Exception as e: st.error(f"Error: {e}"); return False
+                ws.update(f"A{i}:H{i}", [row])
+                found = True
+                break
+        if not found:
+            ws.append_row(row)
+
+        # ── Sincronización automática con viaje_gastos ──────────────────────
+        if rid in ALOJ_DESC_MAP:
+            ws_g = ensure_sheets()["viaje_gastos"]
+            recs_g = ws_g.get_all_records()
+            gid = f"res_{rid}"
+            desc = ALOJ_DESC_MAP[rid]
+            monto_float = float(monto) if monto else 0.0
+            fecha_corta = now[:5]  # dd/mm
+
+            if monto_float > 0:
+                # Actualizar si ya existe, insertar si no
+                updated = False
+                for i, r in enumerate(recs_g, start=2):
+                    if str(r.get("id")) == gid:
+                        ws_g.update(f"A{i}:E{i}", [[gid, desc, "Alojamiento", monto_float, fecha_corta]])
+                        updated = True
+                        break
+                if not updated:
+                    ws_g.append_row([gid, desc, "Alojamiento", monto_float, fecha_corta])
+            else:
+                # Si el monto es 0, eliminar la fila de gastos si existía
+                for i, r in enumerate(recs_g, start=2):
+                    if str(r.get("id")) == gid:
+                        ws_g.delete_rows(i)
+                        break
+
+        st.cache_data.clear()
+        return True
+    except Exception as e:
+        st.error(f"Error: {e}")
+        return False
 
 def toggle_check(cid, current_done):
     try:
@@ -256,7 +302,8 @@ def del_g(gid):
         for i, r in enumerate(ws.get_all_records(), start=2):
             if str(r.get("id")) == str(gid):
                 ws.delete_rows(i); st.cache_data.clear(); return True
-    except: pass; return False
+    except: pass
+    return False
 
 def add_nota(texto, tag, autor):
     try:
@@ -360,16 +407,6 @@ def _al(html, extra=""):
     M(f'<div class="al {extra}">{html}</div>')
 
 # ── ITINERARIO COMPLETO ────────────────────────────────────────────────────────
-# NOTA: Con la eliminación del Día 3 de Milán, todos los días se corren:
-# Milán: D1–2 (25–26 mayo) · 2 noches
-# Cinque Terre: D3–4 (27–28 mayo) · 2 noches
-# Florencia: D5–8 (29 mayo – 1 junio) · 4 noches
-# Roma: D9–12 (2–5 junio) · 4 noches
-# Nápoles: D13 (6 junio) · 1 noche
-# Costa Amalfi: D14–15 (7–8 junio) · 2 noches
-# Venecia: D16–17 (9–10 junio) · 2 noches ← NUEVO
-# Zurich: D18–20 (11–13 junio) · 3 noches
-
 def render_milan():
     _hotel("Hotel Ariston ★★★ (o similar zona Centrale/Navigli)",
            "Central para metro · Desayuno incluido · Habitación doble<br>"
@@ -687,21 +724,21 @@ def render_venecia():
 
     _card("Día 17","Miércoles 10 junio — Murano, Burano y Dorsoduro","Venecia",
         _ev("09:00",True,"Vaporetto a Murano — la isla del cristal",
-            "Murano está a 15 min de Venecia en vaporetto (incluido en el pase 24h o ticket día). La isla es famosa mundialmente por el cristal soplado. Ver una demostración en una de las fábricas históricas — es gratis y espectacular.",
-            tip="Las mejores maestrías: Fornace Mian y Vetreria Artistica Archimede Seguso. Asegurarse de comprar el cristal directamente en Murano — el de los kioscos de Venecia es una copia barata.",
+            "Murano está a 15 min de Venecia en vaporetto (incluido en el pase 24h o ticket día). Ver una demostración en una de las fábricas históricas — es gratis y espectacular.",
+            tip="Las mejores maestrías: Fornace Mian y Vetreria Artistica Archimede Seguso. Asegurarse de comprar el cristal directamente en Murano.",
             acts='<span class="tag tb">⛴️ 15 min</span><a href="https://maps.google.com/?q=Murano+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
         _ev("11:00",True,"Burano — la isla más colorida del mundo",
-            "Burano está a 40 min de Murano. Las casas pintadas de colores vibrantes (azul, verde, amarillo, rojo) son únicas en el mundo. La leyenda dice que los pescadores las pintaban de colores para reconocer su casa desde el mar. El encaje de Burano también es famoso.",
-            tip="El paseo principal es Via Baldassarre Galuppi. El pequeño canal central tiene las mejores fotos. Ir a la primera hora de la mañana para ver el pueblo sin turistas.",
+            "Burano está a 40 min de Murano. Las casas pintadas de colores vibrantes son únicas en el mundo. La leyenda dice que los pescadores las pintaban para reconocer su casa desde el mar.",
+            tip="El paseo principal es Via Baldassarre Galuppi. Ir temprano para ver el pueblo sin turistas.",
             acts='<span class="tag tb">⛴️ 40 min</span><a href="https://maps.google.com/?q=Burano+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo en Burano — risotto de go",
-            "El 'risotto di go' (una especie de gobio local) es la especialidad de Burano. Los restaurantes al borde del canal son caros pero el ambiente lo vale. También probar: moeche (cangrejos de concha blanda, si es temporada).",
+        _ev("13:00",False,"Almuerzo en Burano — risotto di go",
+            "El 'risotto di go' (una especie de gobio local) es la especialidad de Burano. Los restaurantes al borde del canal son caros pero el ambiente lo vale.",
             acts='<span class="tag tf">🦀 Risotto di go</span>') +
         _ev("15:00",False,"Vaporetto de regreso + barrio Dorsoduro",
-            "Dorsoduro es el barrio más tranquilo y auténtico de Venecia. La Gallerie dell'Accademia (colección de arte veneciano, €12) o simplemente caminar por los Zattere (paseo frente a la laguna) al atardecer.",
+            "Dorsoduro es el barrio más tranquilo de Venecia. La Gallerie dell'Accademia (€12) o los Zattere al atardecer.",
             acts='<span class="tag tm">🎨 Accademia €12</span><a href="https://maps.google.com/?q=Dorsoduro+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
         _ev("18:00",False,"Campo Santa Margherita — aperitivo final en Venecia",
-            "La plaza más viva de Venecia, llena de estudiantes locales. Bar alla Toletta y Bar ai Frari son los favoritos de los venecianos. El último Spritz veneziano antes de partir.",
+            "La plaza más viva de Venecia, llena de estudiantes locales. El último Spritz veneziano antes de partir.",
             acts='<span class="tag tf">🍹 Último Spritz</span><a href="https://maps.google.com/?q=Campo+Santa+Margherita+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
         _ev("20:00",False,"Cena despedida de Italia · Preparar maletas",
             "Mañana temprano: tren a Zurich (09:00 desde Venezia S. Lucia). Hacer check-in online si aplica.",
@@ -768,7 +805,6 @@ CIUDAD_FN = {
 }
 
 # ── DATOS FIJOS ────────────────────────────────────────────────────────────────
-# Museos con Vaticanos (m03), Coliseo (m05) y David (m06) ya marcados como "paid"
 RESERVAS_MUSEOS = [
     {"id":"m01","title":"La Última Cena — Da Vinci","city":"Milán","fecha":"26 mayo · 08:15",
      "urgente":True,"url":"https://cenacolodavincimilano.vivaticket.com","maps":"https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan",
@@ -898,14 +934,12 @@ except:
     df_res=df_gas=df_notas=df_chk=pd.DataFrame(); sheets_ok=False
 
 def get_rd(rid):
-    """Obtiene datos de reserva de Sheets. Si no existe, devuelve los defaults del item."""
     if df_res.empty or "id" not in df_res.columns:
         return {}
     r = df_res[df_res["id"]==rid]
     return r.iloc[0].to_dict() if not r.empty else {}
 
 def get_estado(rid, default_estado):
-    """Devuelve el estado de la reserva priorizando Sheets, sino el default."""
     rd = get_rd(rid)
     return rd.get("estado", default_estado) if rd else default_estado
 
@@ -917,7 +951,10 @@ dias_restantes = (VIAJE_DATE - hoy).days
 # ── HERO ───────────────────────────────────────────────────────────────────────
 ok_m = sum(1 for r in RESERVAS_MUSEOS if get_estado(r["id"], r["default_estado"]) in ("confirmed","paid"))
 ok_a = sum(1 for r in RESERVAS_ALOJ   if get_estado(r["id"], "pending") in ("confirmed","paid"))
+
+# Calcular total gastado incluyendo gastos manuales + alojamientos sincronizados
 total_gas = pd.to_numeric(df_gas["monto"],errors="coerce").fillna(0).sum() if not df_gas.empty and "monto" in df_gas.columns else 0
+
 chk_done  = len(df_chk[df_chk["done"].astype(str)=="1"]) if not df_chk.empty and "done" in df_chk.columns else 0
 chk_total = len(df_chk) if not df_chk.empty else 0
 
@@ -1029,7 +1066,6 @@ with tab_museos:
 
     for r in RESERVAS_MUSEOS:
         rd = get_rd(r["id"])
-        # Si hay datos en Sheets los usamos; si no, usamos los defaults del item
         ea = rd.get("estado", r["default_estado"]) if rd else r["default_estado"]
         conf_saved = rd.get("confirmacion", r["default_conf"]) if rd else r["default_conf"]
         monto_saved = float(rd.get("monto", r["default_monto"]) or r["default_monto"]) if rd else float(r["default_monto"])
@@ -1069,6 +1105,8 @@ with tab_museos:
 with tab_aloj:
     M('<div class="sh"><div class="sh-t">🏨 Alojamientos</div><div class="sh-m">Reservá en Airbnb o Booking · Cargá la URL confirmada · Tu pareja la ve al instante</div></div>')
     _al("<strong>💡 Cómo usar:</strong> Buscá con los links → cuando confirmes → copiá la URL de la reserva → pegala aquí → Guardar. Tu pareja verá todo al instante.", "alb")
+    _al("<strong>💰 Sincronización automática:</strong> Al guardar el monto de un alojamiento, se refleja automáticamente en el Tracker de Gastos. No hace falta cargarlo dos veces.", "alg")
+
     for r in RESERVAS_ALOJ:
         rd=get_rd(r["id"]); ea=rd.get("estado","pending") if rd else "pending"
         tipo_saved=str(rd.get("tipo","")) if rd else ""
@@ -1078,7 +1116,12 @@ with tab_aloj:
         uh=f'<div class="usaved">🔗 {us[:70]}{"..." if len(us)>70 else ""}</div>' if us else ""
         tipo_html=(f'<span style="font-size:0.68rem;color:#1A6B32;font-weight:600;background:#D4EDDA;padding:1px 7px;border-radius:20px">{tipo_saved}</span>') if tipo_saved else ""
         ba_html = f'<a href="{r["url_a"]}" target="_blank" class="lb ba">🏠 Airbnb</a>' if r["url_a"] else ""
-        M(f'<div class="rc ok"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span class="rtitle">🏨 {r["city"]} — {r["noches"]} noches</span><span class="{bl}">{ll}</span>{tipo_html}</div><div class="rmeta">📅 {r["fecha"]} · ~{r["precio"]}</div>{uh}<div style="margin-top:6px"><a href="{r["url_b"]}" target="_blank" class="lb bk">📅 Booking</a> {ba_html} <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
+        
+        # Mostrar monto actual si ya fue guardado
+        monto_actual = float(rd.get("monto", 0) or 0) if rd else 0
+        monto_html = f'<span style="font-size:0.78rem;font-weight:700;color:#1A6B32;background:rgba(107,122,62,0.1);padding:2px 10px;border-radius:20px;margin-left:6px">€{monto_actual:,.0f} pagado</span>' if monto_actual > 0 else ""
+        
+        M(f'<div class="rc ok"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span class="rtitle">🏨 {r["city"]} — {r["noches"]} noches</span><span class="{bl}">{ll}</span>{tipo_html}{monto_html}</div><div class="rmeta">📅 {r["fecha"]} · ~{r["precio"]}</div>{uh}<div style="margin-top:6px"><a href="{r["url_b"]}" target="_blank" class="lb bk">📅 Booking</a> {ba_html} <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
         with st.form(key=f"fa_{r['id']}"):
             c1,c2=st.columns(2)
             with c1: ne=st.selectbox("Estado",["pending","confirmed","paid"],index=["pending","confirmed","paid"].index(ea),format_func=lambda x:{"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}[x],key=f"sa_{r['id']}")
@@ -1086,11 +1129,11 @@ with tab_aloj:
             nu=st.text_input("🔗 URL de la reserva confirmada",value=us,key=f"ua_{r['id']}",placeholder="Ej: https://www.airbnb.com/trips/v1/XXXXXXX")
             c3,c4=st.columns(2)
             with c3: nc=st.text_input("N° confirmación",value=str(rd.get("confirmacion","") if rd else ""),key=f"ca_{r['id']}",placeholder="ej. HB-123456789")
-            with c4: nm=st.number_input("Monto total €",value=float(rd.get("monto",0) or 0 if rd else 0),min_value=0.0,step=1.0,key=f"ma_{r['id']}")
+            with c4: nm=st.number_input("Monto total € (→ se suma a Gastos automáticamente)",value=float(rd.get("monto",0) or 0 if rd else 0),min_value=0.0,step=1.0,key=f"ma_{r['id']}")
             nn=st.text_area("Notas",value=str(rd.get("notas_int","") if rd else ""),key=f"na_{r['id']}",height=50,placeholder="Ej: Check-in 15hs · Pedir habitación alta...")
             if st.form_submit_button("💾 Guardar — tu pareja lo ve al instante",use_container_width=True):
                 if save_res(r["id"],ne,tipo,nu,nc,nm,nn):
-                    st.success("✅ Guardado — visible ahora"); st.rerun()
+                    st.success("✅ Guardado — visible ahora y en Gastos"); st.rerun()
         st.write("")
 
 # ══ TRANSPORTES ══════════════════════════════════════════════════════════════
@@ -1102,7 +1145,7 @@ with tab_trans:
 
 # ══ GASTOS ═══════════════════════════════════════════════════════════════════
 with tab_gas_t:
-    M('<div class="sh"><div class="sh-t">Tracker de Gastos</div><div class="sh-m">Cargá cada gasto — ambos lo ven en tiempo real</div></div>')
+    M('<div class="sh"><div class="sh-t">Tracker de Gastos</div><div class="sh-m">Los alojamientos se sincronizan automáticamente · Agregá gastos adicionales aquí</div></div>')
     PRES=4350.0
     cats={"Alojamiento":0,"Transporte":0,"Entradas":0,"Comidas":0,"Otros":0}
     if not df_gas.empty and "monto" in df_gas.columns and "categoria" in df_gas.columns:
@@ -1118,24 +1161,28 @@ with tab_gas_t:
     c5.metric("🍽️ Comidas",f"€{cats['Comidas']:,.0f}")
     M(f'<div class="prog-o"><div class="prog-i" style="width:{pct}%"></div></div><div style="font-size:0.72rem;color:#6B7A8D;margin-top:3px">€{tg:,.0f} de €{PRES:,.0f} presupuestados ({pct}%)</div>')
     st.write("")
+    _al("<strong>ℹ️ Nota:</strong> Los alojamientos cargados en la pestaña Hoteles aparecen aquí automáticamente con prefijo <code>res_</code>. No hace falta duplicarlos.", "alb")
     with st.form("fg"):
         cd,cc2,cm=st.columns([3,2,1])
-        with cd: gd=st.text_input("Descripción",placeholder="ej. Airbnb Florencia 4 noches")
+        with cd: gd=st.text_input("Descripción",placeholder="ej. Trenes Trenitalia · Entradas Uffizi")
         with cc2: gc=st.selectbox("Categoría",["Alojamiento","Transporte","Entradas","Comidas","Otros"])
         with cm: gm=st.number_input("€",min_value=0.0,step=1.0)
-        if st.form_submit_button("➕ Agregar",use_container_width=True):
+        if st.form_submit_button("➕ Agregar gasto",use_container_width=True):
             if gd.strip() and gm>0:
                 if add_g(gd.strip(),gc,gm): st.success("Agregado ✓"); st.rerun()
             else: st.warning("Completá descripción y monto")
     if not df_gas.empty and "descripcion" in df_gas.columns:
-        st.write(""); st.markdown("**Historial**")
+        st.write(""); st.markdown("**Historial completo**")
         df_s=df_gas[["id","descripcion","categoria","monto","fecha"]].copy()
         df_s["monto"]=pd.to_numeric(df_s["monto"],errors="coerce").map("€{:,.0f}".format)
         st.dataframe(df_s.drop("id",axis=1),use_container_width=True,hide_index=True)
-        di=st.text_input("ID a eliminar",placeholder="ej. g0510143022")
+        di=st.text_input("ID a eliminar (solo gastos manuales — NO eliminar los res_XXX)",placeholder="ej. g0510143022")
         if st.button("🗑️ Eliminar") and di:
-            if del_g(di.strip()): st.success("Eliminado ✓"); st.rerun()
-    else: st.info("Aún no hay gastos. ¡Agregá el primero!")
+            if di.strip().startswith("res_"):
+                st.warning("⚠️ Los gastos de alojamiento (res_XXX) se gestionan desde la pestaña Hoteles.")
+            else:
+                if del_g(di.strip()): st.success("Eliminado ✓"); st.rerun()
+    else: st.info("Aún no hay gastos. ¡Cargá el primero desde Hoteles o aquí!")
 
 # ══ PRESUPUESTO ══════════════════════════════════════════════════════════════
 with tab_pres:
