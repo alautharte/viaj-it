@@ -1118,7 +1118,8 @@ with tab_aloj:
         ba_html = f'<a href="{r["url_a"]}" target="_blank" class="lb ba">🏠 Airbnb</a>' if r["url_a"] else ""
         
         # Mostrar monto actual si ya fue guardado
-        monto_actual = float(rd.get("monto", 0) or 0) if rd else 0
+        try: monto_actual = float(rd.get("monto", 0) or 0) if rd else 0
+        except: monto_actual = 0
         monto_html = f'<span style="font-size:0.78rem;font-weight:700;color:#1A6B32;background:rgba(107,122,62,0.1);padding:2px 10px;border-radius:20px;margin-left:6px">€{monto_actual:,.0f} pagado</span>' if monto_actual > 0 else ""
         
         M(f'<div class="rc ok"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span class="rtitle">🏨 {r["city"]} — {r["noches"]} noches</span><span class="{bl}">{ll}</span>{tipo_html}{monto_html}</div><div class="rmeta">📅 {r["fecha"]} · ~{r["precio"]}</div>{uh}<div style="margin-top:6px"><a href="{r["url_b"]}" target="_blank" class="lb bk">📅 Booking</a> {ba_html} <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
@@ -1129,7 +1130,9 @@ with tab_aloj:
             nu=st.text_input("🔗 URL de la reserva confirmada",value=us,key=f"ua_{r['id']}",placeholder="Ej: https://www.airbnb.com/trips/v1/XXXXXXX")
             c3,c4=st.columns(2)
             with c3: nc=st.text_input("N° confirmación",value=str(rd.get("confirmacion","") if rd else ""),key=f"ca_{r['id']}",placeholder="ej. HB-123456789")
-            with c4: nm=st.number_input("Monto total € (→ se suma a Gastos automáticamente)",value=float(rd.get("monto",0) or 0 if rd else 0),min_value=0.0,step=1.0,key=f"ma_{r['id']}")
+            try: _mv2 = float(rd.get("monto",0) or 0) if rd else 0.0
+            except: _mv2 = 0.0
+            with c4: nm=st.number_input("Monto total € (→ se suma a Gastos automáticamente)",value=_mv2,min_value=0.0,step=1.0,key=f"ma_{r['id']}")
             nn=st.text_area("Notas",value=str(rd.get("notas_int","") if rd else ""),key=f"na_{r['id']}",height=50,placeholder="Ej: Check-in 15hs · Pedir habitación alta...")
             if st.form_submit_button("💾 Guardar — tu pareja lo ve al instante",use_container_width=True):
                 if save_res(r["id"],ne,tipo,nu,nc,nm,nn):
