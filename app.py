@@ -273,8 +273,8 @@ def init_checklist():
             ("👗 Ropa","Ropa para iglesias (hombros y rodillas cubiertos)"),
             ("👗 Ropa","Zapatos cómodos con suela firme (para adoquines)"),
             ("👗 Ropa","Ropa de abrigo para Zurich (puede hacer frío en junio)"),
-            ("👗 Ropa","Traje de baño (Cinque Terre y Amalfi)"),
-            ("👗 Ropa","Ropa para senderismo (Sentiero degli Dei)"),
+            ("👗 Ropa","Traje de baño (Cinque Terre y Puglia/Polignano)"),
+            ("👗 Ropa","Ropa para senderismo (Cinque Terre y Polignano)"),
             ("🏥 Salud","Protector solar FPS 50+ (varias unidades)"),
             ("🏥 Salud","Medicamentos habituales con receta"),
             ("🏥 Salud","Antidiarreico / antiácido (cambio de dieta)"),
@@ -327,7 +327,7 @@ CIUDADES_CLIMA = {
     "Florencia":   {"lat":43.77,"lon":11.25,"fecha":"2026-05-30"},
     "Roma":        {"lat":41.90,"lon":12.49,"fecha":"2026-06-02"},
     "Nápoles":     {"lat":40.85,"lon":14.27,"fecha":"2026-06-06"},
-    "Amalfi":      {"lat":40.63,"lon":14.60,"fecha":"2026-06-07"},
+    "Bari":        {"lat":41.12,"lon":16.87,"fecha":"2026-06-07"},
     "Venecia":     {"lat":45.44,"lon":12.33,"fecha":"2026-06-09"},
     "Zurich":      {"lat":47.37,"lon":8.54, "fecha":"2026-06-11"},
 }
@@ -364,8 +364,9 @@ RUTA_MAPA = [
     {"city":"Roma",        "lat":41.9028,"lon":12.4964,"dias":"D9–12","emoji":"🏟️","color":"#6B7A3E"},
     {"city":"Nápoles",     "lat":40.8518,"lon":14.2681,"dias":"D13","emoji":"🍕","color":"#C4693A"},
     {"city":"Pompeya",     "lat":40.7497,"lon":14.4990,"dias":"D13 excursión","emoji":"🌋","color":"#8B3E1E"},
-    {"city":"Positano",    "lat":40.6278,"lon":14.4841,"dias":"D14–15","emoji":"🌅","color":"#6B7A3E"},
-    {"city":"Ravello",     "lat":40.6490,"lon":14.6130,"dias":"D15 excursión","emoji":"🌿","color":"#C9A84C"},
+    {"city":"Bari",        "lat":41.1171,"lon":16.8719,"dias":"D14–15","emoji":"🦔","color":"#6B7A3E"},
+    {"city":"Polignano a Mare","lat":40.9977,"lon":17.2173,"dias":"D14 excursión","emoji":"🏖️","color":"#C9A84C"},
+    {"city":"Alberobello", "lat":40.7855,"lon":17.2399,"dias":"D15 excursión","emoji":"🏠","color":"#C9A84C"},
     {"city":"Venecia",     "lat":45.4408,"lon":12.3155,"dias":"D16–17","emoji":"🚤","color":"#C4693A"},
     {"city":"Burano",      "lat":45.4847,"lon":12.4175,"dias":"D17 excursión","emoji":"🎨","color":"#C9A84C"},
     {"city":"Zurich",      "lat":47.3769,"lon":8.5417, "dias":"D18–20","emoji":"🇨🇭","color":"#3D4A5C"},
@@ -408,13 +409,12 @@ def _al(html, extra=""):
 
 # ── ITINERARIO COMPLETO ────────────────────────────────────────────────────────
 def render_milan():
-    _hotel("Hotel Ariston ★★★ (o similar zona Centrale/Navigli)",
-           "Central para metro · Desayuno incluido · Habitación doble<br>"
-           "Alternativa premium: Hotel Dei Cavalieri (~€110/noche, junto al Duomo)",
-           "~€70–90 / noche · 2 noches",
-           "https://www.booking.com/searchresults.es.html?ss=Milan&checkin=2026-05-25&checkout=2026-05-27&group_adults=2",
-           "https://www.airbnb.com/s/Milan--Italy/homes?checkin=2026-05-25&checkout=2026-05-27&adults=2",
-           "https://maps.google.com/?q=Hotel+Ariston+Milan")
+    _hotel("Departamento en Milán — StayEasy (Airbnb confirmado)",
+           "Corso Como, 9 · Milán · Check-in lun 25 mayo 15:00 · Check-out mié 27 mayo 11:00",
+           "Airbnb confirmado · 2 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Corso+Como+9+Milan+Italy")
 
     _card("Día 1","Lunes 25 mayo — Llegada y primer paseo","Milán",
         _ev("10:15",True,"Llegada MXP — Inmigración y aduana",
@@ -462,13 +462,12 @@ def render_milan():
 
 def render_cinque():
     _tcard("🚄","Milano → La Spezia Centrale","Intercity · ~3h · Salida 08:10 desde Milano Centrale","€25–35","https://www.trenitalia.com")
-    _hotel("Hotel Firenze ★★★ (La Spezia)",
-           "5 min a pie de la estación · Habitación doble · 2 noches<br>"
-           "Alternativa: alojarse directamente en Monterosso al Mare",
-           "~€70–80 / noche · 2 noches",
-           "https://www.booking.com/searchresults.es.html?ss=La+Spezia&checkin=2026-05-27&checkout=2026-05-29&group_adults=2",
-           "https://www.airbnb.com/s/La-Spezia--Italy/homes?checkin=2026-05-27&checkout=2026-05-29&adults=2",
-           "https://maps.google.com/?q=La+Spezia+train+station")
+    _hotel("Departamento en La Spezia — Jessica (Airbnb confirmado)",
+           "Via Napoli, 198 · La Spezia · Check-in mié 27 mayo · Check-out vie 29 mayo 10:00",
+           "Airbnb confirmado · 2 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy")
 
     _card("Día 3","Miércoles 27 mayo — Riomaggiore, Manarola, Corniglia","Cinque Terre",
         _ev("11:30",False,"Llegada La Spezia — Check-in + Cinque Terre Card",
@@ -499,13 +498,12 @@ def render_cinque():
 
 def render_florencia():
     _tcard("🚄","La Spezia → Firenze Santa Maria Novella","Intercity · ~2h · Salida 08:30 · Directo o cambio en Pisa","€15–20","https://www.trenitalia.com")
-    _hotel("Hotel Davanzati ★★★ (recomendado)",
-           "A 2 min del Duomo y Uffizi · Servicio excelente · Desayuno muy bueno<br>"
-           "Alternativa: B&B Machiavelli (zona Oltrarno, ~€75/noche)",
-           "~€95–110 / noche · 4 noches",
-           "https://www.booking.com/searchresults.es.html?ss=Florence&checkin=2026-05-29&checkout=2026-06-02&group_adults=2",
-           "https://www.airbnb.com/s/Florence--Italy/homes?checkin=2026-05-29&checkout=2026-06-02&adults=2",
-           "https://maps.google.com/?q=Hotel+Davanzati+Florence")
+    _hotel("Departamento en Florencia — Liana (Airbnb confirmado)",
+           "Via Nicola Tagliaferri, 5 · Florencia · Check-in vie 29 mayo 15:00 · Check-out mar 2 junio 11:00",
+           "Airbnb confirmado · 4 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy")
 
     _card("Día 5","Viernes 29 mayo — Pisa","Pisa / Florencia",
         _ev("08:30",True,"Tren Florencia → Pisa Centrale",
@@ -578,13 +576,12 @@ def render_florencia():
 
 def render_roma():
     _tcard("🚄","Firenze SMN → Roma Termini","Frecciarossa (Alta Velocidad) · 1h 30min · Sale cada 30 min · Reservar anticipado","€25–45","https://www.trenitalia.com")
-    _hotel("Hotel Arco del Lauro ★★★ (Trastevere)",
-           "Zona Trastevere — auténtica y central · B&B familiar · Muy buenas reseñas<br>"
-           "Alternativa: zona Prati (junto al Vaticano) o Hotel Santa Prassede (~€80)",
-           "~€80–95 / noche · 4 noches",
-           "https://www.booking.com/searchresults.es.html?ss=Rome&checkin=2026-06-02&checkout=2026-06-06&group_adults=2",
-           "https://www.airbnb.com/s/Rome--Italy/homes?checkin=2026-06-02&checkout=2026-06-06&adults=2",
-           "https://maps.google.com/?q=Trastevere+Rome")
+    _hotel("Departamento en Roma — Domenico (Airbnb confirmado)",
+           "Via Giovanni Aldini, 3 · Roma · Check-in mar 2 junio 15:00 · Check-out sáb 6 junio 11:00",
+           "Airbnb confirmado · 4 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy")
     _al("<strong>🎾 Padel Nuestro Roma:</strong> La tienda más completa de la ruta. Centro de Roma. Bullpadel, Siux, Babolat, Head, Star Vie. Permiten probar palas. Ver Día 11.")
 
     _card("Día 9","Martes 2 junio — Vaticano completo","Roma",
@@ -635,12 +632,12 @@ def render_roma():
 
 def render_napoles():
     _tcard("🚄","Roma Termini → Napoli Centrale","Frecciarossa · 1h10 · Sale cada 30 min desde las 06:00","€20–35","https://www.trenitalia.com")
-    _hotel("Hotel Piazza Bellini ★★★ (centro histórico UNESCO)",
-           "En el corazón de Spaccanapoli · 1 noche (6–7 junio)",
-           "~€75–90 / noche",
-           "https://www.booking.com/searchresults.es.html?ss=Naples&checkin=2026-06-06&checkout=2026-06-07&group_adults=2",
-           "https://www.airbnb.com/s/Naples--Italy/homes?checkin=2026-06-06&checkout=2026-06-07&adults=2",
-           "https://maps.google.com/?q=Piazza+Bellini+Naples")
+    _hotel("Departamento en Nápoles (Airbnb confirmado)",
+           "Via San Agostino alla Zecca, 4 · Nápoles · Check-in sáb 6 junio 14:00 · Check-out dom 7 junio 10:00",
+           "Airbnb confirmado · 1 noche",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy")
 
     _card("Día 13","Sábado 6 junio — Pompeya + Nápoles + Pizza","Nápoles",
         _ev("09:00",True,"Circumvesuviana → Pompeya Scavi",
@@ -657,53 +654,66 @@ def render_napoles():
             acts='<span class="tag tf">🍕 €5–8</span><a href="https://maps.google.com/?q=L+Antica+Pizzeria+da+Michele+Naples" target="_blank" class="lb bm">📍 Da Michele</a><a href="https://maps.google.com/?q=Pizzeria+Sorbillo+Naples" target="_blank" class="lb bm">📍 Sorbillo</a>'))
 
 
-def render_amalfi():
-    _al("<strong>💰 Tip de presupuesto:</strong> Alojarse en Praiano (entre Positano y Amalfi) mantiene el presupuesto de €85–100/noche con vista al mar. Positano mismo supera los €200 fácilmente. Con ferry desde Praiano se llega a Positano en 10 min.")
-    _tcard("⛵","Nápoles → Positano (ferry)","SNAV o Alilauro · Desde Molo Beverello · Salidas 08:30 y 09:30 · Solo mayo–oct","~€20/persona","https://www.alilauro.it")
-    _hotel("Albergo California (Praiano) ★★★",
-           "Vista al mar · Desayuno incluido · 10 min de Positano en ferry · 2 noches (7–9 junio)",
-           "~€85–100 / noche",
-           "https://www.booking.com/searchresults.es.html?ss=Praiano&checkin=2026-06-07&checkout=2026-06-09&group_adults=2",
-           "https://www.airbnb.com/s/Praiano--Italy/homes?checkin=2026-06-07&checkout=2026-06-09&adults=2",
-           "https://maps.google.com/?q=Praiano+Amalfi+Coast")
+def render_bari():
+    _tcard("🚄","Nápoles Centrale → Bari Centrale","Intercity · ~3h · Salida 10:30 · Check-out Nápoles 10:00, a la estación tranquilos","€25–40","https://www.trenitalia.com")
+    _hotel("Departamento en Bari (Airbnb confirmado)",
+           "Via Melo da Bari, 163 · Bari · Check-in dom 7 junio 15:00 · Check-out mar 9 junio 10:00",
+           "€190 · 2 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy")
+    _al("<strong>💡 Bari Vecchia:</strong> El casco histórico de Bari es uno de los más auténticos del sur de Italia. Señoras haciendo orecchiette a mano en la calle es la escena más típica — buscarlas en la mañana en Via dell'Arco Basso.")
+    _al("<strong>🏖️ Mejor playa cercana:</strong> Polignano a Mare (39km · tren 25 min) — la cala Lama Monachile rodeada de acantilados con agua turquesa es la imagen icónica de Puglia. Para arena fina y más tranquilidad: Monopoli (30 min en tren).", "alg")
 
-    _card("Día 14","Domingo 7 junio — Positano + Amalfi","Costa Amalfi",
-        _ev("10:30",True,"Positano — las casas en cascada",
-            "El pueblo más fotogénico de la Costa. Playa Grande con guijarros, reposeras ~€20 el par. Agua del Tirreno ~22°C.",
-            acts='<a href="https://maps.google.com/?q=Positano+Amalfi+Coast" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo con vista en Positano",
-            "Muy caro en Positano. Buscar La Zagara o Il Ritrovo (más económico). Probar: scialatielli ai frutti di mare.",
-            acts='<span class="tag tf">🦐 Mariscos</span>') +
-        _ev("15:00",True,"Bus SITA → Amalfi ciudad",
-            "El bus azul recorre toda la costa. €2.50 el tramo. 40 min por la carretera más espectacular de Italia.",
-            tip="Comprar ticket en tabacchi ANTES de subir. Sentarse del lado DERECHO mirando al mar.",
-            acts='<span class="tag tbu">🚌 €2.50</span><a href="https://maps.google.com/?q=Amalfi+Cathedral" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("19:30",False,"Cena con vista al mar",
-            "El atardecer sobre el Tirreno desde la Costa Amalfi es uno de los espectáculos más bellos de Italia.",
-            acts='<span class="tag tf">🌅 Scialatielli ai frutti</span>'))
+    _card("Día 14","Domingo 7 junio — Llegada y Bari Vecchia","Bari",
+        _ev("13:30",False,"Llegada Bari Centrale — check-in y almuerzo",
+            "Dejar maletas en el alojamiento. Almuerzo en Bari Vecchia. Probar: orecchiette al ragù, focaccia barese (la mejor de Italia).",
+            acts='<span class="tag tf">🍝 Orecchiette</span><a href="https://maps.google.com/?q=Bari+Centrale+Station" target="_blank" class="lb bm">📍 Estación</a>') +
+        _ev("15:30",True,"Bari Vecchia — el laberinto medieval",
+            "El casco histórico de Bari es un laberinto de callejones blancos entre el mar Adriático y la ciudad moderna. Es intencionalmente confuso — fue diseñado así para dificultar las invasiones. Perderse es el plan.",
+            acts='<a href="https://maps.google.com/?q=Bari+Vecchia+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("16:30",True,"Basílica di San Nicola",
+            "Una de las basílicas románicas más importantes de Italia (siglo XI). San Nicola — el Papá Noel histórico — está enterrado aquí. La cripta es especialmente impresionante.",
+            acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=Basilica+di+San+Nicola+Bari" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",False,"Lungomare Imperatore Augusto — paseo al atardecer",
+            "El paseo marítimo más largo del sur de Italia. Aperitivo con vista al Adriático. El atardecer desde el muelle es espectacular.",
+            acts='<span class="tag tw">🌅 Paseo</span><a href="https://maps.google.com/?q=Lungomare+Bari" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:30",False,"Cena — tiroteo di frutti di mare + vino primitivo",
+            "Bari es la capital del marisco de Puglia. Pedir: crudo di mare (mariscos crudos), polpo alla pignata (pulpo). Vino Primitivo di Manduria es el tinto de la región.",
+            acts='<span class="tag tf">🦐 Frutti di mare</span>'))
 
-    _card("Día 15","Lunes 8 junio — Ravello + Sentiero degli Dei","Costa Amalfi",
-        _ev("08:00",True,"Ravello — Villa Cimbrone + Terrazza dell'Infinito",
-            "Ravello a 350m sobre el mar. La Terraza del Infinito — Wagner llamó a esta vista 'el balcón más bello del mundo'.",
-            acts='<span class="tag tm">🌿 €7</span><a href="https://maps.google.com/?q=Villa+Cimbrone+Ravello" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:00",True,"Sentiero degli Dei — Camino de los Dioses (7.8km · 3h)",
-            "El sendero más famoso de la Costa Amalfi. Sale desde Bomerano y baja hasta Positano. Vista de toda la costa desde 600m de altura.",
-            tip="El trayecto baja (no sube), así que el cansancio es manejable. Es el mejor día del viaje para muchos viajeros.",
-            acts='<span class="tag tw">🥾 Trekking</span><a href="https://maps.google.com/?q=Sentiero+degli+Dei+Amalfi+Coast" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("15:00",False,"Llegada Positano + playa merecida",
-            "Después del sendero: baño en el mar. Tarde libre. Mañana: ferry + tren largo a Venecia — preparar maletas.",
-            acts='<span class="tag tw">🏖️ Playa</span>'))
+    _card("Día 15","Lunes 8 junio — Polignano a Mare + playa","Puglia",
+        _ev("09:00",True,"Tren Bari → Polignano a Mare",
+            "Tren regional · 25 min · Sale frecuentemente desde Bari Centrale. En Polignano la estación está a 10 min a pie del casco histórico.",
+            acts='<span class="tag tr2">🚄 25 min · ~€3</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
+        _ev("10:00",True,"★ Lama Monachile — la cala icónica de Puglia",
+            "La pequeña cala de guijarros rodeada de acantilados de caliza blanca con agua turquesa es la foto más famosa de la región. El pueblo cuelga literalmente sobre los acantilados. Bajar temprano para conseguir lugar.",
+            tip="La cala se llena rápido en verano. Llegar antes de las 10:30. El agua es cristalina y poco profunda — ideal para snorkel.",
+            acts='<span class="tag tw">🏖️ Playa</span><a href="https://maps.google.com/?q=Lama+Monachile+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("12:30",False,"Casco histórico de Polignano — almuerzo con vista",
+            "Polignano a Mare es el pueblo natal de Domenico Modugno (autor de 'Volare'). Su estatua en la Piazza Vittorio Emanuele II. Almuerzo con vista al mar en uno de los restaurantes sobre los acantilados.",
+            acts='<span class="tag tf">🍽️ Vista al mar</span><a href="https://maps.google.com/?q=Polignano+a+Mare+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("14:30",False,"Cala Paura + calas secundarias",
+            "A 5 min a pie de Lama Monachile hay otras calas menos masificadas: Cala Paura y Porto Cavallo. Rocas perfectas para tomar sol y zambullidas.",
+            acts='<span class="tag tw">🤿 Snorkel</span><a href="https://maps.google.com/?q=Cala+Paura+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:00",True,"★ Alberobello — los Trulli UNESCO (excursión tarde)",
+            "Desde Polignano: tren a Bari (25 min) + FSE a Alberobello (~1h30). O alternativamente visitar el día anterior desde Bari directamente. Los Trulli — casas de piedra con techos cónicos del siglo XIV, Patrimonio UNESCO — son únicos en el mundo. Más de 1.500 en el barrio Rione Monti.",
+            tip="Ir a última hora de la tarde para menos turistas y mejor luz fotográfica. El barrio Aia Piccola es más tranquilo que Rione Monti.",
+            acts='<span class="tag tm">🏠 Trulli UNESCO</span><a href="https://maps.google.com/?q=Alberobello+Trulli+Puglia" target="_blank" class="lb bm">📍 Maps</a><a href="https://www.omio.es/trenes/bari/alberobello" target="_blank" class="lb btr">Trenes FSE</a>') +
+        _ev("21:00",False,"Regreso a Bari — última noche en Puglia",
+            "Mañana temprano: Frecciarossa Bari → Venezia Santa Lucia. Check-out 10:00. Preparar maletas esta noche.",
+            acts='<span class="tag tsl">🧳 Preparar maletas</span>'))
 
 
 def render_venecia():
-    _tcard("🚄","Nápoles → Venezia Santa Lucia","Frecciarossa directo · 4h50 · Salida 07:30–08:00","€35–60","https://www.trenitalia.com")
-    _al("<strong>Nota Venecia:</strong> Desde junio 2024, Venecia cobra €5 de 'tasa de acceso' en días pico. Verificar en comune.venezia.it. Airbnb muy regulado — hotel es la mejor opción.")
-    _hotel("Hotel Dalla Mora ★★★ (Santa Croce)",
-           "Zona auténtica · 10 min a pie de la estación · Venecia real, NO en Mestre (tierra firme)<br>"
-           "Alternativa: B&B en Cannaregio · 2 noches (9–11 junio)",
-           "~€90–110 / noche · 2 noches",
-           "https://www.booking.com/searchresults.es.html?ss=Venice&checkin=2026-06-09&checkout=2026-06-11&group_adults=2&nflt=di%3D1376",
-           "", "https://maps.google.com/?q=Hotel+Dalla+Mora+Venice")
+    _tcard("🚄","Bari Centrale → Venezia Santa Lucia","Frecciarossa · ~7h · Salida ~08:00 desde Bari · Llega ~15:00 justo para check-in","€35–65","https://www.trenitalia.com")
+    _al("<strong>Nota Venecia:</strong> Desde junio 2024, Venecia cobra €5 de 'tasa de acceso' en días pico. Verificar en comune.venezia.it. Airbnb muy regulado — con reserva propia sin problema.")
+    _hotel("Departamento en Venecia — Matteo (Airbnb confirmado)",
+           "Calle Lionpardo, 1954B · Venecia · Check-in mar 9 junio 15:00 · Check-out jue 11 junio 10:00",
+           "Airbnb confirmado · 2 noches",
+           "",
+           "https://www.airbnb.com/trips",
+           "https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy")
 
     _card("Día 16","Martes 9 junio — Venecia clásica","Venecia",
         _ev("13:00",True,"Gran Canal en Vaporetto línea 1 (la lenta)",
@@ -748,9 +758,9 @@ def render_venecia():
 def render_zurich():
     _tcard("🚄","Venezia S. Lucia → Zurich HB (a través de los Alpes)","EuroCity directo · 4h45 · Paisaje alpino impresionante · Sentarse del lado DERECHO mirando norte","€40–60","https://www.sbb.ch")
     _al("⚠️ <strong>Vuelo el 14/6 a las 08:55:</strong> Estar en ZRH a las 07:00. Tren Zurich HB → aeropuerto: 10 min, sale cada 10 min. El día 13 preparar todo y dormir temprano.")
-    _hotel("Hotel Otter ★★ (Langstrasse) o IBIS City West",
-           "Zona cool y multicultural · A pie del casco histórico · 3 noches (11–14 junio)<br>"
-           "Alternativa con vista: Hotel Limmatblick (~€120, sobre el río Limmat)",
+    _hotel("Hotel Zurich — por confirmar",
+           "Zona Langstrasse o Altstadt · 3 noches (11–14 junio)<br>"
+           "Opción: Hotel Otter ★★ (Langstrasse) o IBIS City West · Alternativa con vista: Hotel Limmatblick (~€120, sobre el río Limmat)",
            "~€90–110 / noche · 3 noches",
            "https://www.booking.com/searchresults.es.html?ss=Zurich&checkin=2026-06-11&checkout=2026-06-14&group_adults=2",
            "", "https://maps.google.com/?q=Langstrasse+Zurich")
@@ -799,7 +809,7 @@ CIUDAD_FN = {
     "🌸 Florencia":     render_florencia,
     "🏟️ Roma":          render_roma,
     "🍕 Nápoles":       render_napoles,
-    "🌅 Costa Amalfi":  render_amalfi,
+    "🦔 Bari":          render_bari,
     "🚤 Venecia":       render_venecia,
     "🇨🇭 Zurich":       render_zurich,
 }
@@ -830,28 +840,28 @@ RESERVAS_MUSEOS = [
 ]
 
 RESERVAS_ALOJ = [
-    {"id":"a01","city":"Milán","fecha":"25–27 mayo","noches":2,"precio":"€70–90/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Milan&checkin=2026-05-25&checkout=2026-05-27&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/Milan--Italy/homes?checkin=2026-05-25&checkout=2026-05-27&adults=2","maps":"https://maps.google.com/?q=Milan+Italy"},
-    {"id":"a02","city":"La Spezia","fecha":"27–29 mayo","noches":2,"precio":"€70–80/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=La+Spezia&checkin=2026-05-27&checkout=2026-05-29&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/La-Spezia--Italy/homes?checkin=2026-05-27&checkout=2026-05-29&adults=2","maps":"https://maps.google.com/?q=La+Spezia+Italy"},
-    {"id":"a03","city":"Florencia","fecha":"29 mayo–2 junio","noches":4,"precio":"€95–110/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Florence&checkin=2026-05-29&checkout=2026-06-02&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/Florence--Italy/homes?checkin=2026-05-29&checkout=2026-06-02&adults=2","maps":"https://maps.google.com/?q=Florence+Italy"},
-    {"id":"a04","city":"Roma","fecha":"2–6 junio","noches":4,"precio":"€80–95/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Rome&checkin=2026-06-02&checkout=2026-06-06&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/Rome--Italy/homes?checkin=2026-06-02&checkout=2026-06-06&adults=2","maps":"https://maps.google.com/?q=Trastevere+Rome"},
-    {"id":"a05","city":"Nápoles","fecha":"6–7 junio","noches":1,"precio":"€75–90/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Naples&checkin=2026-06-06&checkout=2026-06-07&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/Naples--Italy/homes?checkin=2026-06-06&checkout=2026-06-07&adults=2","maps":"https://maps.google.com/?q=Naples+Italy"},
-    {"id":"a06","city":"Praiano / Costa Amalfi","fecha":"7–9 junio","noches":2,"precio":"€85–100/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Praiano&checkin=2026-06-07&checkout=2026-06-09&group_adults=2",
-     "url_a":"https://www.airbnb.com/s/Praiano--Italy/homes?checkin=2026-06-07&checkout=2026-06-09&adults=2","maps":"https://maps.google.com/?q=Praiano+Italy"},
-    {"id":"a07","city":"Venecia","fecha":"9–11 junio","noches":2,"precio":"€90–110/noche",
-     "url_b":"https://www.booking.com/searchresults.es.html?ss=Venice&checkin=2026-06-09&checkout=2026-06-11&group_adults=2",
-     "url_a":"","maps":"https://maps.google.com/?q=Venice+Italy"},
-    {"id":"a08","city":"Zurich","fecha":"11–14 junio","noches":3,"precio":"€90–110/noche",
+    {"id":"a01","city":"Milán","fecha":"25–27 mayo","noches":2,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Corso+Como+9+Milan+Italy"},
+    {"id":"a02","city":"La Spezia","fecha":"27–29 mayo","noches":2,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy"},
+    {"id":"a03","city":"Florencia","fecha":"29 mayo–2 junio","noches":4,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy"},
+    {"id":"a04","city":"Roma","fecha":"2–6 junio","noches":4,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy"},
+    {"id":"a05","city":"Nápoles","fecha":"6–7 junio","noches":1,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy"},
+    {"id":"a06","city":"Bari","fecha":"7–9 junio","noches":2,"precio":"€190 total",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy"},
+    {"id":"a07","city":"Venecia","fecha":"9–11 junio","noches":2,"precio":"Airbnb confirmado",
+     "url_b":"","url_a":"https://www.airbnb.com/trips",
+     "maps":"https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy"},
+    {"id":"a08","city":"Zurich","fecha":"11–14 junio","noches":3,"precio":"~€90–110/noche",
      "url_b":"https://www.booking.com/searchresults.es.html?ss=Zurich&checkin=2026-06-11&checkout=2026-06-14&group_adults=2",
      "url_a":"","maps":"https://maps.google.com/?q=Zurich+Switzerland"},
 ]
@@ -866,9 +876,10 @@ TRANSPORTES = [
     ("🚄","Firenze → Roma Termini","Frecciarossa · 1h30 · cada 30 min","€25–45","https://www.trenitalia.com"),
     ("🚄","Roma → Napoli Centrale","Frecciarossa · 1h10 · desde las 06:00","€20–35","https://www.trenitalia.com"),
     ("🚂","Napoli → Pompei Scavi","Circumvesuviana · 40 min · andén subterráneo -1","€3/p","https://www.eavsrl.it"),
-    ("⛵","Napoli → Positano (ferry)","SNAV/Alilauro · Molo Beverello · 65 min · solo mayo–oct","€20/p","https://www.alilauro.it"),
-    ("🚌","Bus SITA Costa Amalfi","Positano ↔ Amalfi ↔ Ravello · ticket en tabacchi","€2.50/tramo","https://www.sitasudtrasporti.it"),
-    ("🚄","Napoli → Venezia S. Lucia","Frecciarossa directo · 4h50 · salida 07:30","€35–60","https://www.trenitalia.com"),
+    ("🚄","Napoli Centrale → Bari Centrale","Intercity · ~3h · Salida 10:30 · Llegada ~13:30","€25–40","https://www.trenitalia.com"),
+    ("🚄","Bari ↔ Polignano a Mare","Regional · 25 min · Frecuente · ~€3","€3/p","https://www.trenitalia.com"),
+    ("🚌","Bari → Alberobello (FSE)","Ferrovie del Sud Est · ~1h30 · Sale desde Bari Centrale sur","€5/p","https://www.fseonline.it"),
+    ("🚄","Bari Centrale → Venezia S. Lucia","Frecciarossa · ~7h · Salida ~08:00 · Llega ~15:00","€35–65","https://www.trenitalia.com"),
     ("🚤","Vaporetto Venecia 24h / 48h","24h=€25 · 48h=€35 · Línea 1 = Gran Canal completo","€25–35","https://actv.avmspa.it"),
     ("⛴️","Vaporetto Venecia → Murano → Burano","Línea 12 desde Fondamente Nove · 40 min a Burano","Incluido en pase","https://actv.avmspa.it"),
     ("🚄","Venezia → Zurich HB (Alpes)","EuroCity directo · 4h45 · lado derecho del tren","€40–60","https://www.sbb.ch"),
@@ -882,7 +893,7 @@ TIPS = [
     ("💳","Revolut / Wise","Sin comisiones. En Suiza cambiar a CHF. 1 CHF ≈ €1.05."),
     ("👟","Zapatos (fundamental)","10–15 km/día en adoquines. Suela firme. Zapatillas de running funcionan."),
     ("🕌","Ropa para iglesias","Hombros y rodillas cubiertos. Bufanda liviana para los dos."),
-    ("🚌","Bus SITA Amalfi","Ticket en tabacchi ANTES de subir. Lado DERECHO mirando al mar."),
+    ("🚌","FSE Bari → Alberobello","Comprar ticket en la boletería de Bari Centrale sur (Ferrovie del Sud Est). No confundir con Trenitalia — son andenes separados. ~€5 por tramo."),
     ("🍦","Gelato auténtico","Colores apagados, tapado con espátula = artesanal. Fluo = industrial."),
     ("📱","Apps esenciales","Trenitalia · Italo · Maps.me offline · TheFork · SBB · Revolut."),
     ("🎾","Pádel Nuestro Roma","Día 11 tarde. Bullpadel, Siux, Babolat, Head. Pista interior."),
@@ -1020,7 +1031,7 @@ with tab_itin:
 
 # ══ MAPA ═════════════════════════════════════════════════════════════════════
 with tab_mapa:
-    M('<div class="sh"><div class="sh-t">🌍 Ruta completa — La U</div><div class="sh-m">Milán → Cinque Terre → Florencia/Pisa → Roma → Nápoles → Amalfi → Venecia → Zurich</div></div>')
+    M('<div class="sh"><div class="sh-t">🌍 Ruta completa — La U</div><div class="sh-m">Milán → Cinque Terre → Florencia/Pisa → Roma → Nápoles → Bari → Venecia → Zurich</div></div>')
     m = folium.Map(location=[44.5, 11.5], zoom_start=5, tiles="CartoDB positron")
     coords = [(c["lat"], c["lon"]) for c in RUTA_MAPA]
     folium.PolyLine(coords, color="#C4693A", weight=3, opacity=0.7, dash_array="8 4").add_to(m)
@@ -1203,7 +1214,7 @@ with tab_pres:
     PRES_FILAS=[
         ("Milán","2","€80","€160"),("La Spezia","2","€75","€150"),
         ("Florencia","4","€100","€400"),("Roma","4","€88","€350"),
-        ("Nápoles","1","€80","€80"),("Costa Amalfi","2","€92","€185"),
+        ("Nápoles","1","€80","€80"),("Bari","2","€95","€190"),
         ("Venecia","2","€100","€200"),("Zurich","3","€100","€300"),
         ("TOTAL","20","~€91","~€1.825"),
     ]
