@@ -179,7 +179,7 @@ ALOJ_DESC_MAP = {
     "a03": "Alojamiento Florencia",
     "a04": "Alojamiento Roma",
     "a05": "Alojamiento Nápoles",
-    "a06": "Alojamiento Costa Amalfi",
+    "a06": "Alojamiento Bari",
     "a07": "Alojamiento Venecia",
     "a08": "Alojamiento Zurich",
 }
