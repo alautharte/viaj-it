@@ -23,27 +23,21 @@ html,body,[class*="css"]{font-family:'DM Sans',sans-serif!important;}
 .stTabs [aria-selected="true"] p{color:var(--td)!important;}
 .stTabs [data-baseweb="tab-highlight"],.stTabs [data-baseweb="tab-border"]{display:none!important;}
 div[data-testid="stRadio"]>div{flex-direction:row!important;flex-wrap:wrap!important;gap:6px!important;background:var(--w)!important;padding:10px!important;border-radius:12px!important;border:1px solid var(--pa)!important;}
-div[data-testid="stRadio"]>div>label{background:var(--pa)!important;padding:6px 12px!important;border-radius:20px!important;border:1.5px solid transparent!important;}
+div[data-testid="stRadio"]>div>label{background:var(--pa)!important;padding:6px 12px!important;border-radius:20px!important;}
 div[data-testid="stRadio"]>div>label p{color:var(--ink)!important;font-weight:600!important;font-size:0.8rem!important;margin:0!important;}
 div[data-testid="stRadio"]>div>label[data-checked="true"]{background:var(--te)!important;}
 div[data-testid="stRadio"]>div>label[data-checked="true"] p{color:var(--w)!important;}
 div[data-testid="stRadio"] div[role="radiogroup"] label>div:first-child{display:none!important;}
-.stTextInput>div>div>input,.stTextArea>div>div>textarea,.stNumberInput>div>div>input{background:#ffffff!important;color:#1A1A2E!important;border:1px solid #EDE7DC!important;border-radius:8px!important;font-family:'DM Sans',sans-serif!important;}
-[data-testid="stNumberInput"] input,[data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:#ffffff!important;color:#1A1A2E!important;}
-[data-baseweb="base-input"]{background:#ffffff!important;}
-[data-baseweb="base-input"] input,[data-baseweb="base-input"] textarea{background:#ffffff!important;color:#1A1A2E!important;}
-input[type="number"],input[type="text"],textarea{background:#ffffff!important;color:#1A1A2E!important;}
-.stTextInput label,.stTextArea label,.stSelectbox label,.stNumberInput label{color:#3D4A5C!important;font-size:0.82rem!important;font-weight:500!important;}
-.stSelectbox>div>div,[data-baseweb="select"],[data-baseweb="select"] *{background:#ffffff!important;color:#1A1A2E!important;}
+.stTextInput>div>div>input,.stTextArea>div>div>textarea,.stNumberInput>div>div>input{background:#fff!important;color:#1A1A2E!important;border:1px solid #EDE7DC!important;border-radius:8px!important;}
+[data-baseweb="base-input"]{background:#fff!important;}
+[data-baseweb="base-input"] input,[data-baseweb="base-input"] textarea{background:#fff!important;color:#1A1A2E!important;}
+.stSelectbox>div>div,[data-baseweb="select"],[data-baseweb="select"] *{background:#fff!important;color:#1A1A2E!important;}
 .stButton>button{background:var(--te)!important;color:var(--w)!important;border:none!important;border-radius:8px!important;font-weight:600!important;}
 .stButton>button:hover{background:var(--td)!important;}
 [data-testid="stMetric"]{background:var(--w);border:1px solid var(--pa);border-radius:10px;padding:0.75rem!important;}
 [data-testid="stMetricLabel"] p{color:var(--sl)!important;font-size:0.75rem!important;}
 [data-testid="stMetricValue"]{color:var(--td)!important;}
-[data-testid="stMetricDelta"]{color:var(--ol)!important;}
 [data-testid="stExpander"]{border:1px solid var(--pa)!important;border-radius:10px!important;background:var(--w)!important;}
-[data-testid="stExpander"] summary p{color:var(--ink)!important;font-weight:600!important;}
-@media(max-width:640px){[data-testid="block-container"]{padding:0.5rem!important;}}
 .hero{background:linear-gradient(135deg,#3D4A5C 0%,#1A1A2E 100%);border-radius:14px 14px 0 0;padding:1.75rem 1.25rem 1.5rem;text-align:center;}
 .htitle{font-family:'Playfair Display',serif!important;font-size:2.2rem!important;color:#F7F3EE!important;margin-bottom:4px;line-height:1.1;}
 .htitle em{color:#E8C96A!important;font-style:italic;}
@@ -59,7 +53,7 @@ input[type="number"],input[type="text"],textarea{background:#ffffff!important;co
 .sl2{font-size:0.62rem!important;color:rgba(247,243,238,0.7)!important;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-top:2px;}
 .sh{border-bottom:2px solid var(--pa);padding-bottom:0.6rem;margin-bottom:1rem;}
 .sh-t{font-family:'Playfair Display',serif!important;font-size:1.5rem!important;color:var(--td)!important;}
-.sh-m{font-size:0.82rem!important;color:var(--sl)!important;margin-top:1px;}
+.sh-m{font-size:0.82rem!important;color:var(--sl)!important;}
 .sok{background:#D4EDDA;color:#1A6B32!important;padding:3px 12px;border-radius:20px;font-size:0.72rem;font-weight:600;display:inline-block;margin-bottom:0.75rem;}
 .serr{background:#F8D7DA;color:#721C24!important;padding:3px 12px;border-radius:20px;font-size:0.72rem;font-weight:600;display:inline-block;margin-bottom:0.75rem;}
 .dc{background:var(--w);border-radius:12px;border:1px solid var(--pa);margin-bottom:0.75rem;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05);}
@@ -85,6 +79,7 @@ input[type="number"],input[type="text"],textarea{background:#ffffff!important;co
 .ts{background:#FFF0E0;color:#8B5010!important;}.tb{background:#E0F4EF;color:#0F6E56!important;}
 .tsl{background:#EEF0FD;color:#4A50B0!important;}.tbu{background:#FEF3E2;color:#8B5E10!important;}
 .tpa{background:#E8F5E8;color:#2A6B2A!important;}.tkt{background:#FCEBEB;color:#A32D2D!important;}
+.tgr{background:#D4EDDA;color:#1A6B32!important;}
 a.lb{display:inline-block;font-size:0.7rem;padding:3px 9px;border-radius:6px;border:1.5px solid;text-decoration:none!important;font-weight:600;background:var(--w);}
 a.bm{border-color:#4285F4;color:#4285F4!important;}a.bk{border-color:#003580;color:#003580!important;}
 a.ba{border-color:#FF5A5F;color:#FF5A5F!important;}a.bt{border-color:var(--ol);color:var(--ol)!important;}
@@ -104,8 +99,7 @@ a.btr{border-color:#B8000A;color:#B8000A!important;}
 .alb{background:#EBF4FF;border-color:#90C4F9;color:#1A4A8A!important;}
 .alb strong{color:#1A4A8A!important;}
 .rc{background:var(--w);border:1px solid var(--pa);border-left:4px solid;border-radius:0 10px 10px 0;padding:0.85rem 1rem;margin-bottom:0.4rem;}
-.rc.urg{border-left-color:var(--te);}.rc.ok{border-left-color:var(--ol);}
-.rc.done{border-left-color:#1A6B32;background:#F8FFF8;}
+.rc.urg{border-left-color:var(--te);}.rc.ok{border-left-color:var(--ol);}.rc.done{border-left-color:#1A6B32;background:#F8FFF8;}
 .rtitle{font-size:0.88rem!important;font-weight:700;color:var(--ink)!important;}
 .rmeta{font-size:0.74rem!important;color:var(--sl)!important;margin:2px 0 5px;}
 .bp{background:#FEF3CD;color:#8B6914!important;padding:2px 8px;border-radius:20px;font-size:0.68rem;font-weight:700;}
@@ -131,7 +125,6 @@ a.btr{border-color:#B8000A;color:#B8000A!important;}
 .clima-city{font-size:0.78rem!important;color:var(--sl)!important;margin-top:2px;}
 .clima-desc{font-size:0.75rem!important;color:var(--ink)!important;margin-top:4px;}
 </style>""", unsafe_allow_html=True)
-
 # ── SHEETS ─────────────────────────────────────────────────────────────────────
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive"]
 
@@ -159,84 +152,56 @@ def ensure_sheets():
 def load_r():
     try: return pd.DataFrame(get_wb().worksheet("viaje_reservas").get_all_records())
     except: return pd.DataFrame()
+
 @st.cache_data(ttl=20)
 def load_g():
     try: return pd.DataFrame(get_wb().worksheet("viaje_gastos").get_all_records())
     except: return pd.DataFrame()
+
 @st.cache_data(ttl=20)
 def load_n():
     try: return pd.DataFrame(get_wb().worksheet("viaje_notas").get_all_records())
     except: return pd.DataFrame()
+
 @st.cache_data(ttl=60)
 def load_chk():
     try: return pd.DataFrame(get_wb().worksheet("viaje_checklist").get_all_records())
     except: return pd.DataFrame()
 
-# Mapa de descripciones para sincronización automática de alojamientos → gastos
 ALOJ_DESC_MAP = {
-    "a01": "Alojamiento Milán",
-    "a02": "Alojamiento La Spezia",
-    "a03": "Alojamiento Florencia",
-    "a04": "Alojamiento Roma",
-    "a05": "Alojamiento Nápoles",
-    "a06": "Alojamiento Bari",
-    "a07": "Alojamiento Venecia",
-    "a08": "Alojamiento Zurich",
+    "a01":"Alojamiento Milán","a02":"Alojamiento La Spezia","a03":"Alojamiento Florencia",
+    "a04":"Alojamiento Roma","a05":"Alojamiento Nápoles","a06":"Alojamiento Bari",
+    "a07":"Alojamiento Venecia","a08":"Alojamiento Zurich",
 }
 
 def save_res(rid, estado, tipo, url, conf, monto, notas):
-    """
-    Guarda una reserva en viaje_reservas.
-    Si el rid es de alojamiento (a01–a08) y tiene monto > 0,
-    sincroniza automáticamente en viaje_gastos con id 'res_{rid}'.
-    """
     try:
         ws = ensure_sheets()["viaje_reservas"]
         recs = ws.get_all_records()
         now = datetime.now().strftime("%Y-%m-%d %H:%M")
         row = [rid, estado, tipo, url, conf, monto, notas, now]
-
-        # Actualizar o insertar en viaje_reservas
         found = False
         for i, r in enumerate(recs, start=2):
             if r.get("id") == rid:
-                ws.update(f"A{i}:H{i}", [row])
-                found = True
-                break
-        if not found:
-            ws.append_row(row)
-
-        # ── Sincronización automática con viaje_gastos ──────────────────────
+                ws.update(f"A{i}:H{i}", [row]); found = True; break
+        if not found: ws.append_row(row)
         if rid in ALOJ_DESC_MAP:
             ws_g = ensure_sheets()["viaje_gastos"]
             recs_g = ws_g.get_all_records()
-            gid = f"res_{rid}"
-            desc = ALOJ_DESC_MAP[rid]
+            gid = f"res_{rid}"; desc = ALOJ_DESC_MAP[rid]
             monto_float = float(monto) if monto else 0.0
-            fecha_corta = now[:5]  # dd/mm
-
+            fecha_corta = now[:5]
             if monto_float > 0:
-                # Actualizar si ya existe, insertar si no
                 updated = False
                 for i, r in enumerate(recs_g, start=2):
                     if str(r.get("id")) == gid:
-                        ws_g.update(f"A{i}:E{i}", [[gid, desc, "Alojamiento", monto_float, fecha_corta]])
-                        updated = True
-                        break
-                if not updated:
-                    ws_g.append_row([gid, desc, "Alojamiento", monto_float, fecha_corta])
+                        ws_g.update(f"A{i}:E{i}", [[gid,desc,"Alojamiento",monto_float,fecha_corta]]); updated = True; break
+                if not updated: ws_g.append_row([gid,desc,"Alojamiento",monto_float,fecha_corta])
             else:
-                # Si el monto es 0, eliminar la fila de gastos si existía
                 for i, r in enumerate(recs_g, start=2):
-                    if str(r.get("id")) == gid:
-                        ws_g.delete_rows(i)
-                        break
-
-        st.cache_data.clear()
-        return True
-    except Exception as e:
-        st.error(f"Error: {e}")
-        return False
+                    if str(r.get("id")) == gid: ws_g.delete_rows(i); break
+        st.cache_data.clear(); return True
+    except Exception as e: st.error(f"Error: {e}"); return False
 
 def toggle_check(cid, current_done):
     try:
@@ -257,37 +222,38 @@ def init_checklist():
             ("📄 Documentos","Pasaportes vigentes (vence después de dic 2026)"),
             ("📄 Documentos","Fotocopias de pasaportes (guardar separado del original)"),
             ("📄 Documentos","Seguro de viaje contratado"),
-            ("📄 Documentos","Reservas impresas / guardadas offline"),
+            ("📄 Documentos","Reservas impresas / guardadas offline en el teléfono"),
             ("📄 Documentos","Tarjetas bancarias notificadas para uso internacional"),
-            ("📄 Documentos","Contactos de emergencia anotados"),
-            ("💳 Dinero","Euros en efectivo para el primer día"),
-            ("💳 Dinero","Francos suizos (CHF) para Zurich"),
-            ("💳 Dinero","Revolut o Wise configurada"),
-            ("🔌 Tecnología","Adaptador de enchufes para Suiza (tipo J — diferente a Italia)"),
+            ("💳 Dinero","Euros en efectivo para el primer día (MXP → Milán)"),
+            ("💳 Dinero","Francos suizos (CHF) — cambiar en Milán o Venecia"),
+            ("💳 Dinero","Revolut o Wise configurada y cargada"),
+            ("🔌 Tecnología","Adaptador tipo J para Suiza (diferente al europeo — comprar en Milán)"),
             ("🔌 Tecnología","Power bank cargado"),
             ("🔌 Tecnología","Tarjeta SIM europea o eSIM activada"),
-            ("🔌 Tecnología","Maps.me con mapas offline descargados"),
-            ("🔌 Tecnología","App Trenitalia instalada"),
+            ("🔌 Tecnología","Maps.me con mapas offline descargados (Italia + Suiza)"),
+            ("🔌 Tecnología","App Trenitalia instalada y cuenta creada"),
+            ("🔌 Tecnología","App Italo instalada"),
             ("🔌 Tecnología","App SBB instalada (trenes Suiza)"),
-            ("🔌 Tecnología","Fotos de reservas guardadas en el teléfono"),
-            ("👗 Ropa","Ropa para iglesias (hombros y rodillas cubiertos)"),
-            ("👗 Ropa","Zapatos cómodos con suela firme (para adoquines)"),
+            ("🔌 Tecnología","Voucher Vaticano guardado (3 jun 08:30 · Código 2L2N0SMT2JVMU3NOU)"),
+            ("🔌 Tecnología","Voucher Coliseo guardado (4 jun 09:00 · Ref. 1386136463)"),
+            ("🔌 Tecnología","Ticket Accademia guardado (31 mayo 13:45 · Orden 22515345)"),
+            ("🔌 Tecnología","Tickets de tren guardados (IC651 · Italo Z9R56L · Italo UL718U)"),
+            ("👗 Ropa","Ropa para iglesias (hombros y rodillas cubiertos — llevar bufanda)"),
+            ("👗 Ropa","Zapatillas con suela firme (15 km/día en adoquines)"),
             ("👗 Ropa","Ropa de abrigo para Zurich (puede hacer frío en junio)"),
-            ("👗 Ropa","Traje de baño (Cinque Terre y Puglia/Polignano)"),
-            ("👗 Ropa","Ropa para senderismo (Cinque Terre y Polignano)"),
-            ("🏥 Salud","Protector solar FPS 50+ (varias unidades)"),
+            ("👗 Ropa","Traje de baño (Cinque Terre + Polignano a Mare)"),
+            ("🏥 Salud","Protector solar FPS 50+ (varias unidades — en Italia es caro)"),
             ("🏥 Salud","Medicamentos habituales con receta"),
             ("🏥 Salud","Antidiarreico / antiácido (cambio de dieta)"),
-            ("🏥 Salud","Repelente de mosquitos"),
             ("🏥 Salud","Botiquín básico (curitas, ibuprofeno)"),
-            ("🎒 Equipaje","Candado para maletas"),
-            ("🎒 Equipaje","Bolsa impermeable para la playa"),
+            ("🎒 Equipaje","Mochila pequeña para excursiones del día"),
+            ("🎒 Equipaje","Bolsa impermeable para la playa (Polignano)"),
+            ("🎒 Equipaje","Snorkel (Polignano a Mare — agua increíble bajo los acantilados)"),
             ("🎒 Equipaje","Botella de agua reutilizable"),
-            ("🎒 Equipaje","Mochila pequeña para excursiones"),
         ]
         rows = [[f"c{str(i+1).zfill(2)}", cat, item, "0", ""] for i,(cat,item) in enumerate(items)]
         ws.append_rows(rows); st.cache_data.clear()
-    except Exception as e: st.warning(f"No se pudo inicializar el checklist: {e}")
+    except Exception as e: st.warning(f"No se pudo inicializar checklist: {e}")
 
 def add_g(desc, cat, monto):
     try:
@@ -318,13 +284,14 @@ def del_nota(nid):
         for i, r in enumerate(ws.get_all_records(), start=2):
             if str(r.get("id")) == str(nid):
                 ws.delete_rows(i); st.cache_data.clear(); return True
-    except: pass; return False
+    except: pass
+    return False
 
-# ── CLIMA ──────────────────────────────────────────────────────────────────────
+# ── CLIMA ───────────────────────────────────────────────────────────────────────
 CIUDADES_CLIMA = {
     "Milán":       {"lat":45.46,"lon":9.19, "fecha":"2026-05-25"},
-    "Pisa":        {"lat":43.72,"lon":10.40,"fecha":"2026-05-29"},
-    "Florencia":   {"lat":43.77,"lon":11.25,"fecha":"2026-05-30"},
+    "Cinque Terre":{"lat":44.15,"lon":9.64, "fecha":"2026-05-27"},
+    "Florencia":   {"lat":43.77,"lon":11.25,"fecha":"2026-05-29"},
     "Roma":        {"lat":41.90,"lon":12.49,"fecha":"2026-06-02"},
     "Nápoles":     {"lat":40.85,"lon":14.27,"fecha":"2026-06-06"},
     "Bari":        {"lat":41.12,"lon":16.87,"fecha":"2026-06-07"},
@@ -333,17 +300,14 @@ CIUDADES_CLIMA = {
 }
 WMO_CODES = {
     0:"☀️ Despejado",1:"🌤️ Poco nublado",2:"⛅ Parcialmente nublado",3:"☁️ Nublado",
-    45:"🌫️ Niebla",48:"🌫️ Niebla helada",51:"🌦️ Llovizna",53:"🌦️ Llovizna mod.",
-    55:"🌧️ Llovizna intensa",61:"🌧️ Lluvia leve",63:"🌧️ Lluvia moderada",
-    65:"🌧️ Lluvia intensa",80:"🌦️ Chubascos",81:"🌧️ Chubascos mod.",
-    82:"⛈️ Chubascos fuertes",95:"⛈️ Tormenta",99:"⛈️ Tormenta granizo",
+    45:"🌫️ Niebla",51:"🌦️ Llovizna",61:"🌧️ Lluvia leve",63:"🌧️ Lluvia moderada",
+    65:"🌧️ Lluvia intensa",80:"🌦️ Chubascos",95:"⛈️ Tormenta",
 }
 
 @st.cache_data(ttl=3600)
 def get_clima(lat, lon, fecha):
     try:
-        url = (f"https://api.open-meteo.com/v1/forecast?"
-               f"latitude={lat}&longitude={lon}"
+        url = (f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}"
                f"&daily=temperature_2m_max,temperature_2m_min,weathercode,precipitation_probability_max"
                f"&timezone=Europe%2FRome&start_date={fecha}&end_date={fecha}")
         r = requests.get(url, timeout=5)
@@ -354,25 +318,25 @@ def get_clima(lat, lon, fecha):
     except: pass
     return None
 
-# ── MAPA ───────────────────────────────────────────────────────────────────────
+# ── MAPA ────────────────────────────────────────────────────────────────────────
 RUTA_MAPA = [
-    {"city":"Milán",       "lat":45.4654,"lon":9.1859, "dias":"D1–2","emoji":"🏛️","color":"#C4693A"},
-    {"city":"Cinque Terre","lat":44.1461,"lon":9.6439, "dias":"D3–4","emoji":"🌊","color":"#6B7A3E"},
-    {"city":"Pisa",        "lat":43.7228,"lon":10.4017,"dias":"D5 excursión","emoji":"🗼","color":"#C9A84C"},
-    {"city":"Florencia",   "lat":43.7696,"lon":11.2558,"dias":"D5–8","emoji":"🌸","color":"#C4693A"},
-    {"city":"Siena",       "lat":43.3188,"lon":11.3307,"dias":"D8 excursión","emoji":"🏰","color":"#C9A84C"},
-    {"city":"Roma",        "lat":41.9028,"lon":12.4964,"dias":"D9–12","emoji":"🏟️","color":"#6B7A3E"},
-    {"city":"Nápoles",     "lat":40.8518,"lon":14.2681,"dias":"D13","emoji":"🍕","color":"#C4693A"},
-    {"city":"Pompeya",     "lat":40.7497,"lon":14.4990,"dias":"D13 excursión","emoji":"🌋","color":"#8B3E1E"},
-    {"city":"Bari",        "lat":41.1171,"lon":16.8719,"dias":"D14–15","emoji":"🦔","color":"#6B7A3E"},
-    {"city":"Polignano a Mare","lat":40.9977,"lon":17.2173,"dias":"D14 excursión","emoji":"🏖️","color":"#C9A84C"},
-    {"city":"Alberobello", "lat":40.7855,"lon":17.2399,"dias":"D15 excursión","emoji":"🏠","color":"#C9A84C"},
-    {"city":"Venecia",     "lat":45.4408,"lon":12.3155,"dias":"D16–17","emoji":"🚤","color":"#C4693A"},
-    {"city":"Burano",      "lat":45.4847,"lon":12.4175,"dias":"D17 excursión","emoji":"🎨","color":"#C9A84C"},
-    {"city":"Zurich",      "lat":47.3769,"lon":8.5417, "dias":"D18–20","emoji":"🇨🇭","color":"#3D4A5C"},
+    {"city":"Milán",            "lat":45.4654,"lon":9.1859, "dias":"D1–2",          "emoji":"🏛️","color":"#C4693A"},
+    {"city":"Cinque Terre",     "lat":44.1461,"lon":9.6439, "dias":"D3–4",          "emoji":"🌊","color":"#6B7A3E"},
+    {"city":"Pisa",             "lat":43.7228,"lon":10.4017,"dias":"D5 excursión",  "emoji":"🗼","color":"#C9A84C"},
+    {"city":"Florencia",        "lat":43.7696,"lon":11.2558,"dias":"D5–8",          "emoji":"🌸","color":"#C4693A"},
+    {"city":"Siena",            "lat":43.3188,"lon":11.3307,"dias":"D8 excursión",  "emoji":"🏰","color":"#C9A84C"},
+    {"city":"Roma",             "lat":41.9028,"lon":12.4964,"dias":"D9–12",         "emoji":"🏟️","color":"#6B7A3E"},
+    {"city":"Nápoles",          "lat":40.8518,"lon":14.2681,"dias":"D13",           "emoji":"🍕","color":"#C4693A"},
+    {"city":"Pompeya",          "lat":40.7497,"lon":14.4990,"dias":"D14 excursión", "emoji":"🌋","color":"#8B3E1E"},
+    {"city":"Bari",             "lat":41.1171,"lon":16.8719,"dias":"D14–15",        "emoji":"🦔","color":"#6B7A3E"},
+    {"city":"Polignano a Mare", "lat":40.9977,"lon":17.2173,"dias":"D15 excursión", "emoji":"🏖️","color":"#C9A84C"},
+    {"city":"Alberobello",      "lat":40.7855,"lon":17.2399,"dias":"D15 excursión", "emoji":"🏠","color":"#C9A84C"},
+    {"city":"Venecia",          "lat":45.4408,"lon":12.3155,"dias":"D16–17",        "emoji":"🚤","color":"#C4693A"},
+    {"city":"Burano",           "lat":45.4847,"lon":12.4175,"dias":"D17 excursión", "emoji":"🎨","color":"#C9A84C"},
+    {"city":"Zurich",           "lat":47.3769,"lon":8.5417, "dias":"D18–20",        "emoji":"🇨🇭","color":"#3D4A5C"},
 ]
 
-# ── RENDER HELPERS ─────────────────────────────────────────────────────────────
+# ── HELPERS ─────────────────────────────────────────────────────────────────────
 def M(html): st.markdown(html, unsafe_allow_html=True)
 
 def _ev(hora, hi, titulo, desc, tip="", acts="", alt=False):
@@ -404,403 +368,197 @@ def _tcard(icon, route, detail, price, url):
       f'<div class="tp3">{price}</div>'
       f'<a href="{url}" target="_blank" class="lb btr">🔗 Comprar</a></div>')
 
-def _al(html, extra=""):
-    M(f'<div class="al {extra}">{html}</div>')
+def _al(html, extra=""):   M(f'<div class="al {extra}">{html}</div>')
+def _ticket_ok(texto):     M(f'<div class="al alg"><strong>✅ TICKET COMPRADO:</strong> {texto}</div>')
+def _warn(texto):          M(f'<div class="al" style="background:#FEE2E2;border-color:#B91C1C;color:#B91C1C"><strong>⚠️ ATENCIÓN:</strong> {texto}</div>')
+# ══ ITINERARIO — RENDER FUNCTIONS ═════════════════════════════════════════════
 
-# ── ITINERARIO COMPLETO ────────────────────────────────────────────────────────
 def render_milan():
-    _hotel("Departamento en Milán — StayEasy (Airbnb confirmado)",
-           "Corso Como, 9 · Milán · Check-in lun 25 mayo 15:00 · Check-out mié 27 mayo 11:00",
-           "Airbnb confirmado · 2 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Corso+Como+9+Milan+Italy")
-
-    _card("Día 1","Lunes 25 mayo — Llegada y primer paseo","Milán",
-        _ev("10:15",True,"Llegada MXP — Inmigración y aduana",
-            "Pasaporte argentino. Calcular 30–45 min en inmigración en temporada alta.") +
-        _ev("11:30",False,"Malpensa Express → Milano Centrale",
-            "Sale cada 30 min. 52 minutos. Comprar en máquinas Trenord o app. Validar antes de subir.",
-            acts='<span class="tag tr2">🚄 €13/persona</span><a href="https://www.trenord.it" target="_blank" class="lb btr">Trenord</a><a href="https://maps.google.com/?q=Milano+Centrale" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:30",False,"Check-in + almuerzo tranquilo",
-            "Risotto alla milanese o cotoletta en trattoria local. Evitar restaurantes junto a estaciones.",
-            acts='<span class="tag tf">🍝 Risotto</span>') +
-        _ev("15:00",False,"Siesta obligatoria",
-            "Vienen de 11h de vuelo nocturno. 2–3 horas de siesta es clave para los días siguientes.") +
-        _ev("18:00",False,"Paseo Navigli + Aperitivo",
-            "Los canales al atardecer. Aperol Spritz al borde del canal. Mejor zona: Alzaia Naviglio Grande.",
-            acts='<span class="tag tw">🚶 Paseo</span><a href="https://maps.google.com/?q=Navigli+Milan" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 2","Martes 26 mayo — Última Cena, Duomo, Shopping y Pádel","Milán",
-        _ev("08:00",False,"Desayuno italiano",
-            "Bar local: cappuccino + cornetto. No pedir cappuccino después del mediodía.",
-            acts='<span class="tag tf">☕ €3</span>') +
-        _ev("08:15",True,"LA ÚLTIMA CENA — Santa Maria delle Grazie",
-            "El fresco más famoso del mundo. RESERVA OBLIGATORIA. Solo 25 personas cada 15 minutos. Duración: 15 min exactos.",
-            tip="⚠️ CRÍTICO: Reservar hoy mismo en cenacolodavincimilano.vivaticket.com — Los cupos de mayo se agotan meses antes.",
-            acts='<span class="tag tm">🎨 €15 + €2 reserva</span><a href="https://cenacolodavincimilano.vivaticket.com" target="_blank" class="lb bt">🎟️ Reservar ahora</a><a href="https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("10:00",True,"Duomo di Milano — terrazas",
-            "Terrazas en ascensor para ver los 135 chapiteles de cerca. Vista 360° de Milán. Reservar online.",
-            acts='<span class="tag tm">⛪ €15 terraza</span><a href="https://ticket.duomomilano.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Duomo+di+Milano" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:30",False,"Galleria Vittorio Emanuele II + Scala",
-            "Pisar el toro y girar el talón — trae suerte. Teatro alla Scala (exterior y museo).",
-            acts='<span class="tag tw">🚶 Gratis</span><a href="https://maps.google.com/?q=Galleria+Vittorio+Emanuele+II" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo en Brera",
-            "Buscar menú del giorno visible en la puerta: primer plato + segundo + agua = €12–15.",
-            acts='<span class="tag tf">🍽️ €15</span><a href="https://maps.google.com/?q=Brera+Milan" target="_blank" class="lb bm">📍 Brera</a>') +
-        _ev("15:00",True,"Shopping — Corso Buenos Aires",
-            "La calle comercial más larga de Italia. Zara, H&M, Bershka, Mango, marcas italianas. 2km de tiendas.",
-            acts='<span class="tag ts">🛍️ Ropa</span><a href="https://maps.google.com/?q=Corso+Buenos+Aires+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:30",True,"Padel Nuestro Milano (opcional)",
-            "La mayor tienda de pádel del norte de Italia. Bullpadel, Siux, Adidas, Nox. Pista interior para probar palas. Está en las afueras.",
-            tip="Más conveniente ir a Padel Nuestro Roma (centro, Día 11). Esta cierra 19:30.",
-            acts='<span class="tag tpa">🎾 Pádel</span><a href="https://maps.google.com/?q=Padel+Nuestro+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("20:00",False,"Cena en Navigli · Preparar maletas",
-            "Cena tranquila. Mañana temprano: tren a Cinque Terre (08:10 desde Milano Centrale).",
-            acts='<span class="tag tf">🍷 Cena</span><span class="tag tsl">🧳 Preparación</span>'))
+    _hotel("Departamento StayEasy — Airbnb ✅","Corso Como, 9 · Milán · Check-in lun 25 mayo 15:00 · Check-out mié 27 mayo 11:00","Airbnb confirmado · 2 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Corso+Como+9+Milan+Italy")
+    _warn("Salida 27 mayo muy temprana (tren 06:10 desde Milano Centrale) — preparar maletas la noche anterior.")
+    _card("Día 1","Lunes 25 mayo — Llegada","Milán",
+        _ev("10:15",False,"Llegada MXP — Inmigración y aduana","Pasaporte argentino. Calcular 30–45 min en temporada alta. Bajar al andén del Malpensa Express (nivel -1 del aeropuerto).",acts='<span class="tag tr2">🛬 Llegada</span>') +
+        _ev("11:30",False,"Malpensa Express → Milano Centrale","52 minutos. Sale cada 30 min. Comprar ticket en máquinas Trenord o app. Validar antes de subir.",acts='<span class="tag tr2">🚄 €13/persona</span><a href="https://www.trenord.it" target="_blank" class="lb btr">Trenord</a>') +
+        _ev("13:30",False,"Check-in + almuerzo tranquilo","Zona Isola/Porta Garibaldi. Trattoria local: risotto alla milanese (azafrán) o cotoletta. Menú del giorno = €12–15.",acts='<span class="tag tf">🍝 Risotto alla milanese</span>') +
+        _ev("15:00",False,"Siesta obligatoria 2–3 horas","Vienen de 11h de vuelo nocturno. Esta siesta es clave para los días siguientes.") +
+        _ev("18:00",True,"Navigli — Alzaia Naviglio Grande","Los canales históricos de Milán. El aperitivo milanese (18–20h): con el precio de una copa (€8–10) viene un buffet gratis — institución local. Mejores bares: Upcycle, El Brellin.",tip="La foto más clásica del canal: ir hacia el puente de Via Corsico.",acts='<span class="tag tw">🚶 Aperitivo gratis</span><a href="https://maps.google.com/?q=Navigli+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:30",False,"Cena en Navigli","Alejarse media cuadra del canal para comer mejor y más barato. Probar: ossobuco alla milanese.",acts='<span class="tag tf">🍷 Ossobuco</span>'))
+    _card("Día 2","Martes 26 mayo — Última Cena, Duomo, Shopping","Milán",
+        _ev("08:15",True,"LA ÚLTIMA CENA — Santa Maria delle Grazie","El fresco de Leonardo da Vinci (1495–1498). Solo 25 personas cada 15 min exactos. Pintado directamente en la pared del refectorio. Detalle: Judas tiene el salero volcado. Zona Magenta.",tip="⚠️ RESERVA URGENTE en cenacolodavincimilano.vivaticket.com — cupos de mayo se agotan meses antes. Presentarse 10 min antes.",acts='<span class="tag tm">🎨 €15+€2</span><a href="https://cenacolodavincimilano.vivaticket.com" target="_blank" class="lb bt">🎟️ Reservar AHORA</a><a href="https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("10:00",True,"Duomo di Milano — terrazas","Tercera catedral más grande del mundo. 135 chapiteles y 3.400 estatuas. Ascensor a las terrazas €7. Vista de Milán y los Alpes en días claros.",acts='<span class="tag tm">⛪ €7 terrazas</span><a href="https://ticket.duomomilano.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Duomo+di+Milano" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("11:30",False,"Galleria Vittorio Emanuele II + Scala","La galería más antigua de Italia (1877). Ritual del toro: talón en el mosaico central, girar 3 veces — trae suerte al amor. Teatro alla Scala exterior gratis.",acts='<span class="tag tw">🚶 Gratis</span><a href="https://maps.google.com/?q=Galleria+Vittorio+Emanuele+II" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("13:00",False,"Almuerzo en Brera","El barrio más bohemio. Menú del giorno visible en la puerta (Via Fiori Chiari, Via Madonnina): primer + segundo + bebida = €12–15.",acts='<span class="tag tf">🍽️ Menú €12–15</span>') +
+        _ev("15:00",True,"Shopping — Corso Buenos Aires","La calle comercial más larga de Italia (2km). Zara, H&M, Bershka, Mango, Benetton, marcas italianas.",acts='<span class="tag ts">🛍️ Shopping</span><a href="https://maps.google.com/?q=Corso+Buenos+Aires+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("19:00",False,"Castello Sforzesco — exterior","La fortaleza medieval del siglo XV. Patio interior gratis hasta el anochecer. Parco Sempione detrás.",acts='<span class="tag tw">🏰 Gratis</span><a href="https://maps.google.com/?q=Castello+Sforzesco+Milan" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:30",False,"Cena + preparar maletas 🧳","MAÑANA: tren IC651 a las 06:10 desde Milano Centrale (PNR M9NTBN). Preparar todo. Dormir a las 22:00.",acts='<span class="tag tsl">🧳 Preparar maletas</span>'))
 
 
 def render_cinque():
-    _tcard("🚄","Milano → La Spezia Centrale","Intercity · ~3h · Salida 08:10 desde Milano Centrale","€25–35","https://www.trenitalia.com")
-    _hotel("Departamento en La Spezia — Jessica (Airbnb confirmado)",
-           "Via Napoli, 198 · La Spezia · Check-in mié 27 mayo · Check-out vie 29 mayo 10:00",
-           "Airbnb confirmado · 2 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy")
-
+    _ticket_ok("Trenitalia IC651 · Milano Centrale 06:10 → La Spezia Centrale 09:26 · 1ª Clase · Adilson: Coche 1 Asiento 7C · Mirtha: Coche 1 Asiento 7D · PNR: M9NTBN")
+    _hotel("Departamento Jessica — Airbnb ✅","Via Napoli, 198 · La Spezia · Check-in mié 27 mayo · Check-out vie 29 mayo 10:00","Airbnb confirmado · 2 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy")
+    _al("<strong>🎫 Cinque Terre Card 2 días:</strong> €29.50/persona. Incluye todos los trenes locales entre los 5 pueblos y los senderos oficiales. Comprar en La Spezia al llegar.", "alb")
     _card("Día 3","Miércoles 27 mayo — Riomaggiore, Manarola, Corniglia","Cinque Terre",
-        _ev("11:30",False,"Llegada La Spezia — Check-in + Cinque Terre Card",
-            "Comprar la Card 2 días en InfoParco o taquilla de la estación (~€29.50/persona). Incluye todos los trenes locales.",
-            acts='<span class="tag tkt">🎫 €29.50 · 2 días</span><a href="https://www.cinqueterre.eu.com/en/cinque-terre-card" target="_blank" class="lb bt">Info Card</a>') +
-        _ev("12:30",True,"Riomaggiore — el más fotogénico",
-            "Bajar al puerto pequeño. Almuerzo: focaccia con pesto ligurio + vino sciacchetrà. El pesto de Liguria es el mejor del mundo.",
-            acts='<span class="tag tf">🍃 Pesto original</span><a href="https://maps.google.com/?q=Riomaggiore+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("15:30",True,"Manarola — el mirador icónico",
-            "La foto de las casas pastel sobre las rocas. Bajar al muelle de natación. 1.5h.",
-            acts='<span class="tag tw">📸 Foto icónica</span><a href="https://maps.google.com/?q=Manarola+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:30",False,"Corniglia — vista 360°",
-            "El único pueblo en lo alto. 377 escalones o minibus desde la estación. Vista impresionante.",
-            acts='<a href="https://maps.google.com/?q=Corniglia+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>'))
-
+        _ev("09:30",False,"Llegada La Spezia — check-in + Cinque Terre Card","Dejar maletas. Comprar la Card 2 días (€29.50/persona) en InfoParco o taquilla. Desayuno rápido.",acts='<span class="tag tkt">🎫 €29.50 · 2 días</span>') +
+        _ev("11:00",True,"★ Riomaggiore — el más fotogénico","El pueblo más al sur. Porto piccolo: barquitas de colores sobre el Mediterráneo. Almuerzo: focaccia con pesto ligurio (el mejor del mundo) + trofie al pesto + vino bianco.",acts='<span class="tag tf">🍃 Pesto original</span><a href="https://maps.google.com/?q=Riomaggiore+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("14:00",True,"★ Manarola — el mirador más fotografiado","Casas pastel apiladas sobre los acantilados. Mirador famoso a 5 min al este del pueblo. Plataforma para tirarse al agua (mayo: ~18°C).",tip="La tarde ilumina las fachadas de frente. Ir 30 min antes del sunset.",acts='<span class="tag tw">🌅 Mirador</span><a href="https://maps.google.com/?q=Manarola+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("16:30",False,"Corniglia — el único pueblo en lo alto","377 escalones (o minibus €2.50). Vista 360°. El más tranquilo. Probar sciacchetrà (vino dulce de uvas pasas).",acts='<span class="tag tw">⛰️ 377 escalones</span><a href="https://maps.google.com/?q=Corniglia+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("19:00",False,"Tren de vuelta a La Spezia","Cena más económica en La Spezia.",acts='<span class="tag tr2">🚄 Regreso</span>'))
     _card("Día 4","Jueves 28 mayo — Vernazza, senderismo y Monterosso","Cinque Terre",
-        _ev("08:00",True,"Vernazza — el más medieval",
-            "Castillo Doria (€1.50) para la mejor vista. Puerto pintoresco. 2h.",
-            acts='<a href="https://maps.google.com/?q=Vernazza+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:00",True,"Senderismo Vernazza → Monterosso (3.5 km · 2h)",
-            "El sendero más espectacular. Verificar estado en parconazionale5terre.it antes de ir. Llevar agua y zapatos cerrados.",
-            tip="Si el sendero está cerrado, tomar el tren y usar el tiempo de playa en Monterosso.",
-            acts='<span class="tag tw">🥾 Trekking</span><a href="https://www.parconazionale5terre.it" target="_blank" class="lb bt">Estado senderos</a>') +
-        _ev("14:00",False,"Monterosso — playa y anchoas",
-            "El único pueblo con playa de arena real. Probar acciughe (anchoas de Monterosso). Reposeras ~€5. Agua ~22°C.",
-            acts='<span class="tag tw">🏖️ Playa</span><a href="https://maps.google.com/?q=Monterosso+al+Mare" target="_blank" class="lb bm">📍 Maps</a>'))
+        _ev("08:00",True,"★ Vernazza — el pueblo más completo","Puerto, iglesia, plaza y Castello Doria (€1.50) — la mejor vista del viaje. 2h para explorarlo. Café en Piazza Marconi mirando al mar.",acts='<span class="tag tm">🏰 Castello €1.50</span><a href="https://maps.google.com/?q=Vernazza+Cinque+Terre" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("10:00",True,"★ Senderismo Vernazza → Monterosso (3.5km · 2h)","El sendero más espectacular — viñedos sobre el Mediterráneo. Llevar: agua, protector solar, zapatillas cerradas.",tip="Verificar estado en parconazionale5terre.it antes de salir. Si cerrado, tren directo.",acts='<span class="tag tw">🥾 2h · Sendero</span><a href="https://www.parconazionale5terre.it" target="_blank" class="lb bt">Estado senderos</a>') +
+        _ev("13:00",True,"🏖️ Monterosso al Mare — playa y anchoas","El único pueblo con playa de arena real. Reposeras ~€5. Junio: agua ~22°C. Acciughe di Monterosso (anchoas marinadas — la especialidad local).",acts='<span class="tag tw">🏖️ Playa de arena</span><a href="https://maps.google.com/?q=Monterosso+al+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:30",False,"Tren de regreso — preparar maletas 🧳","Mañana: tren a Florencia desde La Spezia. Comprar en app Trenitalia (La Spezia → Firenze SMN ~08:30). Check-out 10:00.",acts='<span class="tag tsl">🧳 Preparar</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Comprar tren</a>'))
 
 
 def render_florencia():
-    _tcard("🚄","La Spezia → Firenze Santa Maria Novella","Intercity · ~2h · Salida 08:30 · Directo o cambio en Pisa","€15–20","https://www.trenitalia.com")
-    _hotel("Departamento en Florencia — Liana (Airbnb confirmado)",
-           "Via Nicola Tagliaferri, 5 · Florencia · Check-in vie 29 mayo 15:00 · Check-out mar 2 junio 11:00",
-           "Airbnb confirmado · 4 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy")
-
-    _card("Día 5","Viernes 29 mayo — Pisa","Pisa / Florencia",
-        _ev("08:30",True,"Tren Florencia → Pisa Centrale",
-            "Tren Regional · 1h · Sale frecuentemente desde SMN. En Pisa tomar el bus LAM Rossa (€1.50) o 20 min a pie hasta la Piazza dei Miracoli.",
-            acts='<span class="tag tr2">🚄 1h · ~€10</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
-        _ev("10:00",True,"Piazza dei Miracoli — La Torre de Pisa",
-            "La famosa plaza de los milagros con la Torre Inclinada, el Duomo y el Baptisterio. Subir a la Torre: 294 escalones en espiral, 56m de altura. La inclinación se siente al caminar.",
-            tip="⚠️ La Torre requiere reserva obligatoria en opapisa.it. Sin reserva puede no quedar cupos. Llegar 15 min antes del horario reservado.",
-            acts='<span class="tag tm">🗼 Torre €20</span><a href="https://www.opapisa.it" target="_blank" class="lb bt">🎟️ Reservar Torre</a><a href="https://maps.google.com/?q=Piazza+dei+Miracoli+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:30",False,"Duomo di Pisa + Baptisterio",
-            "El Duomo de Pisa (siglo XI) es uno de los mejores ejemplos del románico italiano. El Baptisterio tiene una acústica increíble — el guarda suele demostrarla cantando.",
-            acts='<span class="tag tm">⛪ Pase €7</span><a href="https://maps.google.com/?q=Duomo+di+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo — Borgo Stretto",
-            "Alejarse de la Piazza dei Miracoli para comer bien y barato. Probar: cecina (torta de garbanzo, especialidad de Pisa, €2) y schiacciata.",
-            acts='<span class="tag tf">🍽️ Cecina €2</span><a href="https://maps.google.com/?q=Borgo+Stretto+Pisa" target="_blank" class="lb bm">📍 Borgo Stretto</a>') +
-        _ev("14:30",False,"Camposanto Monumentale + Lungarni",
-            "El Camposanto es un cementerio medieval con frescos impresionantes. Luego pasear por los Lungarni (orilla del Arno pisano) — tranquilo y sin turistas.",
-            acts='<span class="tag tm">🏛️ €5</span><a href="https://maps.google.com/?q=Camposanto+Monumentale+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("16:30",False,"Tren Pisa → Florencia",
-            "Tren Regional de vuelta · 1h · Hay trenes frecuentes.",
-            acts='<span class="tag tr2">🚄 1h</span>') +
-        _ev("18:30",True,"Piazzale Michelangelo — atardecer",
-            "EL punto de vista de Florencia al atardecer. Vista panorámica de toda la ciudad. Llegar 30 min antes del sunset.",
-            acts='<span class="tag tw">🌅 Gratis</span><a href="https://maps.google.com/?q=Piazzale+Michelangelo+Florence" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 6","Sábado 30 mayo — Uffizi + David + San Miniato","Florencia",
-        _ev("08:30",True,"Galería degli Uffizi — Botticelli, Leonardo, Caravaggio",
-            "El museo de arte renacentista más importante del mundo. 3h mínimo. RESERVA OBLIGATORIA. La sala de Botticelli — visitarla primero.",
-            acts='<span class="tag tm">🎨 €20 + €4 reserva</span><a href="https://www.uffizi.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Uffizi+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("14:00",True,"David de Michelangelo — Accademia",
-            "5.17 metros de mármol perfecto, tallado entre 1501 y 1504. El original — el de la Piazza es una copia. 1.5h.",
-            acts='<span class="tag tm">🗿 €12 + reserva</span><a href="https://www.uffizi.it/en/the-accademia-gallery" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Accademia+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:30",False,"San Miniato al Monte",
-            "La iglesia más bella de Florencia — sobre una colina, entrada gratis. Los monjes rezan el Oficio en gregoriano a las 17:30.",
-            acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=San+Miniato+al+Monte+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("20:30",False,"Cena en Oltrarno",
-            "Ponte Vecchio al paso. Cena en el barrio más auténtico de Florencia. Probar bistecca fiorentina si el presupuesto lo permite.",
-            acts='<span class="tag tf">🥩 Bistecca</span>'))
-
-    _card("Día 7","Domingo 31 mayo — Palazzo Pitti + Boboli + Cappelle Medicee","Florencia",
-        _ev("09:00",False,"Palazzo Pitti + Jardines de Boboli",
-            "El palacio de los Medici. Rafael y Tiziano en la Galleria Palatina. Jardines renacentistas con gruta de Buontalenti (1583).",
-            acts='<span class="tag tm">🏰 €16</span><a href="https://maps.google.com/?q=Palazzo+Pitti+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("12:30",False,"Almuerzo en Mercato Centrale",
-            "Piso superior con puestos de comida. Probar lampredotto (callos florentinos) o pasta fresca.",
-            acts='<a href="https://maps.google.com/?q=Mercato+Centrale+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("14:30",True,"Cappelle Medicee — Michelangelo",
-            "Las tumbas de los Medici con las esculturas: Aurora, Crepúsculo, Día y Noche. Menos conocidas que el David, igual de impactantes.",
-            acts='<span class="tag tm">🗿 €9</span><a href="https://maps.google.com/?q=Cappelle+Medicee+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:00",False,"Ponte Vecchio + Cuero florentino",
-            "Cruzar el Ponte Vecchio y explorar el mercado de San Lorenzo. El cuero florentino es el mejor de Italia. Verificar que sea auténtico (encendedor — no huele a plástico).",
-            acts='<span class="tag ts">🛍️ Cuero</span><a href="https://maps.google.com/?q=Ponte+Vecchio+Florence" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 8","Lunes 1 junio — Siena y Val d'Orcia","Toscana",
-        _ev("07:30",False,"Bus SENA desde Florencia a Siena",
-            "Desde Autostazione di Firenze (frente a Santa Maria Novella). 1.5h · €9.",
-            acts='<span class="tag tbu">🚌 €9</span><a href="https://maps.google.com/?q=Autostazione+Firenze" target="_blank" class="lb bm">📍 Bus</a>') +
-        _ev("09:00",True,"Piazza del Campo + Torre del Mangia",
-            "La plaza más bella de Italia en forma de concha, escenario del Palio. La Torre tiene 400 escalones y vistas impresionantes.",
-            acts='<span class="tag tm">🏰 Torre €10</span><a href="https://maps.google.com/?q=Piazza+del+Campo+Siena" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("10:30",False,"Duomo di Siena",
-            "El Duomo de Siena compite con Florencia en belleza. El pavimento de mármol con 56 escenas es único en el mundo.",
-            acts='<span class="tag tm">⛪ €8</span><a href="https://maps.google.com/?q=Siena+Cathedral" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo en la ciudad vieja",
-            "Probar: pici all'aglione (pasta gruesa con ajo), cinghiale (jabalí). Siena tiene cocina muy diferente a Florencia.",
-            acts='<span class="tag tf">🍖 Toscana</span>') +
-        _ev("17:00",False,"Bus de regreso a Florencia",
-            "Hay buses frecuentes hasta las 21:00. Cena en Florencia. Mañana viajan a Roma."))
-
-
+    _tcard("🚄","La Spezia → Firenze Santa Maria Novella","Intercity · ~2h · Salida ~08:30 · Directo o cambio en Pisa","€15–20","https://www.trenitalia.com")
+    _hotel("Departamento Liana — Airbnb ✅","Via Nicola Tagliaferri, 5 · Florencia · Check-in vie 29 mayo 15:00 · Check-out mar 2 junio 11:00","Airbnb confirmado · 4 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy")
+    _warn("Salida 02/06: tren Italo Z9R56L a las 09:43 desde Firenze SMN. Desayunar antes y dejar maletas en recepción.")
+    _card("Día 5","Viernes 29 mayo — Pisa de excursión","Pisa / Florencia",
+        _ev("08:30",False,"Tren Florencia → Pisa Centrale","Regional · 1h · frecuente desde SMN. En Pisa bus LAM Rossa (€1.50) o 20 min a pie hasta la Piazza dei Miracoli.",acts='<span class="tag tr2">🚄 1h · ~€10</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
+        _ev("10:00",True,"★ Torre de Pisa — subida","Piazza dei Miracoli (UNESCO). 294 escalones de mármol blanco. 56m de altura. La inclinación se siente físicamente.",tip="⚠️ Reserva OBLIGATORIA en opapisa.it — llegar 15 min antes del turno reservado.",acts='<span class="tag tm">🗼 Torre €20</span><a href="https://www.opapisa.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Piazza+dei+Miracoli+Pisa" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("11:00",False,"Duomo di Pisa + Baptisterio","Románico del siglo XI. El Baptisterio tiene acústica extraordinaria: el custodio canta para demostrarla — no perdérselo. Pase combinado €7.",acts='<span class="tag tm">⛪ Pase €7</span>') +
+        _ev("13:00",False,"Almuerzo — Borgo Stretto de Pisa","Cecina (torta de garbanzo, especialidad pisana, €2) y schiacciata con embutidos. Mucho más barato que junto a la Torre.",acts='<span class="tag tf">🫘 Cecina €2</span><a href="https://maps.google.com/?q=Borgo+Stretto+Pisa" target="_blank" class="lb bm">📍 Borgo</a>') +
+        _ev("14:30",False,"Camposanto + Lungarni de Pisa","Cementerio medieval con frescos del siglo XIV. Los Lungarni (avenidas sobre el Arno pisano) son tranquilos y sin turistas.",acts='<span class="tag tm">🏛️ €5</span>') +
+        _ev("16:30",False,"Tren Pisa → Florencia + Piazzale Michelangelo","Al llegar a Florencia, subir al Piazzale para el atardecer (bus 12 o 13 desde la orilla sur del Arno). Vista panorámica completa.",acts='<span class="tag tw">🌅 Atardecer</span><a href="https://maps.google.com/?q=Piazzale+Michelangelo+Florence" target="_blank" class="lb bm">📍 Maps</a>'))
+    _card("Día 6","Sábado 30 mayo — Uffizi + Oltrarno + San Miniato","Florencia",
+        _ev("08:30",True,"★ Galería degli Uffizi","El museo de arte renacentista más importante del mundo. 3–4h. Sala de Botticelli (Nascita di Venere + Primavera), Annunciazione de Leonardo, Bacco de Caravaggio, Venere di Urbino de Tiziano.",tip="Reserva OBLIGATORIA en uffizi.it. Sin reserva: 2–3 horas de fila.",acts='<span class="tag tm">🎨 €20+€4</span><a href="https://www.uffizi.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Uffizi+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("13:00",False,"Almuerzo en Oltrarno — lampredotto","Cruzar el Ponte Vecchio. Oltrarno es el barrio más auténtico. Lampredotto (callos de ternera en pan, €4 — el street food típico florentino).",acts='<span class="tag tf">🥩 Lampredotto €4</span>') +
+        _ev("14:00",False,"Ponte Vecchio + Piazza della Signoria","Puente más antiguo de Florencia (1345). La Loggia dei Lanzi: Perseo con la testa di Medusa de Cellini y El rapto de las Sabinas de Giambologna — gratis.",acts='<span class="tag tw">🚶 Gratis</span><a href="https://maps.google.com/?q=Ponte+Vecchio+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:30",True,"★ San Miniato al Monte","La iglesia más antigua y bella de Florencia (siglo XI). Los monjes benedictinos rezan el Oficio Divino en canto gregoriano todos los días a las 17:30. Entrada gratis.",acts='<span class="tag tw">⛪ Gratis · Gregoriano 17:30</span><a href="https://maps.google.com/?q=San+Miniato+al+Monte+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:00",False,"Cena en Oltrarno","Trattoria Buca Mario (la más antigua de Florencia, 1886) o buscar trat con pizarrón en la puerta.",acts='<span class="tag tf">🍷 Cena Oltrarno</span>'))
+    _card("Día 7","Domingo 31 mayo — David de Michelangelo + Palazzo Pitti","Florencia",
+        _ev("09:00",True,"★ Palazzo Pitti + Jardines de Boboli","El palacio de los Medici. Galleria Palatina: Rafael (La Velata), Tiziano, Caravaggio. Jardines de Boboli con la Gruta de Buontalenti (1583) — una de las primeras obras manieristas del mundo. €16.",acts='<span class="tag tm">🏰 €16</span><a href="https://maps.google.com/?q=Palazzo+Pitti+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("12:30",False,"Almuerzo — Mercato Centrale (piso superior)","Puestos artesanales. Probar: lampredotto, pasta fresca, ribollita. No el piso inferior — es crudo.",acts='<a href="https://maps.google.com/?q=Mercato+Centrale+Florence" target="_blank" class="lb bm">📍 Mercato</a>') +
+        _ev("13:45",True,"★ DAVID DE MICHELANGELO — Accademia ✅ RESERVADO 31 MAYO","El David original (5.17m, mármol de Carrara, 1501–1504). El de la Piazza della Signoria es réplica. También los Prigioni de Michelangelo. Vía Ricasoli 58/60.",tip="⚠️ TICKET COMPRADO · Orden 22515345 · Adilson ID:11 · Mirtha ID:10 · Presentar digital o impreso. Llevar documento. No se admiten mochilas grandes.",acts='<span class="tag tgr">✅ 31 mayo 13:45 · €24</span><a href="https://maps.google.com/?q=Accademia+Gallery+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("16:00",True,"★ Cappelle Medicee — tumbas de Michelangelo","Las tumbas con Aurora, Crepúsculo, Día y Noche — las esculturas más expresivas del artista. €9.",acts='<span class="tag tm">🗿 €9</span><a href="https://maps.google.com/?q=Cappelle+Medicee+Florence" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",False,"Mercato di San Lorenzo + cuero florentino","El mejor cuero de Italia. Verificar autenticidad: acercar llama, el cuero real huele a carne no a plástico.",acts='<span class="tag ts">🛍️ Cuero</span>'))
+    _card("Día 8","Lunes 1 junio — Siena + Cúpula de Brunelleschi","Toscana / Florencia",
+        _ev("07:30",False,"Bus SENA Florencia → Siena","Desde Autostazione di Firenze (frente a SMN). 1.5h · €9/persona. Sale cada hora.",acts='<span class="tag tbu">🚌 €9 · 1.5h</span><a href="https://maps.google.com/?q=Autostazione+Firenze" target="_blank" class="lb bm">📍 Bus</a>') +
+        _ev("09:00",True,"★ Piazza del Campo — la más bella de Italia","Forma de concha, 9 sectores. Torre del Mangia (102m, 400 escalones) — una de las mejores vistas de Toscana. Escenario del Palio di Siena.",acts='<span class="tag tm">🏰 Torre €10</span><a href="https://maps.google.com/?q=Piazza+del+Campo+Siena" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("10:30",True,"★ Duomo di Siena","El pavimento de mármol con 56 escenas narrativas (únicas en el mundo) y los frescos de Pinturicchio en la Biblioteca Piccolomini. €8.",acts='<span class="tag tm">⛪ €8</span><a href="https://maps.google.com/?q=Siena+Cathedral" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("12:00",False,"Museo Civico — frescos de Lorenzetti","El buen y el mal gobierno (1338): los primeros frescos cívicos de la historia del arte occidental. €10.",acts='<span class="tag tm">🏛️ €10</span>') +
+        _ev("13:00",False,"Almuerzo en Siena","Pici all'aglione, pappardelle al cinghiale (jabalí), panforte. Restaurantes en Via di Città.",acts='<span class="tag tf">🍖 Pici + cinghiale</span>') +
+        _ev("16:00",False,"Bus de regreso a Florencia","Buses cada hora hasta las 21:00. Cena tranquila en Florencia.") +
+        _ev("18:30",True,"★ Cúpula de Brunelleschi — Duomo di Firenze","463 escalones sin ascensor. La cúpula de ladrillo más grande del mundo (1436). Frescos del Juicio Final de Vasari. Vista de Florencia desde la linterna.",tip="Reservar el último turno disponible para menos gente y mejor luz.",acts='<span class="tag tm">⛪ ~€20</span><a href="https://www.ilgrandemuseodelduomo.it" target="_blank" class="lb bt">🎟️ Reservar</a>') +
+        _ev("20:30",False,"Última cena en Florencia + preparar maletas 🧳","Mañana: tren Italo Z9R56L a las 09:43 desde Firenze SMN. Check-out 11:00.",acts='<span class="tag tsl">🧳 Preparar maletas</span>'))
 def render_roma():
-    _tcard("🚄","Firenze SMN → Roma Termini","Frecciarossa (Alta Velocidad) · 1h 30min · Sale cada 30 min · Reservar anticipado","€25–45","https://www.trenitalia.com")
-    _hotel("Departamento en Roma — Domenico (Airbnb confirmado)",
-           "Via Giovanni Aldini, 3 · Roma · Check-in mar 2 junio 15:00 · Check-out sáb 6 junio 11:00",
-           "Airbnb confirmado · 4 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy")
-    _al("<strong>🎾 Padel Nuestro Roma:</strong> La tienda más completa de la ruta. Centro de Roma. Bullpadel, Siux, Babolat, Head, Star Vie. Permiten probar palas. Ver Día 11.")
-
-    _card("Día 9","Martes 2 junio — Vaticano completo","Roma",
-        _ev("10:30",True,"Museos Vaticanos + Capilla Sixtina",
-            "Los museos más visitados del mundo. 3–4h. El recorrido culmina en la Capilla Sixtina con el fresco de Miguel Ángel. RESERVA YA COMPRADA ✓",
-            tip="⚠️ En la Capilla Sixtina está prohibido fotografiar y hacer ruido — los guardias son estrictos. Silencio absoluto.",
-            acts='<span class="tag bc">✅ Reserva confirmada</span><a href="https://maps.google.com/?q=Vatican+Museums+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("14:00",False,"Basílica de San Pedro + Cúpula",
-            "La basílica más grande del mundo cristiano. Subir a la cúpula (551 escalones o ascensor parcial €8) para vista alucinante.",
-            acts='<span class="tag tm">⛪ Gratis · Cúpula €8</span><a href="https://maps.google.com/?q=St+Peters+Basilica+Rome" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 10","Miércoles 3 junio — Roma Imperial","Roma",
-        _ev("08:00",True,"Coliseo + Foro Romano + Palatino",
-            "Combo obligatorio. 3–4h. El Palatino tiene las mejores vistas del Coliseo y es el menos visitado — no saltearlo. RESERVA YA COMPRADA ✓",
-            acts='<span class="tag bc">✅ Reserva confirmada</span><a href="https://maps.google.com/?q=Colosseum+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo en Testaccio",
-            "El barrio más auténtico de Roma para comer. El Mercato di Testaccio tiene puestos con cocina romana real: supplì, pizza al taglio.",
-            acts='<span class="tag tf">🥙 Testaccio</span><a href="https://maps.google.com/?q=Mercato+Testaccio+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("15:00",False,"Terme di Caracalla + Circo Massimo",
-            "Las Termas de Caracalla (216 d.C.) son ruinas espectaculares y poco masificadas. El Circo Massimo (450,000 espectadores) es gratis, hoy un parque.",
-            acts='<span class="tag tm">🏛️ Termas €8</span><a href="https://maps.google.com/?q=Terme+di+Caracalla+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:00",False,"Trastevere — paseo y cena",
-            "El barrio medieval más pintoresco de Roma. La Basílica di Santa Maria in Trastevere (siglo XII, gratis). Cena: Da Enzo al 29.",
-            acts='<span class="tag tw">🚶 Paseo</span><a href="https://maps.google.com/?q=Trastevere+Rome" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 11","Jueves 4 junio — Roma Barroca + Borghese + Pádel","Roma",
-        _ev("09:00",False,"Pantheon → Piazza Navona → Fontana di Trevi",
-            "El Pantheon (125 d.C.) requiere ticket €5 desde 2023. Trevi: lanzar la moneda de espaldas con la derecha.",
-            acts='<span class="tag tm">🏛️ Pantheon €5</span><a href="https://maps.google.com/?q=Pantheon+Rome" target="_blank" class="lb bm">📍 Pantheon</a><a href="https://maps.google.com/?q=Trevi+Fountain+Rome" target="_blank" class="lb bm">📍 Trevi</a>') +
-        _ev("15:00",True,"Galería Borghese — Bernini",
-            "El museo más exclusivo de Roma — solo 360 personas cada 2 horas. Apolo y Dafne, El rapto de Proserpina — lo más impactante de toda Roma.",
-            acts='<span class="tag tm">🗿 €15 + €2 reserva</span><a href="https://www.galleriaborghese.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Galleria+Borghese+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:00",True,"🎾 Padel Nuestro Roma",
-            "La tienda más completa de pádel en Roma. Bullpadel, Siux, Adidas, Star Vie, Babolat, Head. Pista interior para probar palas antes de comprar.",
-            acts='<span class="tag tpa">🎾 Pádel Roma</span><a href="https://maps.google.com/?q=Padel+Nuestro+Roma+Italy" target="_blank" class="lb bm">📍 Maps</a><a href="https://www.padelnuestro.com" target="_blank" class="lb bt">Web tienda</a>'))
-
-    _card("Día 12","Viernes 5 junio — Castel Sant'Angelo + Pincio + libre","Roma",
-        _ev("09:00",False,"Castel Sant'Angelo",
-            "Mausoleo de Adriano convertido en fortaleza papal. Vista del Tiber y San Pedro desde la cima.",
-            acts='<span class="tag tm">🏰 €14</span><a href="https://maps.google.com/?q=Castel+Sant+Angelo+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:00",False,"Piazza del Popolo + Santa Maria del Popolo",
-            "La gran plaza de entrada a Roma desde el norte. Las dos capillas Caravaggio dentro de Santa Maria del Popolo (gratis) son joyas escondidas.",
-            acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=Piazza+del+Popolo+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo + tarde libre · Compras Via del Corso",
-            "Via del Corso para shopping. Zona Spagna para marcas. Ghetto judío para caminar. Mañana temprano: tren a Nápoles.",
-            acts='<span class="tag ts">🛍️ Libre</span>'))
+    _ticket_ok("Italo Z9R56L · Firenze S.M. 09:43 → Roma Termini 11:19 · Coche 9 · Asientos 35 y 36")
+    _hotel("Departamento Domenico — Airbnb ✅","Via Giovanni Aldini, 3 · Roma · Check-in mar 2 junio 15:00 · Check-out sáb 6 junio 11:00","Airbnb confirmado · 4 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy")
+    _al("<strong>🎾 Pádel:</strong> Padel Nuestro Roma — Día 12 tarde. Centro de Roma. Bullpadel, Siux, Babolat, Head, Star Vie. Pista interior para probar palas.")
+    _card("Día 9","Martes 2 junio — Llegada + Trastevere","Roma",
+        _ev("11:19",False,"Llegada Roma Termini","Metro Línea A (dirección Battistini) para el centro. Taxi oficial blanco: €15–20. Check-in desde las 15:00.",acts='<span class="tag tr2">🚇 Metro Línea A</span>') +
+        _ev("13:00",False,"Almuerzo + check-in","Dejar maletas. Caminar 10 min hacia Prati — evitar restaurantes al lado de Termini.") +
+        _ev("16:30",True,"★ Trastevere — primer paseo por Roma","El barrio medieval más pintoresco. Callejuelas adoquinadas, hiedra en las fachadas. La Basílica di Santa Maria in Trastevere (siglo II d.C. — la primera iglesia dedicada a la Virgen en Roma, mosaicos del siglo XII, gratis).",acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=Trastevere+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",False,"Campo de' Fiori + Piazza Farnese","Campo de' Fiori: la única plaza de Roma sin iglesia. Estatua de Giordano Bruno (quemado aquí en 1600). Piazza Farnese: el palazzo renacentista más monumental de Roma.",acts='<a href="https://maps.google.com/?q=Campo+de+Fiori+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:00",False,"Cena en Trastevere","Las mejores trattorias de Roma. Probar: cacio e pepe, carbonara (sin nata — la real), gricia. Recomendado: Da Enzo al 29.",acts='<span class="tag tf">🍝 Cacio e pepe</span>'))
+    _card("Día 10","Miércoles 3 junio — VATICANO COMPLETO ✅","Roma",
+        _ev("08:00",True,"Presentarse en la entrada del Vaticano","Llegar a Viale Vaticano a las 08:00 (30 min antes). Fila exclusiva para visitantes con reserva. Mostrar voucher + documento de identidad al Customer Care Staff.",tip="⚠️ TICKET COMPRADO · Código 2L2N0SMT2JVMU3NOU · Tour guiado español · 3 jun 08:30 · Entrada: CORRIDOIO 2 / PASSAGEWAY 2 · Subir escaleras del fondo izquierdo al desk Visite Guidate.",acts='<span class="tag tgr">✅ 3 jun 08:30 · €80 total</span><a href="https://maps.google.com/?q=Vatican+Museums+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("08:30",True,"★ MUSEOS VATICANOS — Tour Guiado Español ✅","54 galerías. Museo Pio-Clementino (Laocoonte, Apollo del Belvedere), Galleria delle Mappe (40 mapas de Italia siglo XVI), Stanze di Raffaello (La Scuola di Atene), Capilla Sixtina.",tip="Capilla Sixtina: SILENCIO ABSOLUTO. Prohibido fotografiar. Techo: Creación de Adán está en el panel 9 de 12. El Juicio Universal en la pared frontal.",acts='<span class="tag tgr">✅ Confirmado</span>') +
+        _ev("12:30",True,"★ Basílica di San Pedro + Cúpula","La basílica más grande del mundo cristiano. La Pietà de Michelangelo (1499, 24 años — primera obra firmada por él). Baldaquino de Bernini (29m de bronce). Cúpula: 551 escalones o ascensor parcial (€8). Colonnato de Bernini (284 columnas en forma de abrazo).",acts='<span class="tag tm">⛪ Gratis · Cúpula €8</span><a href="https://maps.google.com/?q=St+Peters+Basilica+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("15:30",False,"Castel Sant'Angelo + Ponte Sant'Angelo","Mausoleo de Adriano (139 d.C.) convertido en fortaleza papal. El Ponte Sant'Angelo con los ángeles de Bernini — uno de los puentes más bellos del mundo. Interior: €14.",acts='<span class="tag tm">🏰 €14</span><a href="https://maps.google.com/?q=Castel+Sant+Angelo+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",False,"Barrio Prati — cena tranquila","Pizzería al taglio o trattoria local cerca del Vaticano.",acts='<span class="tag tf">🍕 Prati</span>'))
+    _card("Día 11","Jueves 4 junio — COLISEO + Roma Antigua ✅","Roma",
+        _ev("08:45",False,"Presentarse en Via delle Terme di Tito 93 (Enjoy Rome)","2 min caminando del Coliseo. Mostrar cupón digital (Ref. 1386136463) + documento. El tour incluye Coliseo, Foro Romano y Palatino con audioguía en español.",tip="⚠️ TICKET COMPRADO · Ref. 1386136463 · 4 junio 09:00 · Llegar 15 min antes = 08:45.",acts='<span class="tag tgr">✅ 4 jun 09:00 · Ref. 1386136463</span><a href="https://maps.google.com/?q=Via+delle+Terme+di+Tito+93+Rome" target="_blank" class="lb bm">📍 Punto encuentro</a>') +
+        _ev("09:00",True,"★ COLISEO + FORO ROMANO + MONTE PALATINO ✅","Coliseo (70–80 d.C.): 80.000 espectadores. Los tres niveles de arcos. El hipogeo bajo el piso de arena. Foro Romano: Arco de Tito, Via Sacra. Palatino: la colina donde nació Roma — mejores vistas del Foro. Duración: 3h.",acts='<span class="tag tgr">✅ Confirmado</span>') +
+        _ev("13:00",False,"Almuerzo en Testaccio","El barrio gastronómico más auténtico de Roma. Mercato di Testaccio: supplì, pizza al taglio, abbacchio alla romana.",acts='<span class="tag tf">🥙 Testaccio</span><a href="https://maps.google.com/?q=Mercato+Testaccio+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("15:00",False,"Terme di Caracalla + Circo Massimo","Termas de Caracalla (216 d.C.) — ruinas espectaculares y poco masificadas. Circo Massimo (487m, 250.000+ espectadores): el mayor estadio de la historia humana.",acts='<span class="tag tm">🏛️ Termas €8 · Circo gratis</span><a href="https://maps.google.com/?q=Terme+di+Caracalla+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:00",True,"★ Buco della Serradura — Aventino","Piazza dei Cavalieri di Malta: mirar por el ojo de la cerradura de la Orden de Malta → la cúpula de San Pedro perfectamente enmarcada por dos setos. Una de las vistas más mágicas de Roma. Gratis.",acts='<span class="tag tw">🔑 Gratis · imperdible</span><a href="https://maps.google.com/?q=Keyhole+View+Rome+Aventine" target="_blank" class="lb bm">📍 Maps</a>'))
+    _card("Día 12","Viernes 5 junio — Roma Barroca + Pádel","Roma",
+        _ev("09:00",True,"★ Pantheon","El edificio más perfecto de la Antigüedad (125 d.C.). La cúpula de 43.3m: cuando llueve el agua cae por el óculo y escapa por el drenaje romano original. Tumbas de Rafael y Víctor Manuel II. €5.",acts='<span class="tag tm">🏛️ €5</span><a href="https://maps.google.com/?q=Pantheon+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("10:00",True,"★ Piazza Navona — Fontana dei Quattro Fiumi","La plaza más barroca de Roma. La Fontana de Bernini (1651): Nilo, Ganges, Danubio y RÍO DE LA PLATA — el único monumento de Roma que alude a América del Sur.",tip="Los cuatro gigantes representan los ríos más importantes de los cuatro continentes conocidos en 1651.",acts='<a href="https://maps.google.com/?q=Piazza+Navona+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("11:30",True,"★ Fontana di Trevi","La fuente barroca más grande del mundo (26m × 20m). Ritual: moneda lanzada de espaldas con la mano derecha = regreso a Roma garantizado.",tip="Ir entre 07:00 y 08:00 para encontrarla casi vacía. A mediodía puede ser imposible acercarse.",acts='<a href="https://maps.google.com/?q=Trevi+Fountain+Rome" target="_blank" class="lb bm">📍 Trevi</a>') +
+        _ev("12:30",False,"Spanish Steps — Piazza di Spagna","135 escalones (1723). Fontana della Barcaccia de Pietro Bernini abajo. Via Condotti al pie: Gucci, Valentino, Bulgari.",acts='<a href="https://maps.google.com/?q=Spanish+Steps+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("13:30",False,"Almuerzo + Shopping Via del Corso","2km peatonal: Zara, H&M, Mango, marcas italianas. El Ghetto Ebraico al atardecer: carciofo alla giudìa (alcaucil frito — la especialidad judío-romana).",acts='<span class="tag ts">🛍️ Via del Corso</span>') +
+        _ev("17:00",False,"Santa Maria del Popolo — Caravaggio","Piazza del Popolo. Dos capillas con Caravaggio: Conversione di Saulo y Crocifissione di Pietro. Bernini y Bramante también trabajaron aquí. Gratis.",acts='<span class="tag tw">⛪ Gratis · Caravaggio</span><a href="https://maps.google.com/?q=Santa+Maria+del+Popolo+Rome" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",True,"🎾 Padel Nuestro Roma","La tienda más completa de pádel en Roma. Bullpadel, Siux, Adidas, Star Vie, Babolat, Head, Nox. Pista interior para probar palas.",acts='<span class="tag tpa">🎾 Pádel</span><a href="https://maps.google.com/?q=Padel+Nuestro+Roma+Italy" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:30",False,"Última cena en Roma","El mejor restaurante que hayan descubierto estos días.",acts='<span class="tag tf">🍷 Última cena Roma</span>'))
 
 
 def render_napoles():
-    _tcard("🚄","Roma Termini → Napoli Centrale","Frecciarossa · 1h10 · Sale cada 30 min desde las 06:00","€20–35","https://www.trenitalia.com")
-    _hotel("Departamento en Nápoles (Airbnb confirmado)",
-           "Via San Agostino alla Zecca, 4 · Nápoles · Check-in sáb 6 junio 14:00 · Check-out dom 7 junio 10:00",
-           "Airbnb confirmado · 1 noche",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy")
-
-    _card("Día 13","Sábado 6 junio — Pompeya + Nápoles + Pizza","Nápoles",
-        _ev("09:00",True,"Circumvesuviana → Pompeya Scavi",
-            "Andén subterráneo (-1) de Napoli Centrale. Sale cada 30 min hacia Sorrento. Bajarse en 'Pompei Scavi'. Comprar ticket en máquina automática.",
-            acts='<span class="tag tr2">🚂 €3 · 40min</span><a href="https://maps.google.com/?q=Pompei+Scavi+station" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("10:00",True,"Pompeya — ciudad sepultada por el Vesubio",
-            "La ciudad romana sepultada en 79 d.C. 3h mínimo. Casa dei Vettii, Anfiteatro, Thermopolium (bar romano), moldes humanos en el Granario, el Foro. Llevar agua y sombrero.",
-            acts='<span class="tag tm">🌋 €16</span><a href="https://maps.google.com/?q=Pompeii+Archaeological+Park" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("15:00",False,"Spaccanapoli + Museo Arqueológico Nacional",
-            "La calle que cruza Nápoles histórica. El Museo tiene los mejores objetos de Pompeya y Herculano del mundo.",
-            acts='<span class="tag tm">🏺 €15</span><a href="https://maps.google.com/?q=National+Archaeological+Museum+Naples" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("19:30",True,"🍕 La pizza napolitana ORIGINAL",
-            "Nápoles inventó la pizza. Las tres legendarias: L'Antica Pizzeria da Michele (solo Margherita y Marinara, fila larga), Sorbillo (favorita de los napolitanos), Di Matteo.",
-            acts='<span class="tag tf">🍕 €5–8</span><a href="https://maps.google.com/?q=L+Antica+Pizzeria+da+Michele+Naples" target="_blank" class="lb bm">📍 Da Michele</a><a href="https://maps.google.com/?q=Pizzeria+Sorbillo+Naples" target="_blank" class="lb bm">📍 Sorbillo</a>'))
+    _tcard("🚄","Roma Termini → Napoli Centrale","Frecciarossa · 1h10 · Sale cada 30 min · Salida ~11:30 tras check-out","€20–35","https://www.trenitalia.com")
+    _hotel("Departamento — Airbnb ✅","Via San Agostino alla Zecca, 4 · Nápoles · Check-in sáb 6 junio 14:00 · Check-out dom 7 junio 10:00","Airbnb confirmado · 1 noche","","https://www.airbnb.com/trips","https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy")
+    _al("<strong>🧳 Logística 7 jun:</strong> Check-out 10:00 → dejar maletas en guardaequipajes Napoli Centrale (Kipoint, ~€6/bulto) → Circumvesuviana a Pompeya → regreso ~12:30 → recoger maletas → tren a Bari ~14:00.", "alb")
+    _warn("Nápoles: cuidado con los carteristas en zonas turísticas. Guardar el teléfono en bolsillo interno.")
+    _card("Día 13","Sábado 6 junio — Llegada + Nápoles histórica","Nápoles",
+        _ev("13:00",False,"Llegada Napoli Centrale — check-in","Si el departamento no está listo, dejar maletas y salir a explorar de una.",acts='<a href="https://maps.google.com/?q=Naples+Central+Station" target="_blank" class="lb bm">📍 Centrale</a>') +
+        _ev("14:30",True,"★ Spaccanapoli — el corazón de Nápoles","Via San Biagio dei Librai / Via Benedetto Croce: la arteria histórica que cruza Nápoles desde hace 2.500 años. Iglesias barrocas en cada esquina: Santa Chiara, Gesù Nuovo, San Domenico Maggiore.",acts='<a href="https://maps.google.com/?q=Spaccanapoli+Naples" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("15:30",True,"★ Cappella Sansevero — Cristo Velato","El Cristo Velato de Sanmartino (1753): la escultura de mármol técnicamente más perfecta del mundo — el velo es de mármol sólido y transmite la forma del cuerpo debajo. No existe ninguna otra igual. €8.",tip="No salteársela bajo ningún concepto. Reservar en museosansevero.it.",acts='<span class="tag tm">🗿 €8</span><a href="https://www.museosansevero.it" target="_blank" class="lb bt">🎟️ Reservar</a><a href="https://maps.google.com/?q=Cappella+Sansevero+Naples" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:30",False,"Quartieri Spagnoli — altar de Maradona","El laberinto de callejuelas españolas del siglo XVI. El altar a Diego Maradona en Via Emanuele De Deo — literalmente una deidad local.",acts='<a href="https://maps.google.com/?q=Maradona+Shrine+Naples" target="_blank" class="lb bm">📍 Maradona</a>') +
+        _ev("18:00",False,"Castel Nuovo + Porto di Napoli","El Maschio Angioino (1279) con el arco triunfal del siglo XV. Vista al golfo de Nápoles y al Vesubio al atardecer.",acts='<span class="tag tm">🏰 Exterior gratis</span>') +
+        _ev("19:30",True,"★ LA PIZZA NAPOLITANA ORIGINAL","Las tres legendarias: L'Antica Pizzeria da Michele (solo Margherita y Marinara, €6–8 — la más auténtica), Pizzeria Sorbillo (favorita de los napolitanos, Via Tribunali), Di Matteo. Horno de leña a 485°C, 90 segundos.",acts='<span class="tag tf">🍕 €6–8</span><a href="https://maps.google.com/?q=L+Antica+Pizzeria+da+Michele+Naples" target="_blank" class="lb bm">📍 Da Michele</a><a href="https://maps.google.com/?q=Pizzeria+Sorbillo+Naples" target="_blank" class="lb bm">📍 Sorbillo</a>'))
+    _card("Día 14","Domingo 7 junio — POMPEYA de mañana → viaje a Bari","Pompeya / Bari",
+        _ev("07:00",True,"Circumvesuviana → Pompei Scavi","Andén subterráneo (-1) de Napoli Centrale. Línea hacia Sorrento. Bajarse en 'Pompei Scavi - Villa dei Misteri'. Sale cada 30 min. Ticket en máquina: €3/persona.",acts='<span class="tag tr2">🚂 €3 · 40 min</span><a href="https://maps.google.com/?q=Pompei+Scavi+station" target="_blank" class="lb bm">📍 Estación</a>') +
+        _ev("08:00",True,"★ POMPEYA — ciudad sepultada en 79 d.C.","3h. Imperdibles: Casa dei Vettii (frescos mitológicos), Anfiteatro (70 d.C. — el más antiguo del mundo romano en pie), Thermopolium de Vetutius Placidus (el 'bar' romano con el menú pintado en la barra), moldes humanos en el Granario del Foro, Lupanare. €16.",tip="Llevar agua y sombrero — en junio el sol es muy intenso. No hay sombra en el sitio.",acts='<span class="tag tm">🌋 €16</span><a href="https://maps.google.com/?q=Pompeii+Archaeological+Park" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("11:30",False,"Tren de vuelta a Nápoles — recoger maletas","~40 min de regreso. Recoger maletas del guardaequipajes Kipoint. Almuerzo rápido en la estación.",acts='<span class="tag tr2">🚂 Regreso</span>') +
+        _ev("14:00",False,"Tren Napoli → Bari Centrale","Intercity · ~3h30 · Salida ~14:00. Llegada a Bari ~17:30.",acts='<span class="tag tr2">🚄 ~3h30 · €25–40</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
+        _ev("17:30",False,"Llegada Bari — check-in","Via Melo da Bari, 163. Primera exploración de Bari Vecchia.",acts='<a href="https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy" target="_blank" class="lb bm">📍 Alojamiento</a>'))
 
 
 def render_bari():
-    _tcard("🚄","Nápoles Centrale → Bari Centrale","Intercity · ~3h · Salida 10:30 · Check-out Nápoles 10:00, a la estación tranquilos","€25–40","https://www.trenitalia.com")
-    _hotel("Departamento en Bari (Airbnb confirmado)",
-           "Via Melo da Bari, 163 · Bari · Check-in dom 7 junio 15:00 · Check-out mar 9 junio 10:00",
-           "€190 · 2 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy")
-    _al("<strong>💡 Bari Vecchia:</strong> El casco histórico de Bari es uno de los más auténticos del sur de Italia. Señoras haciendo orecchiette a mano en la calle es la escena más típica — buscarlas en la mañana en Via dell'Arco Basso.")
-    _al("<strong>🏖️ Mejor playa cercana:</strong> Polignano a Mare (39km · tren 25 min) — la cala Lama Monachile rodeada de acantilados con agua turquesa es la imagen icónica de Puglia. Para arena fina y más tranquilidad: Monopoli (30 min en tren).", "alg")
-
-    _card("Día 14","Domingo 7 junio — Llegada y Bari Vecchia","Bari",
-        _ev("13:30",False,"Llegada Bari Centrale — check-in y almuerzo",
-            "Dejar maletas en el alojamiento. Almuerzo en Bari Vecchia. Probar: orecchiette al ragù, focaccia barese (la mejor de Italia).",
-            acts='<span class="tag tf">🍝 Orecchiette</span><a href="https://maps.google.com/?q=Bari+Centrale+Station" target="_blank" class="lb bm">📍 Estación</a>') +
-        _ev("15:30",True,"Bari Vecchia — el laberinto medieval",
-            "El casco histórico de Bari es un laberinto de callejones blancos entre el mar Adriático y la ciudad moderna. Es intencionalmente confuso — fue diseñado así para dificultar las invasiones. Perderse es el plan.",
-            acts='<a href="https://maps.google.com/?q=Bari+Vecchia+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("16:30",True,"Basílica di San Nicola",
-            "Una de las basílicas románicas más importantes de Italia (siglo XI). San Nicola — el Papá Noel histórico — está enterrado aquí. La cripta es especialmente impresionante.",
-            acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=Basilica+di+San+Nicola+Bari" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:00",False,"Lungomare Imperatore Augusto — paseo al atardecer",
-            "El paseo marítimo más largo del sur de Italia. Aperitivo con vista al Adriático. El atardecer desde el muelle es espectacular.",
-            acts='<span class="tag tw">🌅 Paseo</span><a href="https://maps.google.com/?q=Lungomare+Bari" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("20:30",False,"Cena — tiroteo di frutti di mare + vino primitivo",
-            "Bari es la capital del marisco de Puglia. Pedir: crudo di mare (mariscos crudos), polpo alla pignata (pulpo). Vino Primitivo di Manduria es el tinto de la región.",
-            acts='<span class="tag tf">🦐 Frutti di mare</span>'))
-
-    _card("Día 15","Lunes 8 junio — Polignano a Mare + playa","Puglia",
-        _ev("09:00",True,"Tren Bari → Polignano a Mare",
-            "Tren regional · 25 min · Sale frecuentemente desde Bari Centrale. En Polignano la estación está a 10 min a pie del casco histórico.",
-            acts='<span class="tag tr2">🚄 25 min · ~€3</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
-        _ev("10:00",True,"★ Lama Monachile — la cala icónica de Puglia",
-            "La pequeña cala de guijarros rodeada de acantilados de caliza blanca con agua turquesa es la foto más famosa de la región. El pueblo cuelga literalmente sobre los acantilados. Bajar temprano para conseguir lugar.",
-            tip="La cala se llena rápido en verano. Llegar antes de las 10:30. El agua es cristalina y poco profunda — ideal para snorkel.",
-            acts='<span class="tag tw">🏖️ Playa</span><a href="https://maps.google.com/?q=Lama+Monachile+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("12:30",False,"Casco histórico de Polignano — almuerzo con vista",
-            "Polignano a Mare es el pueblo natal de Domenico Modugno (autor de 'Volare'). Su estatua en la Piazza Vittorio Emanuele II. Almuerzo con vista al mar en uno de los restaurantes sobre los acantilados.",
-            acts='<span class="tag tf">🍽️ Vista al mar</span><a href="https://maps.google.com/?q=Polignano+a+Mare+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("14:30",False,"Cala Paura + calas secundarias",
-            "A 5 min a pie de Lama Monachile hay otras calas menos masificadas: Cala Paura y Porto Cavallo. Rocas perfectas para tomar sol y zambullidas.",
-            acts='<span class="tag tw">🤿 Snorkel</span><a href="https://maps.google.com/?q=Cala+Paura+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:00",True,"★ Alberobello — los Trulli UNESCO (excursión tarde)",
-            "Desde Polignano: tren a Bari (25 min) + FSE a Alberobello (~1h30). O alternativamente visitar el día anterior desde Bari directamente. Los Trulli — casas de piedra con techos cónicos del siglo XIV, Patrimonio UNESCO — son únicos en el mundo. Más de 1.500 en el barrio Rione Monti.",
-            tip="Ir a última hora de la tarde para menos turistas y mejor luz fotográfica. El barrio Aia Piccola es más tranquilo que Rione Monti.",
-            acts='<span class="tag tm">🏠 Trulli UNESCO</span><a href="https://maps.google.com/?q=Alberobello+Trulli+Puglia" target="_blank" class="lb bm">📍 Maps</a><a href="https://www.omio.es/trenes/bari/alberobello" target="_blank" class="lb btr">Trenes FSE</a>') +
-        _ev("21:00",False,"Regreso a Bari — última noche en Puglia",
-            "Mañana temprano: Frecciarossa Bari → Venezia Santa Lucia. Check-out 10:00. Preparar maletas esta noche.",
-            acts='<span class="tag tsl">🧳 Preparar maletas</span>'))
+    _hotel("Departamento — Airbnb ✅","Via Melo da Bari, 163 · Bari · Check-in dom 7 junio 15:00 · Check-out mar 9 junio 10:00","€190 total · 2 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy")
+    _ticket_ok("Italo UL718U · Bari C.LE 06:50 → Roma Termini 11:30 · Coche 4 Asientos 5/6 · CONEXIÓN Roma Termini 11:55 → Venezia S.L. 15:55 · Coche 7 Asientos 9/10")
+    _warn("CONEXIÓN: solo 25 minutos en Roma Termini entre los dos Italo. No salir de la estación. Ir directo a la pantalla de salidas al llegar.")
+    _al("<strong>🏖️ Playas Puglia:</strong> Polignano a Mare (acantilados + agua turquesa, tren 25 min) · Cala Lama Monachile · Cala Paura · Monopoli (arena fina, 30 min). Junio: agua ~24°C.", "alg")
+    _card("Día 14b","Domingo 7 junio — Bari Vecchia (tarde/noche)","Bari",
+        _ev("19:00",True,"★ Bari Vecchia — el laberinto medieval","El casco histórico fue diseñado como laberinto para confundir invasores sarracenos. Callejuelas tan angostas que a veces solo cabe una persona. Mañana temprano (antes de las 12:00) buscar señoras haciendo orecchiette a mano en las puertas (Via dell'Arco Basso).",acts='<a href="https://maps.google.com/?q=Bari+Vecchia+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("19:30",True,"Basílica di San Nicola","Una de las más importantes basílicas románicas de Italia (1087–1197). San Nicola — el obispo turco que inspiró la figura de Santa Claus — está enterrado en la cripta. Gratis.",acts='<span class="tag tw">⛪ Gratis</span><a href="https://maps.google.com/?q=Basilica+di+San+Nicola+Bari" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:30",False,"Cena — mariscos del Adriático","Crudo di mare, polpo alla pignata (pulpo guisado), frittura di paranza. Vino Primitivo di Manduria.",acts='<span class="tag tf">🦐 Crudo di mare</span>'))
+    _card("Día 15","Lunes 8 junio — Polignano a Mare + Alberobello","Puglia",
+        _ev("08:30",False,"Tren Bari → Polignano a Mare","Regional · 25 min · frecuente dirección Brindisi. Estación a 10 min caminando del casco histórico.",acts='<span class="tag tr2">🚄 25 min · ~€3</span><a href="https://www.trenitalia.com" target="_blank" class="lb btr">Trenitalia</a>') +
+        _ev("09:00",True,"★ 🏖️ Cala Lama Monachile — LA imagen de Puglia","La cala más fotogénica del Adriático: agua turquesa entre acantilados de caliza blanca. El pueblo medieval cuelga 25m sobre el mar. Playa de guijarros. Junio: ~24°C. Snorkel bajo los acantilados.",tip="Llegar antes de las 10:30 — se satura rápido en temporada alta.",acts='<span class="tag tw">🏖️ Playa</span><a href="https://maps.google.com/?q=Lama+Monachile+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("10:30",False,"Cala Paura + Porto Cavallo — calas secundarias","A 5 min a pie de Lama Monachile. Cala Paura tiene plataformas de roca para zambullidas de 2–3m. Porto Cavallo más pequeña y con menos gente.",acts='<span class="tag tw">🤿 Snorkel</span><a href="https://maps.google.com/?q=Cala+Paura+Polignano+a+Mare" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("12:00",True,"Polignano — almuerzo con vista al mar","Pueblo natal de Domenico Modugno (autor de 'Volare'). Estatua en la Piazza Vittorio Emanuele II. Restaurantes sobre los acantilados — el almuerzo más espectacular del viaje.",acts='<span class="tag tf">🌊 Vista al mar</span><a href="https://maps.google.com/?q=Polignano+a+Mare+historic+center" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("14:30",False,"Monopoli (opcional — 10 min de tren)","Para playa de arena en lugar de guijarros. Castello Carlo V y catedral barroca.",acts='<span class="tag tr2">🚄 10 min</span><a href="https://maps.google.com/?q=Monopoli+Puglia" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:00",True,"★ Alberobello — los Trulli UNESCO","Las casas de piedra caliza con techos cónicos (siglo XIV–XVII), únicas en el mundo. Más de 1.500 trulli. Para llegar: tren a Bari (25 min) + FSE desde Bari Sur (~1h30). El barrio Aia Piccola es más tranquilo.",tip="Ir en la tarde para mejor luz. Los trulli iluminados al anochecer son mágicos.",acts='<span class="tag tm">🏠 Trulli UNESCO</span><a href="https://maps.google.com/?q=Alberobello+Trulli" target="_blank" class="lb bm">📍 Maps</a><a href="https://www.fseonline.it" target="_blank" class="lb btr">FSE Trenes</a>') +
+        _ev("21:00",False,"Regreso a Bari — preparar maletas 🧳","MAÑANA: Italo UL718U a las 06:50 desde Bari C.LE. Preparar TODO esta noche.",acts='<span class="tag tsl">🧳 Preparar maletas — tren 06:50</span>'))
 
 
 def render_venecia():
-    _tcard("🚄","Bari Centrale → Venezia Santa Lucia","Frecciarossa · ~7h · Salida ~08:00 desde Bari · Llega ~15:00 justo para check-in","€35–65","https://www.trenitalia.com")
-    _al("<strong>Nota Venecia:</strong> Desde junio 2024, Venecia cobra €5 de 'tasa de acceso' en días pico. Verificar en comune.venezia.it. Airbnb muy regulado — con reserva propia sin problema.")
-    _hotel("Departamento en Venecia — Matteo (Airbnb confirmado)",
-           "Calle Lionpardo, 1954B · Venecia · Check-in mar 9 junio 15:00 · Check-out jue 11 junio 10:00",
-           "Airbnb confirmado · 2 noches",
-           "",
-           "https://www.airbnb.com/trips",
-           "https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy")
-
-    _card("Día 16","Martes 9 junio — Venecia clásica","Venecia",
-        _ev("13:00",True,"Gran Canal en Vaporetto línea 1 (la lenta)",
-            "La línea 1 recorre todo el Gran Canal parando en cada estación. 45 minutos de palacios del siglo XIV, puentes, góndolas. El paseo más cinematográfico del viaje. Ticket 24h = €25.",
-            acts='<span class="tag tb">🚤 24h = €25</span>') +
-        _ev("15:00",True,"Plaza San Marcos + Basílica + Campanile",
-            "Basílica siglo XI, estilo bizantino, cúpulas doradas — gratuita con espera. El Campanile (99m) ofrece la mejor vista de Venecia. €10.",
-            acts='<span class="tag tm">🏛️ Gratis + €10 campanile</span><a href="https://maps.google.com/?q=St+Marks+Basilica+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("17:00",True,"Perderse sin mapa — la mejor actividad de Venecia",
-            "Apagar Google Maps. Venecia tiene 118 islas conectadas por 400 puentes. Los callejones más angostos llevan a los campos (plazas) más secretos.",
-            acts='<span class="tag tw">🗺️ Sin mapa</span>') +
-        _ev("19:30",False,"Spritz veneziano en bacaro + Rialto",
-            "El Spritz se inventó en Venecia. Los 'bacari' son los bares tradicionales con 'cicchetti' (tapas de €1–2). Zona Cannaregio para los más auténticos.",
-            acts='<span class="tag tf">🍹 Bacaro</span><a href="https://maps.google.com/?q=Rialto+Bridge+Venice" target="_blank" class="lb bm">📍 Rialto</a>') +
-        _ev("21:00",False,"Góndola nocturna (opcional)",
-            "Precio fijo oficial: €80 para 30 min (hasta 6 personas). De noche los canales sin turistas son mágicos.",
-            acts='<span class="tag tb">🎭 €80 / góndola</span>'))
-
+    _ticket_ok("Italo UL718U · Bari C.LE 06:50 → Roma Termini 11:30 · Coche 4 · Asientos 5/6 · Conexión Roma 11:55 → Venezia S.L. 15:55 · Coche 7 · Asientos 9/10")
+    _warn("Conexión en Roma Termini: solo 25 minutos. No salir de la estación. Verificar andén de salida en la pantalla al llegar.")
+    _hotel("Departamento Matteo — Airbnb ✅","Calle Lionpardo, 1954B · Venecia · Check-in mar 9 junio 15:00 · Check-out jue 11 junio 10:00","Airbnb confirmado · 2 noches","","https://www.airbnb.com/trips","https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy")
+    _al("<strong>⚠️ Mapas en Venecia:</strong> En Venecia no hay calles numeradas normales. Usar Maps.me offline descargado ANTES de llegar.")
+    _al("<strong>💶 Tasa turística:</strong> Desde 2024 Venecia cobra €5/persona en días pico de junio. Verificar en comune.venezia.it.", "alb")
+    _card("Día 16","Martes 9 junio — Llegada + Venecia clásica","Venecia",
+        _ev("15:55",False,"Llegada Venezia Santa Lucia","Comprar pase vaporetto 48h (€35) en la taquilla de la estación.",acts='<span class="tag tb">⛴️ Pase 48h = €35</span><a href="https://actv.avmspa.it" target="_blank" class="lb bt">ACTV</a>') +
+        _ev("16:15",True,"★ Gran Canal en vaporetto Línea 1","45 min de palacios del siglo XIV: Ca'd'Oro (el más bello gótico veneciano), Palazzo Grimani, Ca'Rezzonico. El Ponte di Rialto (1591) — el punto más fotogénico. Sentarse en la proa.",acts='<span class="tag tb">🚤 Línea 1</span><a href="https://maps.google.com/?q=Grand+Canal+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:30",True,"★ Piazza San Marco + Basílica + Campanile","La única plaza de Venecia llamada 'piazza'. Basílica di San Marco (1094): mosaicos de oro estilo bizantino. Campanile (99m): €10. Palazzo Ducale con el Ponte dei Sospiri.",acts='<span class="tag tm">🏛️ Basílica gratis · Campanile €10</span><a href="https://maps.google.com/?q=St+Marks+Basilica+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("19:30",True,"★ Perderse sin mapa — la mejor actividad de Venecia","Apagar Google Maps. 118 islas, 160 canales, 400 puentes. Cada calle ciega termina en un canal. Los 'campi' escondidos son los espacios más auténticos.",acts='<span class="tag tw">🗺️ Sin mapa</span>') +
+        _ev("20:30",False,"Spritz veneziano en bacaro + cicchetti","El Spritz se inventó en el Véneto. Los bacari tienen cicchetti a €1–2: baccalà mantecato, sarde in saor, nervetti. Zona Cannaregio para los más auténticos.",acts='<span class="tag tf">🍹 Spritz veneziano</span><a href="https://maps.google.com/?q=Cannaregio+Venice" target="_blank" class="lb bm">📍 Cannaregio</a>') +
+        _ev("22:00",False,"Góndola nocturna (opcional)","€80 fijos por 30 min / hasta 6 personas. De noche los canales sin turistas y los palacios iluminados son mágicos.",acts='<span class="tag tb">🎭 €80 / góndola entera</span>'))
     _card("Día 17","Miércoles 10 junio — Murano, Burano y Dorsoduro","Venecia",
-        _ev("09:00",True,"Vaporetto a Murano — la isla del cristal",
-            "Murano está a 15 min de Venecia en vaporetto (incluido en el pase 24h o ticket día). Ver una demostración en una de las fábricas históricas — es gratis y espectacular.",
-            tip="Las mejores maestrías: Fornace Mian y Vetreria Artistica Archimede Seguso. Asegurarse de comprar el cristal directamente en Murano.",
-            acts='<span class="tag tb">⛴️ 15 min</span><a href="https://maps.google.com/?q=Murano+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("11:00",True,"Burano — la isla más colorida del mundo",
-            "Burano está a 40 min de Murano. Las casas pintadas de colores vibrantes son únicas en el mundo. La leyenda dice que los pescadores las pintaban para reconocer su casa desde el mar.",
-            tip="El paseo principal es Via Baldassarre Galuppi. Ir temprano para ver el pueblo sin turistas.",
-            acts='<span class="tag tb">⛴️ 40 min</span><a href="https://maps.google.com/?q=Burano+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",False,"Almuerzo en Burano — risotto di go",
-            "El 'risotto di go' (una especie de gobio local) es la especialidad de Burano. Los restaurantes al borde del canal son caros pero el ambiente lo vale.",
-            acts='<span class="tag tf">🦀 Risotto di go</span>') +
-        _ev("15:00",False,"Vaporetto de regreso + barrio Dorsoduro",
-            "Dorsoduro es el barrio más tranquilo de Venecia. La Gallerie dell'Accademia (€12) o los Zattere al atardecer.",
-            acts='<span class="tag tm">🎨 Accademia €12</span><a href="https://maps.google.com/?q=Dorsoduro+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:00",False,"Campo Santa Margherita — aperitivo final en Venecia",
-            "La plaza más viva de Venecia, llena de estudiantes locales. El último Spritz veneziano antes de partir.",
-            acts='<span class="tag tf">🍹 Último Spritz</span><a href="https://maps.google.com/?q=Campo+Santa+Margherita+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("20:00",False,"Cena despedida de Italia · Preparar maletas",
-            "Mañana temprano: tren a Zurich (09:00 desde Venezia S. Lucia). Hacer check-in online si aplica.",
-            acts='<span class="tag tsl">🧳 Mañana Zurich</span>'))
+        _ev("09:00",True,"★ Vaporetto a Murano — isla del cristal soplado","Línea 3 o 4.1 desde Ferrovia. 15 min. Producción de cristal desde 1291. Ver demostración de soplado en vivo en una furnace histórica — gratis en muchas.",tip="Comprar directamente en Murano. Pedir certificado de origen.",acts='<span class="tag tb">⛴️ 15 min</span><a href="https://maps.google.com/?q=Murano+Venice" target="_blank" class="lb bm">📍 Murano</a>') +
+        _ev("11:00",True,"★ Burano — la isla más colorida del mundo","45 min de Murano en Línea 12 desde Fondamente Nove. Casas pintadas de colores intensos únicas en el mundo. Ir temprano para verla sin grupos.",acts='<span class="tag tw">🌈 Colores únicos</span><a href="https://maps.google.com/?q=Burano+Venice" target="_blank" class="lb bm">📍 Burano</a>') +
+        _ev("13:00",False,"Almuerzo en Burano","Risotto di go (pez de laguna, sabor intenso a mar) — la especialidad local.",acts='<span class="tag tf">🐟 Risotto di go</span>') +
+        _ev("15:00",False,"Dorsoduro — Gallerie Accademia + Peggy Guggenheim","Accademia (€12): Bellini, Tiziano, Tintoretto. Peggy Guggenheim (€16): Pollock, Dalí, Kandinsky, Picasso.",acts='<span class="tag tm">🎨 Accademia €12 · Guggenheim €16</span><a href="https://maps.google.com/?q=Dorsoduro+Venice" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:00",False,"Campo Santa Margherita — último aperitivo en Italia","El campo más grande y vivo de Venecia. Bares económicos. Último Spritz veneziano del viaje.",acts='<span class="tag tf">🍹 Último Spritz</span>') +
+        _ev("20:00",False,"Cena despedida de Italia + preparar maletas 🧳","Mañana: tren EuroCity Venezia → Zürich (~09:00). SENTARSE DEL LADO DERECHO mirando norte para ver los Alpes.",acts='<span class="tag tsl">🧳 Preparar maletas</span><a href="https://www.sbb.ch" target="_blank" class="lb bt">SBB Zürich</a>'))
 
 
 def render_zurich():
-    _tcard("🚄","Venezia S. Lucia → Zurich HB (a través de los Alpes)","EuroCity directo · 4h45 · Paisaje alpino impresionante · Sentarse del lado DERECHO mirando norte","€40–60","https://www.sbb.ch")
-    _al("⚠️ <strong>Vuelo el 14/6 a las 08:55:</strong> Estar en ZRH a las 07:00. Tren Zurich HB → aeropuerto: 10 min, sale cada 10 min. El día 13 preparar todo y dormir temprano.")
-    _hotel("Hotel Zurich — por confirmar",
-           "Zona Langstrasse o Altstadt · 3 noches (11–14 junio)<br>"
-           "Opción: Hotel Otter ★★ (Langstrasse) o IBIS City West · Alternativa con vista: Hotel Limmatblick (~€120, sobre el río Limmat)",
-           "~€90–110 / noche · 3 noches",
-           "https://www.booking.com/searchresults.es.html?ss=Zurich&checkin=2026-06-11&checkout=2026-06-14&group_adults=2",
-           "", "https://maps.google.com/?q=Langstrasse+Zurich")
-
-    _card("Día 18","Jueves 11 junio — Llegada + Altstadt","Zurich",
-        _ev("14:00",False,"Bahnhofstrasse + Lago de Zurich",
-            "La calle comercial más cara del mundo. Joyerías, Rolex, bancos. El Lago al final para sentarse. Cambio mental: de caos italiano a precisión suiza.",
-            acts='<span class="tag tw">⌚ Paseo</span><a href="https://maps.google.com/?q=Bahnhofstrasse+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("15:30",True,"Altstadt + Grossmünster",
-            "La iglesia donde Zwinglio inició la Reforma Protestante en 1519. Subir las torres (€5). El barrio Niederdorf: callejuelas adoquinadas, gremios medievales, cafés.",
-            acts='<a href="https://maps.google.com/?q=Grossmunster+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("18:00",False,"Fraumünster — vitrales de Chagall (1970)",
-            "5 vitrales de Marc Chagall en un edificio del siglo XIII. Tesoro de arte moderno en arquitectura medieval. €5.",
-            acts='<span class="tag tm">🎨 €5</span><a href="https://maps.google.com/?q=Fraumunster+Zurich" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 19","Viernes 12 junio — Lago + ETH + Fondue","Zurich",
-        _ev("09:00",True,"Crucero Lago de Zurich",
-            "ZSG opera cruceros. Recorrido corto 1h o largo 4h hasta Rapperswil. El lago con los Alpes de fondo es icónico.",
-            acts='<span class="tag tb">⛵ €8–30</span><a href="https://www.zsg.ch" target="_blank" class="lb bt">ZSG</a><a href="https://maps.google.com/?q=Lake+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("16:00",False,"Polybahn → terraza ETH (vista gratis)",
-            "El funicular universitario de 1889 sube hasta la ETH (la universidad de Einstein). Vista panorámica de Zurich, el lago y los Alpes — gratis.",
-            acts='<a href="https://maps.google.com/?q=ETH+Zurich+terrace" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("20:00",True,"Fondue suiza — Swiss Chuchi",
-            "La fondue de queso es el plato nacional suizo. Swiss Chuchi en el Altstadt. Experiencia completa ~€35–45/persona.",
-            acts='<span class="tag tf">🧀 Fondue</span><a href="https://maps.google.com/?q=Swiss+Chuchi+Zurich" target="_blank" class="lb bm">📍 Maps</a>'))
-
-    _card("Día 20","Sábado 13 junio — Uetliberg + Chocolates + Última noche","Zurich",
-        _ev("09:00",False,"Uetliberg — la montaña de Zurich",
-            "870m. Tren S10 desde HB, 20 min, €5. Vista de Zurich, el lago y los Alpes. Bajada por sendero a Felsenegg.",
-            acts='<span class="tag tw">⛰️ €5 tren</span><a href="https://maps.google.com/?q=Uetliberg+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("13:00",True,"Chocolates Sprüngli + Mercado Bürkliplatz",
-            "Sprüngli (desde 1836) — los mejores truffes du jour de Zurich. El mercado de Bürkliplatz los sábados tiene artesanías locales.",
-            acts='<span class="tag tf">🍫 Chocolates</span><a href="https://maps.google.com/?q=Confiserie+Sprungli+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
-        _ev("19:00",True,"Última cena del viaje 🥂",
-            "Elegir el restaurante favorito de los días en Zurich. Brindar por el viaje. Hacer check-in online del vuelo LA8799.",
-            acts='<span class="tag tf">🥂 Despedida</span>') +
-        _ev("22:00",False,"A dormir — vuelo 08:55 mañana",
-            "Alarma: 06:00. Tren HB → ZRH: cada 10 min, 10 min de duración. Estar en aeropuerto a las 07:00.",
-            tip="⚠️ ALARMA 06:00. Sin excepciones.",
-            acts='<span class="tag tsl">✈️ Alarma 06:00</span>'))
+    _tcard("🚄","Venezia S. Lucia → Zürich HB","EuroCity directo · ~4h45 · Alpes por la ventana · Sentarse lado DERECHO mirando norte","€40–60","https://www.sbb.ch")
+    _hotel("Hotel Zürich — por confirmar","Zona Langstrasse o Altstadt · Check-in jue 11 junio · Check-out dom 14 junio","~€90–110/noche · 3 noches","https://www.booking.com/searchresults.es.html?ss=Zurich&checkin=2026-06-11&checkout=2026-06-14&group_adults=2","","https://maps.google.com/?q=Zurich+Switzerland")
+    _warn("VUELO 14/06 LA8799 a las 08:55: estar en ZRH a las 07:00. Tren Zürich HB → Aeropuerto: 10 min, sale cada 10 min desde las 05:30. ALARMA 06:00 sin excepciones.")
+    _al("<strong>💱 CHF:</strong> 1 CHF ≈ €1.05. Revolut y Wise funcionan. Precios: café €4–5, almuerzo €20–30, cena €40–60. Presupuestar el doble que Italia.", "alb")
+    _card("Día 18","Jueves 11 junio — Llegada + Altstadt","Zürich",
+        _ev("15:00",False,"Llegada Zürich HB — check-in","La Bahnhofstrasse empieza en la salida de la estación. Cambio mental: caos italiano → precisión suiza.",acts='<a href="https://maps.google.com/?q=Zurich+Hauptbahnhof" target="_blank" class="lb bm">📍 HB</a>') +
+        _ev("15:30",True,"★ Bahnhofstrasse + Lago de Zürich","1.4km de boutiques de lujo y bancos privados. Bürkliplatz sobre el lago. El Zürichsee es perfectamente limpio.",acts='<span class="tag ts">⌚ Rolex · Bulgari</span><a href="https://maps.google.com/?q=Bahnhofstrasse+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("17:00",True,"★ Altstadt + Grossmünster","Aquí Huldrych Zwingli comenzó la Reforma Protestante en 1519. Subir las torres (€5) para ver los vitrales de Sigmar Polke (2009) y la vista de Zürich. Barrio Niederdorf: callejuelas medievales.",acts='<span class="tag tm">⛪ Torres €5</span><a href="https://maps.google.com/?q=Grossmunster+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("18:30",False,"★ Fraumünster — vitrales de Marc Chagall","Cinco vitrales de Chagall (1970) y rosetón de Giacometti (1945) en edificio románico del siglo IX. Una de las mejores fusiones de arte moderno y arquitectura medieval de Europa. €5.",acts='<span class="tag tm">🎨 Chagall €5</span><a href="https://maps.google.com/?q=Fraumunster+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:00",False,"Cena en Niederdorf","Zürcher Geschnetzeltes: ternera con champiñones en crema sobre rösti — el plato nacional de Zürich.",acts='<span class="tag tf">🍖 Geschnetzeltes</span>'))
+    _card("Día 19","Viernes 12 junio — Lago + ETH + Fondue","Zürich",
+        _ev("09:00",True,"★ Crucero Lago de Zürich","ZSG desde Bürkliplatz. Recorrido corto 1h (€8) o largo 4h hasta Rapperswil (€30) con los Alpes reflejados.",acts='<span class="tag tb">⛵ 1h=€8 · 4h=€30</span><a href="https://www.zsg.ch" target="_blank" class="lb bt">ZSG</a>') +
+        _ev("13:00",False,"Almuerzo en el Altstadt","Birchermüesli (el muesli original de Zürich, inventado en 1900) o Rösti con huevo.",acts='<span class="tag tf">🥣 Birchermüesli</span>') +
+        _ev("15:00",False,"Polybahn → Terraza ETH Zürich (gratis)","El funicular de 1889 sube al campus donde Einstein estudió y enseñó. La terraza tiene la mejor vista de Zürich, el lago y los Alpes — totalmente gratis.",acts='<span class="tag tw">⛰️ Gratis</span><a href="https://maps.google.com/?q=ETH+Zurich" target="_blank" class="lb bm">📍 ETH</a>') +
+        _ev("17:00",False,"St. Peter Kirche","La esfera de reloj de iglesia más grande de Europa (8.7m de diámetro). Visible desde casi cualquier punto del Altstadt.",acts='<a href="https://maps.google.com/?q=St+Peter+Church+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("20:00",True,"★ Fondue suiza — Swiss Chuchi","Reitergasse 4. Gruyère + Appenzeller en kirsch. Pan para mojar. Vino blanco valaisano (Fendant). ~€35–45/persona. Reservar con anticipación.",acts='<span class="tag tf">🧀 Fondue</span><a href="https://maps.google.com/?q=Swiss+Chuchi+Zurich" target="_blank" class="lb bm">📍 Maps</a>'))
+    _card("Día 20","Sábado 13 junio — Uetliberg + Sprüngli + Despedida","Zürich",
+        _ev("09:00",True,"★ Uetliberg — la montaña de Zürich","Tren S10 desde Zürich HB, 20 min, €5.60. 869m. Vista 360°: Zürich, el lago, los Alpes (Jungfrau, Eiger, Matterhorn en días claros). Sendero de bajada a Felsenegg (1.5h, fácil) con vista del lago todo el tiempo.",acts='<span class="tag tw">⛰️ Tren €5.60</span><a href="https://maps.google.com/?q=Uetliberg+Zurich" target="_blank" class="lb bm">📍 Maps</a>') +
+        _ev("13:30",True,"★ Confiserie Sprüngli + Mercado Bürkliplatz","Sprüngli (Paradeplatz, desde 1836): Luxemburgerli (macarons suizos) y Truffes du Jour. Mercado de Bürkliplatz los sábados: artesanías, flores, quesos suizos.",acts='<span class="tag tf">🍫 Chocolates</span><a href="https://maps.google.com/?q=Confiserie+Sprungli+Paradeplatz+Zurich" target="_blank" class="lb bm">📍 Sprüngli</a>') +
+        _ev("15:30",False,"Shopping final + preparar maletas 🧳","Via Augustinergasse para recuerdos: chocolates, cuchillos suizos (Victorinox), quesos. Check-in online del vuelo LA8799.",acts='<span class="tag tsl">🧳 Preparar maletas + check-in online</span>') +
+        _ev("19:00",True,"★ Última cena del viaje 🥂","Brindar por los 21 días y la luna de miel.",acts='<span class="tag tf">🥂 Despedida</span>') +
+        _ev("22:00",False,"🛏️ Dormir — vuelo 08:55 mañana ✈️","ALARMA: 06:00. Tren Zürich HB → ZRH: 10 min desde las 05:30. Estar en ZRH a las 07:00.",tip="⚠️ ALARMA 06:00 SIN EXCEPCIONES.",acts='<span class="tag tsl">✈️ LA8799 · ZRH → MXP 08:55</span>'))
 
 
 CIUDAD_FN = {
@@ -809,100 +567,104 @@ CIUDAD_FN = {
     "🌸 Florencia":     render_florencia,
     "🏟️ Roma":          render_roma,
     "🍕 Nápoles":       render_napoles,
-    "🦔 Bari":          render_bari,
+    "🦔 Bari/Puglia":   render_bari,
     "🚤 Venecia":       render_venecia,
     "🇨🇭 Zurich":       render_zurich,
 }
+# ── DATOS ESTÁTICOS ────────────────────────────────────────────────────────────
 
-# ── DATOS FIJOS ────────────────────────────────────────────────────────────────
 RESERVAS_MUSEOS = [
+    {"id":"m03","title":"Museos Vaticanos + Capilla Sixtina (Tour Guiado Español)","city":"Roma",
+     "fecha":"3 junio · 08:30 · Código: 2L2N0SMT2JVMU3NOU · Llegar 08:00 a Viale Vaticano · Entrada: CORRIDOIO 2",
+     "urgente":False,"url":"https://www.museivaticani.va","maps":"https://maps.google.com/?q=Vatican+Museums+Rome",
+     "default_estado":"paid","default_conf":"2L2N0SMT2JVMU3NOU","default_monto":80},
+    {"id":"m05","title":"Coliseo + Foro Romano + Palatino (Enjoy Rome · audioguía español)","city":"Roma",
+     "fecha":"4 junio · 09:00 · Ref. 1386136463 · Punto encuentro: Via delle Terme di Tito 93 · Llegar 08:45",
+     "urgente":False,"url":"https://www.booking.com","maps":"https://maps.google.com/?q=Via+delle+Terme+di+Tito+93+Rome",
+     "default_estado":"paid","default_conf":"1386136463","default_monto":0},
+    {"id":"m06","title":"David — Galleria dell'Accademia","city":"Florencia",
+     "fecha":"31 mayo · 13:45 · Orden: 22515345 · Adilson ID:11 · Mirtha ID:10",
+     "urgente":False,"url":"https://www.uffizi.it/en/the-accademia-gallery","maps":"https://maps.google.com/?q=Accademia+Gallery+Florence",
+     "default_estado":"paid","default_conf":"22515345","default_monto":24},
     {"id":"m01","title":"La Última Cena — Da Vinci","city":"Milán","fecha":"26 mayo · 08:15",
      "urgente":True,"url":"https://cenacolodavincimilano.vivaticket.com","maps":"https://maps.google.com/?q=Santa+Maria+delle+Grazie+Milan",
      "default_estado":"pending","default_conf":"","default_monto":0},
-    {"id":"m02","title":"Galería Borghese — Bernini","city":"Roma","fecha":"4 junio · 15:00",
-     "urgente":True,"url":"https://www.galleriaborghese.it","maps":"https://maps.google.com/?q=Galleria+Borghese+Rome",
-     "default_estado":"pending","default_conf":"","default_monto":0},
-    {"id":"m03","title":"Museos Vaticanos + Capilla Sixtina","city":"Roma","fecha":"2 junio · 10:30",
-     "urgente":False,"url":"https://www.museivaticani.va","maps":"https://maps.google.com/?q=Vatican+Museums+Rome",
-     "default_estado":"paid","default_conf":"YA COMPRADO ✓","default_monto":42},
     {"id":"m04","title":"Torre de Pisa — Subida","city":"Pisa","fecha":"29 mayo",
      "urgente":True,"url":"https://www.opapisa.it","maps":"https://maps.google.com/?q=Torre+di+Pisa",
      "default_estado":"pending","default_conf":"","default_monto":0},
-    {"id":"m05","title":"Coliseo + Foro Romano + Palatino","city":"Roma","fecha":"3 junio · 08:00",
-     "urgente":False,"url":"https://www.coopculture.it","maps":"https://maps.google.com/?q=Colosseum+Rome",
-     "default_estado":"paid","default_conf":"YA COMPRADO ✓","default_monto":32},
-    {"id":"m06","title":"David — Accademia Florencia","city":"Florencia","fecha":"30 mayo · 14:00",
-     "urgente":False,"url":"https://www.uffizi.it/en/the-accademia-gallery","maps":"https://maps.google.com/?q=Accademia+Gallery+Florence",
-     "default_estado":"paid","default_conf":"YA COMPRADO ✓","default_monto":24},
     {"id":"m07","title":"Galería degli Uffizi","city":"Florencia","fecha":"30 mayo · 08:30",
-     "urgente":False,"url":"https://www.uffizi.it","maps":"https://maps.google.com/?q=Uffizi+Gallery+Florence",
+     "urgente":True,"url":"https://www.uffizi.it","maps":"https://maps.google.com/?q=Uffizi+Gallery+Florence",
+     "default_estado":"pending","default_conf":"","default_monto":0},
+    {"id":"m08","title":"Cúpula de Brunelleschi — Duomo Florencia","city":"Florencia","fecha":"1 junio · 18:30",
+     "urgente":True,"url":"https://www.ilgrandemuseodelduomo.it","maps":"https://maps.google.com/?q=Florence+Cathedral",
+     "default_estado":"pending","default_conf":"","default_monto":0},
+    {"id":"m09","title":"Cappella Sansevero — Cristo Velato","city":"Nápoles","fecha":"6 junio",
+     "urgente":True,"url":"https://www.museosansevero.it","maps":"https://maps.google.com/?q=Cappella+Sansevero+Naples",
+     "default_estado":"pending","default_conf":"","default_monto":0},
+    {"id":"m02","title":"Galería Borghese — Bernini","city":"Roma","fecha":"5 junio · 15:00",
+     "urgente":True,"url":"https://www.galleriaborghese.it","maps":"https://maps.google.com/?q=Galleria+Borghese+Rome",
      "default_estado":"pending","default_conf":"","default_monto":0},
 ]
 
 RESERVAS_ALOJ = [
     {"id":"a01","city":"Milán","fecha":"25–27 mayo","noches":2,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Corso+Como+9+Milan+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Corso+Como+9+Milan+Italy"},
     {"id":"a02","city":"La Spezia","fecha":"27–29 mayo","noches":2,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Via+Napoli+198+La+Spezia+Italy"},
     {"id":"a03","city":"Florencia","fecha":"29 mayo–2 junio","noches":4,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Via+Nicola+Tagliaferri+5+Florence+Italy"},
     {"id":"a04","city":"Roma","fecha":"2–6 junio","noches":4,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Via+Giovanni+Aldini+3+Rome+Italy"},
     {"id":"a05","city":"Nápoles","fecha":"6–7 junio","noches":1,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Via+San+Agostino+alla+Zecca+4+Naples+Italy"},
     {"id":"a06","city":"Bari","fecha":"7–9 junio","noches":2,"precio":"€190 total",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy"},
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Via+Melo+da+Bari+163+Bari+Italy"},
     {"id":"a07","city":"Venecia","fecha":"9–11 junio","noches":2,"precio":"Airbnb confirmado",
-     "url_b":"","url_a":"https://www.airbnb.com/trips",
-     "maps":"https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy"},
-    {"id":"a08","city":"Zurich","fecha":"11–14 junio","noches":3,"precio":"~€90–110/noche",
+     "url_b":"","url_a":"https://www.airbnb.com/trips","maps":"https://maps.google.com/?q=Calle+Lionpardo+1954B+Venice+Italy"},
+    {"id":"a08","city":"Zürich","fecha":"11–14 junio","noches":3,"precio":"~€90–110/noche",
      "url_b":"https://www.booking.com/searchresults.es.html?ss=Zurich&checkin=2026-06-11&checkout=2026-06-14&group_adults=2",
      "url_a":"","maps":"https://maps.google.com/?q=Zurich+Switzerland"},
 ]
 
 TRANSPORTES = [
-    ("✈️→🚄","MXP → Milano Centrale","Malpensa Express · 52 min · cada 30 min","€13/p","https://www.trenord.it"),
-    ("🚄","Milano → La Spezia Centrale","Intercity · ~3h · Salida 08:10","€25–35","https://www.trenitalia.com"),
+    ("✈️→🚄","MXP → Milano Centrale","Malpensa Express · 52 min · sale cada 30 min · Andén -1 aeropuerto","€13/p","https://www.trenord.it"),
+    ("🚄✅","Milano Centrale → La Spezia Centrale","IC651 · 06:10→09:26 · 1ª Clase · Adilson 7C · Mirtha 7D · PNR M9NTBN · YA COMPRADO","€53.80 pagado","https://www.trenitalia.com"),
     ("🚂","La Spezia ↔ Cinque Terre","Regional · Incluido en Cinque Terre Card (€29.50/2 días)","Incluido","https://www.cinqueterre.eu.com"),
-    ("🚄","La Spezia → Firenze SMN","Intercity · ~2h · Salida 08:30","€15–20","https://www.trenitalia.com"),
-    ("🚄","Firenze ↔ Pisa Centrale","Regional · 1h · Frecuente todo el día","€9–12","https://www.trenitalia.com"),
-    ("🚌","Firenze ↔ Siena","Bus SENA · 1h30 · desde Autostazione frente a SMN","€9","https://www.tiemmespa.it"),
-    ("🚄","Firenze → Roma Termini","Frecciarossa · 1h30 · cada 30 min","€25–45","https://www.trenitalia.com"),
-    ("🚄","Roma → Napoli Centrale","Frecciarossa · 1h10 · desde las 06:00","€20–35","https://www.trenitalia.com"),
-    ("🚂","Napoli → Pompei Scavi","Circumvesuviana · 40 min · andén subterráneo -1","€3/p","https://www.eavsrl.it"),
-    ("🚄","Napoli Centrale → Bari Centrale","Intercity · ~3h · Salida 10:30 · Llegada ~13:30","€25–40","https://www.trenitalia.com"),
-    ("🚄","Bari ↔ Polignano a Mare","Regional · 25 min · Frecuente · ~€3","€3/p","https://www.trenitalia.com"),
-    ("🚌","Bari → Alberobello (FSE)","Ferrovie del Sud Est · ~1h30 · Sale desde Bari Centrale sur","€5/p","https://www.fseonline.it"),
-    ("🚄","Bari Centrale → Venezia S. Lucia","Frecciarossa · ~7h · Salida ~08:00 · Llega ~15:00","€35–65","https://www.trenitalia.com"),
-    ("🚤","Vaporetto Venecia 24h / 48h","24h=€25 · 48h=€35 · Línea 1 = Gran Canal completo","€25–35","https://actv.avmspa.it"),
-    ("⛴️","Vaporetto Venecia → Murano → Burano","Línea 12 desde Fondamente Nove · 40 min a Burano","Incluido en pase","https://actv.avmspa.it"),
-    ("🚄","Venezia → Zurich HB (Alpes)","EuroCity directo · 4h45 · lado derecho del tren","€40–60","https://www.sbb.ch"),
-    ("🚄","Zurich HB → Aeropuerto ZRH","SBB · 10 min · sale cada 10 min","€4","https://www.sbb.ch"),
+    ("🚄","La Spezia → Firenze SMN","Intercity · ~2h · Salida ~08:30","€15–20","https://www.trenitalia.com"),
+    ("🚄","Firenze ↔ Pisa Centrale","Regional · 1h · Excursión día 5","€9–12","https://www.trenitalia.com"),
+    ("🚌","Firenze ↔ Siena","Bus SENA · 1h30 · Desde Autostazione frente a SMN","€9","https://www.tiemmespa.it"),
+    ("🚄✅","Firenze SMN → Roma Termini","Italo Z9R56L · 09:43→11:19 · Coche 9 · Asientos 35/36 · YA COMPRADO","€39.80 pagado","https://www.italotreno.it"),
+    ("🚄","Roma Termini → Napoli Centrale","Frecciarossa · 1h10 · Salida ~11:30","€20–35","https://www.trenitalia.com"),
+    ("🚂","Napoli → Pompei Scavi","Circumvesuviana · 40 min · Andén -1 Napoli Centrale · €3/p","€3/p","https://www.eavsrl.it"),
+    ("🚄","Napoli Centrale → Bari Centrale","Intercity · ~3h30 · Salida ~14:00 del 7 jun","€25–40","https://www.trenitalia.com"),
+    ("🚄","Bari ↔ Polignano a Mare","Regional · 25 min · Frecuente","€3/p","https://www.trenitalia.com"),
+    ("🚌","Bari → Alberobello (FSE)","Ferrovie del Sud Est · ~1h30 · Andén SUR de Bari Centrale","€5/p","https://www.fseonline.it"),
+    ("🚄✅","Bari C.LE → Roma Termini","Italo UL718U · 06:50→11:30 · Coche 4 · Asientos 5/6 · YA COMPRADO","","https://www.italotreno.it"),
+    ("🚄✅","Roma Termini → Venezia S.L.","Italo UL718U · 11:55→15:55 · Coche 7 · Asientos 9/10 · ⚠️ 25min conexión · YA COMPRADO","€123.80 (Bari→VCE)","https://www.italotreno.it"),
+    ("🚤","Vaporetto Venecia 48h","48h=€35 · Línea 1=Gran Canal · Murano (3/4.1) · Burano (Línea 12)","€35","https://actv.avmspa.it"),
+    ("🚄","Venezia S.L. → Zürich HB","EuroCity directo · ~4h45 · LADO DERECHO mirando norte · ~09:00","€40–60","https://www.sbb.ch"),
+    ("🚄","Zürich HB → Aeropuerto ZRH","SBB · 10 min · sale cada 10 min desde las 05:30","€4","https://www.sbb.ch"),
 ]
 
 TIPS = [
-    ("☕","Café en la barra","Parado = €1.20. Sentado en mesa = €3–5. La ley exige mostrar ambos precios."),
-    ("💧","Agua del grifo","Pedir 'acqua del rubinetto' — gratis. El agua mineral en mesa = €3–5."),
-    ("🍽️","Menú del giorno","Primer + segundo + bebida + pan = €12–15. Solo almuerzo."),
+    ("☕","Café en la barra","Parado = €1.20. Sentado = €3–5. NUNCA pedir cappuccino después del mediodía."),
+    ("💧","Agua del grifo","Pedir 'acqua del rubinetto' — gratis. Agua mineral en mesa = €3–5 extra."),
+    ("🍽️","Menú del giorno","Primer + segundo + bebida = €12–15. Solo almuerzo. Buscar el pizarrón en la puerta."),
     ("💳","Revolut / Wise","Sin comisiones. En Suiza cambiar a CHF. 1 CHF ≈ €1.05."),
-    ("👟","Zapatos (fundamental)","10–15 km/día en adoquines. Suela firme. Zapatillas de running funcionan."),
+    ("👟","Zapatos (fundamental)","15 km/día en adoquines. Zapatillas de running con amortiguación."),
     ("🕌","Ropa para iglesias","Hombros y rodillas cubiertos. Bufanda liviana para los dos."),
-    ("🚌","FSE Bari → Alberobello","Comprar ticket en la boletería de Bari Centrale sur (Ferrovie del Sud Est). No confundir con Trenitalia — son andenes separados. ~€5 por tramo."),
-    ("🍦","Gelato auténtico","Colores apagados, tapado con espátula = artesanal. Fluo = industrial."),
-    ("📱","Apps esenciales","Trenitalia · Italo · Maps.me offline · TheFork · SBB · Revolut."),
-    ("🎾","Pádel Nuestro Roma","Día 11 tarde. Bullpadel, Siux, Babolat, Head. Pista interior."),
-    ("🛍️","Ropa barata — Milán","Corso Buenos Aires. 2km de tiendas. Zara, H&M, marcas italianas."),
-    ("🧀","Fondue — Zurich","Swiss Chuchi (Altstadt) ~€40/persona. Sprüngli para chocolates."),
-    ("💶","Coperto en Italia","Un cargo de €1–3 por persona que aparece en la cuenta. Es legal. No es una estafa."),
+    ("📸","Capilla Sixtina","Prohibido fotografiar — los guardias son muy estrictos. Silencio absoluto."),
+    ("🚄","Validar el ticket","SIEMPRE validar antes de subir al tren. Multa sin validar: €50–200."),
+    ("🧳","Guardaequipajes Nápoles","Kipoint en Napoli Centrale, ~€6/bulto. Clave para el día de Pompeya."),
+    ("🌊","Polignano a Mare","Llegar antes de las 10:30. Llevar snorkel."),
+    ("🚤","Venecia sin mapa","Apagar Google Maps y perderse es la mejor actividad de Venecia."),
+    ("🧀","Fondue en Zürich","Swiss Chuchi (Reitergasse 4) ~€40/persona. Reservar con anticipación."),
+    ("🍫","Sprüngli — Zürich","Los Luxemburgerli y Truffes du Jour: el mejor souvenir comestible del viaje."),
     ("🔌","Enchufe Suiza (TIPO J)","Suiza usa enchufe TIPO J — diferente al italiano. Comprar adaptador en Milán."),
-    ("📸","Mejor foto Manarola","Ir al mirador 15 min ANTES del sunset. Llegar temprano para conseguir lugar."),
-    ("🎨","Murano vs Burano","En Murano: ver la demostración de cristal soplado (gratis en las fornaci). En Burano: ir temprano para conseguir las fotos sin turistas."),
+    ("🎾","Pádel Nuestro Roma","Día 12 tarde. Bullpadel, Siux, Babolat. Pista interior para probar palas."),
+    ("💶","Coperto en Italia","€1–3 por persona que aparece en la cuenta. Es legal. No es una estafa."),
+    ("🍦","Gelato auténtico","Colores apagados + tapado con espátula = artesanal. Fluo + expuesto = industrial."),
+    ("📱","Apps esenciales","Trenitalia · Italo · Maps.me offline · TheFork · SBB · Revolut · ACTV."),
 ]
 
 FRASES_ITALIANO = [
@@ -910,7 +672,6 @@ FRASES_ITALIANO = [
     ("Restaurante","La cuenta, por favor","Il conto, per favore","Il-KON-to-per-fa-VO-re"),
     ("Restaurante","¿Tienen menú del día?","Avete il menù del giorno?","A-VE-te-il-me-NU-del-JOR-no"),
     ("Restaurante","Agua del grifo, por favor","Acqua del rubinetto, per favore","A-KUA-del-ru-bi-NET-to"),
-    ("Restaurante","Sin gluten, por favor","Senza glutine, per favore","SEN-tsa-GLU-ti-ne"),
     ("Transporte","¿Dónde está la estación?","Dov'è la stazione?","Do-VE-la-sta-TSYO-ne"),
     ("Transporte","Un billete para... por favor","Un biglietto per... per favore","Un-bil-YET-to-per..."),
     ("Transporte","¿A qué hora sale el tren?","A che ora parte il treno?","A-ke-O-ra-PAR-te-il-TRE-no"),
@@ -934,7 +695,6 @@ FRASES_SUIZO = [
     ("Restaurante","La cuenta, por favor","Die Rechnung, bitte","Di-REJ-nung-BI-te"),
     ("General","¿Habla inglés?","Sprechen Sie Englisch?","SHPRE-jen-zi-ENG-lish"),
 ]
-
 # ── CARGA DE DATOS ──────────────────────────────────────────────────────────────
 try:
     df_res=load_r(); df_gas=load_g(); df_notas=load_n(); df_chk=load_chk()
@@ -945,8 +705,7 @@ except:
     df_res=df_gas=df_notas=df_chk=pd.DataFrame(); sheets_ok=False
 
 def get_rd(rid):
-    if df_res.empty or "id" not in df_res.columns:
-        return {}
+    if df_res.empty or "id" not in df_res.columns: return {}
     r = df_res[df_res["id"]==rid]
     return r.iloc[0].to_dict() if not r.empty else {}
 
@@ -954,18 +713,13 @@ def get_estado(rid, default_estado):
     rd = get_rd(rid)
     return rd.get("estado", default_estado) if rd else default_estado
 
-# ── COUNTDOWN ──────────────────────────────────────────────────────────────────
+# ── COUNTDOWN + HERO ───────────────────────────────────────────────────────────
 VIAJE_DATE = date(2026, 5, 24)
 hoy = date.today()
 dias_restantes = (VIAJE_DATE - hoy).days
-
-# ── HERO ───────────────────────────────────────────────────────────────────────
 ok_m = sum(1 for r in RESERVAS_MUSEOS if get_estado(r["id"], r["default_estado"]) in ("confirmed","paid"))
-ok_a = sum(1 for r in RESERVAS_ALOJ   if get_estado(r["id"], "pending") in ("confirmed","paid"))
-
-# Calcular total gastado incluyendo gastos manuales + alojamientos sincronizados
+ok_a = sum(1 for r in RESERVAS_ALOJ if get_estado(r["id"], "pending") in ("confirmed","paid"))
 total_gas = pd.to_numeric(df_gas["monto"],errors="coerce").fillna(0).sum() if not df_gas.empty and "monto" in df_gas.columns else 0
-
 chk_done  = len(df_chk[df_chk["done"].astype(str)=="1"]) if not df_chk.empty and "done" in df_chk.columns else 0
 chk_total = len(df_chk) if not df_chk.empty else 0
 
@@ -988,8 +742,8 @@ M(f"""<div class="hero">
   <div class="si"><span class="sn">{ok_a}/{len(RESERVAS_ALOJ)}</span><span class="sl2">Hoteles ok</span></div>
   <div class="si"><span class="sn">€{total_gas:,.0f}</span><span class="sl2">Gastado</span></div>
   <div class="si"><span class="sn">{chk_done}/{chk_total}</span><span class="sl2">Checklist</span></div>
-  <div class="si"><span class="sn">20</span><span class="sl2">Días totales</span></div>
-  <div class="si"><span class="sn">9</span><span class="sl2">Ciudades</span></div>
+  <div class="si"><span class="sn">21</span><span class="sl2">Días totales</span></div>
+  <div class="si"><span class="sn">8</span><span class="sl2">Ciudades</span></div>
 </div>""")
 
 if sheets_ok:
@@ -999,7 +753,7 @@ else:
 
 st.write("")
 
-# ── TABS ───────────────────────────────────────────────────────────────────────
+# ── TABS ────────────────────────────────────────────────────────────────────────
 tab_vue,tab_itin,tab_mapa,tab_clima,tab_museos,tab_aloj,tab_trans,tab_gas_t,tab_pres,tab_chk_t,tab_frases,tab_tips,tab_notas_t = st.tabs([
     "✈️ Vuelos","🗺️ Itinerario","🌍 Mapa","🌤️ Clima",
     "🎟️ Museos","🏨 Hoteles","🚄 Trenes","💰 Gastos",
@@ -1011,17 +765,17 @@ with tab_vue:
     M('<div class="sh"><div class="sh-t">Vuelos confirmados</div><div class="sh-m">LATAM + Swiss · Foz de Iguazú ↔ Zurich</div></div>')
     M('<div class="dc"><div class="dh"><span class="dn">IDA</span><span class="dd">Domingo 24 mayo 2026 — Foz de Iguazú → Milán</span></div>' +
       _ev("14:50",True,"IGU → São Paulo GRU","LA3879 op. LATAM Brasil · Airbus 320 · 1h 40min",acts='<span class="tag tr2">✈ LA3879 · A320</span>') +
-      _ev("16:30",False,"Escala São Paulo Guarulhos (GRU)","Cambio de avión · 1h 30min de conexión · Considerar el traslado si aplica",alt=True) +
+      _ev("16:30",False,"Escala São Paulo Guarulhos (GRU)","Cambio de avión · 1h 30min de conexión",alt=True) +
       _ev("18:00",True,"São Paulo GRU → Milán Malpensa MXP","LA8072 op. LATAM Brasil · Boeing 773 · 11h 15min · Llega 10:15 +1día",acts='<span class="tag tr2">✈ LA8072 · B777</span>') +
       '</div>')
     M('<div class="dc"><div class="dh"><span class="dn">VUELTA</span><span class="dd">Domingo 14 junio 2026 — Zurich → Foz de Iguazú</span></div>' +
-      _ev("08:55",True,"Zurich ZRH → Milán Malpensa MXP","LA8799 op. Swiss · Avión 221 · 55min · Salir al aeropuerto a las 07:00",tip="⚠️ Tren Zurich HB → ZRH: 10 min, sale cada 10 min. Alarma 06:00.",acts='<span class="tag tr2">✈ LA8799 · Swiss</span>') +
+      _ev("08:55",True,"Zurich ZRH → Milán Malpensa MXP","LA8799 op. Swiss · 55min · Salir al aeropuerto a las 07:00",tip="⚠️ ALARMA 06:00. Tren HB → ZRH: 10 min desde las 05:30. Estar en ZRH a las 07:00.",acts='<span class="tag tr2">✈ LA8799 · Swiss</span>') +
       _ev("09:50",False,"Escala Milán Malpensa (MXP)","Cambio de avión · 3h 10min de conexión",alt=True) +
       _ev("13:00",True,"Milán MXP → São Paulo GRU","LA8073 op. LATAM Brasil · Boeing 773 · 12h",acts='<span class="tag tr2">✈ LA8073 · B777</span>') +
       _ev("20:00",False,"Escala São Paulo Guarulhos (GRU)","Cambio de avión · 2h 20min de conexión",alt=True) +
       _ev("22:20",True,"São Paulo GRU → Foz de Iguazú IGU","LA3206 op. LATAM Brasil · Airbus 321 · 1h 45min · Llega 00:05 +1día",acts='<span class="tag tr2">✈ LA3206 · A321</span>') +
       '</div>')
-    _al("<strong>⚠️ Día 1 — Llegada 25 mayo:</strong> Llegan a las 10:15hs tras 11h de vuelo nocturno. Primer día: guardar equipaje, almuerzo tranquilo, siesta obligatoria 2–3h, paseo suave al atardecer por Navigli. No planificar actividades intensas.")
+    _al("<strong>⚠️ Día 1 — Llegada 25 mayo:</strong> Llegan a las 10:15hs tras 11h de vuelo nocturno. Primer día tranquilo: guardar equipaje, almuerzo, siesta obligatoria 2–3h, paseo suave al atardecer por Navigli.")
 
 # ══ ITINERARIO ════════════════════════════════════════════════════════════════
 with tab_itin:
@@ -1029,78 +783,70 @@ with tab_itin:
     M(f'<div class="sh" style="margin-top:0.75rem"><div class="sh-t">{ciudad_sel}</div></div>')
     CIUDAD_FN[ciudad_sel]()
 
-# ══ MAPA ═════════════════════════════════════════════════════════════════════
+# ══ MAPA ══════════════════════════════════════════════════════════════════════
 with tab_mapa:
-    M('<div class="sh"><div class="sh-t">🌍 Ruta completa — La U</div><div class="sh-m">Milán → Cinque Terre → Florencia/Pisa → Roma → Nápoles → Bari → Venecia → Zurich</div></div>')
+    M('<div class="sh"><div class="sh-t">🌍 Ruta completa</div><div class="sh-m">Milán → Cinque Terre → Florencia/Pisa → Roma → Nápoles/Pompeya → Bari/Puglia → Venecia → Zurich</div></div>')
     m = folium.Map(location=[44.5, 11.5], zoom_start=5, tiles="CartoDB positron")
     coords = [(c["lat"], c["lon"]) for c in RUTA_MAPA]
     folium.PolyLine(coords, color="#C4693A", weight=3, opacity=0.7, dash_array="8 4").add_to(m)
     for c in RUTA_MAPA:
-        color = c["color"]
-        popup_html = f'<div style="font-family:DM Sans,sans-serif;min-width:140px"><div style="font-size:1.1rem;margin-bottom:4px">{c["emoji"]} <strong>{c["city"]}</strong></div><div style="font-size:0.78rem;color:#6B7A8D">{c["dias"]}</div></div>'
-        folium.CircleMarker(location=[c["lat"],c["lon"]],radius=10 if "excursión" not in c["dias"] else 7,
-            color=color,fill=True,fill_color=color,fill_opacity=0.9,
-            popup=folium.Popup(popup_html,max_width=180),tooltip=f'{c["emoji"]} {c["city"]} · {c["dias"]}').add_to(m)
+        popup_html = f'<div style="font-family:sans-serif;min-width:130px"><strong>{c["emoji"]} {c["city"]}</strong><br><span style="color:#6B7A8D;font-size:0.78rem">{c["dias"]}</span></div>'
+        folium.CircleMarker(location=[c["lat"],c["lon"]],
+            radius=10 if "excursión" not in c["dias"] else 7,
+            color=c["color"],fill=True,fill_color=c["color"],fill_opacity=0.9,
+            popup=folium.Popup(popup_html,max_width=180),
+            tooltip=f'{c["emoji"]} {c["city"]} · {c["dias"]}').add_to(m)
         if "excursión" not in c["dias"]:
             folium.Marker(location=[c["lat"]+0.15,c["lon"]],
-                icon=folium.DivIcon(html=f'<div style="font-size:0.65rem;font-weight:700;color:{color};white-space:nowrap;background:white;padding:1px 4px;border-radius:4px;border:1px solid {color}">{c["city"]}</div>',
-                icon_size=(80,20),icon_anchor=(40,10))).add_to(m)
+                icon=folium.DivIcon(
+                    html=f'<div style="font-size:0.62rem;font-weight:700;color:{c["color"]};white-space:nowrap;background:white;padding:1px 4px;border-radius:4px;border:1px solid {c["color"]}">{c["city"]}</div>',
+                    icon_size=(80,20),icon_anchor=(40,10))).add_to(m)
     st_folium(m, width=None, height=500, returned_objects=[])
-    M("""<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem">
-    <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem"><span style="width:12px;height:12px;background:#C4693A;border-radius:50%;display:inline-block"></span>Ciudades principales</div>
-    <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem"><span style="width:12px;height:12px;background:#C9A84C;border-radius:50%;display:inline-block"></span>Excursiones de día</div>
-    </div>""")
 
-# ══ CLIMA ════════════════════════════════════════════════════════════════════
+# ══ CLIMA ═════════════════════════════════════════════════════════════════════
 with tab_clima:
     M('<div class="sh"><div class="sh-t">🌤️ Clima durante el viaje</div><div class="sh-m">Pronóstico para la fecha de llegada a cada ciudad · API Open-Meteo</div></div>')
-    _al("<strong>ℹ️ Nota:</strong> A medida que se acerque la fecha, los datos serán más precisos. Las temperaturas de mayo/junio en Italia son ideales: 22–28°C.")
+    _al("<strong>ℹ️</strong> A medida que se acerque la fecha, los datos serán más precisos. Las temperaturas de mayo/junio en Italia son ideales: 22–28°C.")
     cols = st.columns(4)
     for i,(nombre,datos) in enumerate(CIUDADES_CLIMA.items()):
         with cols[i%4]:
             clima = get_clima(datos["lat"],datos["lon"],datos["fecha"])
             if clima:
                 desc = WMO_CODES.get(clima["code"],"🌤️")
-                desc_icon = desc.split()[0]
-                desc_text = " ".join(desc.split()[1:])
-                rain_html = f'<div style="font-size:0.7rem;color:#4285F4;margin-top:3px">Lluvia: {clima["rain"]}%</div>' if clima["rain"] else ""
-                M(f'<div class="clima-card"><div style="font-size:1.4rem">{desc_icon}</div><div class="clima-temp">{clima["max"]}°</div><div style="font-size:0.72rem;color:#6B7A8D">Mín {clima["min"]}°C · Máx {clima["max"]}°C</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div class="clima-desc">{desc_text}</div>{rain_html}</div>')
+                icon = desc.split()[0]; texto = " ".join(desc.split()[1:])
+                rain_h = f'<div style="font-size:0.7rem;color:#4285F4;margin-top:3px">Lluvia: {clima["rain"]}%</div>' if clima["rain"] else ""
+                M(f'<div class="clima-card"><div style="font-size:1.4rem">{icon}</div><div class="clima-temp">{clima["max"]}°</div><div style="font-size:0.72rem;color:#6B7A8D">Mín {clima["min"]}° · Máx {clima["max"]}°C</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div class="clima-desc">{texto}</div>{rain_h}</div>')
             else:
-                M(f'<div class="clima-card"><div style="font-size:1.4rem">🌤️</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div style="font-size:0.72rem;color:#6B7A8D;margin-top:4px">Disponible cuando se acerque la fecha</div></div>')
+                M(f'<div class="clima-card"><div style="font-size:1.4rem">🌤️</div><div class="clima-city"><strong>{nombre}</strong><br>{datos["fecha"]}</div><div style="font-size:0.72rem;color:#6B7A8D;margin-top:4px">Disponible próximamente</div></div>')
             st.write("")
 
 # ══ MUSEOS ════════════════════════════════════════════════════════════════════
 with tab_museos:
-    M('<div class="sh"><div class="sh-t">🎟️ Museos y Entradas</div><div class="sh-m">Reservar en el sitio oficial · Los marcados con ✅ ya están comprados y confirmados</div></div>')
-    _al("<strong>⚠️ Urgente pendiente:</strong> La Última Cena (Milán), Galería Borghese (Roma) y Torre de Pisa. Gestionar hoy.")
-    _al("<strong>✅ Ya comprados:</strong> Museos Vaticanos · Coliseo + Foro Romano · David (Accademia). No hacer nada con estos.", "alg")
-
+    M('<div class="sh"><div class="sh-t">🎟️ Museos y Entradas</div><div class="sh-m">✅ Ya comprados · ⚠️ Gestionar URGENTE</div></div>')
+    _al("<strong>✅ Ya comprados:</strong> Vaticano (3 jun 08:30) · Coliseo Enjoy Rome (4 jun 09:00) · Accademia/David (31 mayo 13:45).", "alg")
+    _al("<strong>⚠️ Urgentes pendientes:</strong> La Última Cena (Milán) · Uffizi · Cúpula Brunelleschi · Sansevero/Cristo Velato · Galería Borghese.")
     for r in RESERVAS_MUSEOS:
         rd = get_rd(r["id"])
         ea = rd.get("estado", r["default_estado"]) if rd else r["default_estado"]
         conf_saved = rd.get("confirmacion", r["default_conf"]) if rd else r["default_conf"]
         monto_saved = float(rd.get("monto", r["default_monto"]) or r["default_monto"]) if rd else float(r["default_monto"])
         notas_saved = rd.get("notas_int","") if rd else ""
-
         bl = {"pending":"bp","confirmed":"bc","paid":"bpa"}.get(ea,"bp")
         ll = {"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}.get(ea,"⏳ Pendiente")
-        cc = "done" if ea == "paid" else ("urg" if r["urgente"] else "ok")
-        conf_html = (f'<div style="font-size:0.72rem;color:#1A6B32;font-weight:600;background:#D4EDDA;padding:2px 8px;border-radius:8px;margin-top:4px;display:inline-block">✓ {conf_saved}</div>') if conf_saved else ""
-
+        cc = "done" if ea=="paid" else ("urg" if r["urgente"] else "ok")
+        conf_html = f'<div style="font-size:0.72rem;color:#1A6B32;font-weight:600;background:#D4EDDA;padding:2px 8px;border-radius:8px;margin-top:4px;display:inline-block">✓ {conf_saved}</div>' if conf_saved else ""
         M(f'<div class="rc {cc}"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span style="font-size:0.68rem;padding:1px 7px;border-radius:20px;background:#F0EDE8;color:#6B7A8D;font-weight:600">{r["city"]}</span><span class="rtitle">{"⚠️ " if r["urgente"] else ""}{"✅ " if ea=="paid" else ""}{r["title"]}</span><span class="{bl}">{ll}</span></div><div class="rmeta">📅 {r["fecha"]}</div>{conf_html}<div style="margin-top:6px"><a href="{r["url"]}" target="_blank" class="lb bt">🔗 Ir a reservar</a> <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
-
         if ea != "paid":
             with st.form(key=f"fm_{r['id']}"):
                 c1,c2,c3 = st.columns([2,2,1])
                 with c1: ne=st.selectbox("Estado",["pending","confirmed","paid"],index=["pending","confirmed","paid"].index(ea),format_func=lambda x:{"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}[x],key=f"se_{r['id']}")
                 with c2: nc=st.text_input("N° confirmación",value=conf_saved,key=f"ce_{r['id']}",placeholder="ej. ABC123456")
                 with c3: nm=st.number_input("€",value=monto_saved,min_value=0.0,step=1.0,key=f"me_{r['id']}")
-                nn=st.text_area("Notas",value=notas_saved,key=f"ne_{r['id']}",height=50,placeholder="Ej: horario 09:15, 2 personas...")
+                nn=st.text_area("Notas",value=notas_saved,key=f"ne_{r['id']}",height=50)
                 if st.form_submit_button("💾 Guardar",use_container_width=True):
-                    if save_res(r["id"],ne,"Museo/Entrada","",nc,nm,nn):
-                        st.success("✅ Guardado"); st.rerun()
+                    if save_res(r["id"],ne,"Museo/Entrada","",nc,nm,nn): st.success("✅ Guardado"); st.rerun()
         else:
-            with st.expander("✏️ Editar datos si es necesario"):
+            with st.expander("✏️ Editar si es necesario"):
                 with st.form(key=f"fm_edit_{r['id']}"):
                     c1,c2,c3 = st.columns([2,2,1])
                     with c1: ne=st.selectbox("Estado",["pending","confirmed","paid"],index=["pending","confirmed","paid"].index(ea),format_func=lambda x:{"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}[x],key=f"spe_{r['id']}")
@@ -1108,16 +854,13 @@ with tab_museos:
                     with c3: nm=st.number_input("€",value=monto_saved,min_value=0.0,step=1.0,key=f"mpe_{r['id']}")
                     nn=st.text_area("Notas",value=notas_saved,key=f"npe_{r['id']}",height=50)
                     if st.form_submit_button("💾 Actualizar",use_container_width=True):
-                        if save_res(r["id"],ne,"Museo/Entrada","",nc,nm,nn):
-                            st.success("✅ Actualizado"); st.rerun()
+                        if save_res(r["id"],ne,"Museo/Entrada","",nc,nm,nn): st.success("✅ Actualizado"); st.rerun()
         st.write("")
 
 # ══ ALOJAMIENTOS ══════════════════════════════════════════════════════════════
 with tab_aloj:
-    M('<div class="sh"><div class="sh-t">🏨 Alojamientos</div><div class="sh-m">Reservá en Airbnb o Booking · Cargá la URL confirmada · Tu pareja la ve al instante</div></div>')
-    _al("<strong>💡 Cómo usar:</strong> Buscá con los links → cuando confirmes → copiá la URL de la reserva → pegala aquí → Guardar. Tu pareja verá todo al instante.", "alb")
-    _al("<strong>💰 Sincronización automática:</strong> Al guardar el monto de un alojamiento, se refleja automáticamente en el Tracker de Gastos. No hace falta cargarlo dos veces.", "alg")
-
+    M('<div class="sh"><div class="sh-t">🏨 Alojamientos</div><div class="sh-m">Airbnb confirmados · Cargá la URL · Tu pareja la ve al instante</div></div>')
+    _al("<strong>💰 Sincronización automática:</strong> Al guardar el monto, se refleja en el Tracker de Gastos. No hace falta cargarlo dos veces.", "alg")
     for r in RESERVAS_ALOJ:
         rd=get_rd(r["id"]); ea=rd.get("estado","pending") if rd else "pending"
         tipo_saved=str(rd.get("tipo","")) if rd else ""
@@ -1125,42 +868,39 @@ with tab_aloj:
         ll={"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}.get(ea,"⏳ Pendiente")
         us=str(rd.get("url_reserva","")) if rd else ""
         uh=f'<div class="usaved">🔗 {us[:70]}{"..." if len(us)>70 else ""}</div>' if us else ""
-        tipo_html=(f'<span style="font-size:0.68rem;color:#1A6B32;font-weight:600;background:#D4EDDA;padding:1px 7px;border-radius:20px">{tipo_saved}</span>') if tipo_saved else ""
+        tipo_html=f'<span style="font-size:0.68rem;color:#1A6B32;font-weight:600;background:#D4EDDA;padding:1px 7px;border-radius:20px">{tipo_saved}</span>' if tipo_saved else ""
         ba_html = f'<a href="{r["url_a"]}" target="_blank" class="lb ba">🏠 Airbnb</a>' if r["url_a"] else ""
-        
-        # Mostrar monto actual si ya fue guardado
-        try: monto_actual = float(rd.get("monto", 0) or 0) if rd else 0
+        bb_html = f'<a href="{r["url_b"]}" target="_blank" class="lb bk">📅 Booking</a>' if r.get("url_b") else ""
+        try: monto_actual = float(rd.get("monto",0) or 0) if rd else 0
         except: monto_actual = 0
         monto_html = f'<span style="font-size:0.78rem;font-weight:700;color:#1A6B32;background:rgba(107,122,62,0.1);padding:2px 10px;border-radius:20px;margin-left:6px">€{monto_actual:,.0f} pagado</span>' if monto_actual > 0 else ""
-        
-        M(f'<div class="rc ok"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span class="rtitle">🏨 {r["city"]} — {r["noches"]} noches</span><span class="{bl}">{ll}</span>{tipo_html}{monto_html}</div><div class="rmeta">📅 {r["fecha"]} · ~{r["precio"]}</div>{uh}<div style="margin-top:6px"><a href="{r["url_b"]}" target="_blank" class="lb bk">📅 Booking</a> {ba_html} <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
+        M(f'<div class="rc ok"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><span class="rtitle">🏨 {r["city"]} — {r["noches"]} noches</span><span class="{bl}">{ll}</span>{tipo_html}{monto_html}</div><div class="rmeta">📅 {r["fecha"]} · ~{r["precio"]}</div>{uh}<div style="margin-top:6px">{bb_html} {ba_html} <a href="{r["maps"]}" target="_blank" class="lb bm">📍 Maps</a></div></div>')
         with st.form(key=f"fa_{r['id']}"):
             c1,c2=st.columns(2)
             with c1: ne=st.selectbox("Estado",["pending","confirmed","paid"],index=["pending","confirmed","paid"].index(ea),format_func=lambda x:{"pending":"⏳ Pendiente","confirmed":"✅ Confirmado","paid":"💳 Pagado"}[x],key=f"sa_{r['id']}")
             with c2: tipo=st.selectbox("Reservado en",["","Airbnb","Booking.com","Directo / Otro"],index=["","Airbnb","Booking.com","Directo / Otro"].index(tipo_saved) if tipo_saved in ["","Airbnb","Booking.com","Directo / Otro"] else 0,key=f"ta_{r['id']}")
-            nu=st.text_input("🔗 URL de la reserva confirmada",value=us,key=f"ua_{r['id']}",placeholder="Ej: https://www.airbnb.com/trips/v1/XXXXXXX")
+            nu=st.text_input("🔗 URL de la reserva",value=us,key=f"ua_{r['id']}",placeholder="Ej: https://www.airbnb.com/trips/v1/XXXXXXX")
             c3,c4=st.columns(2)
-            with c3: nc=st.text_input("N° confirmación",value=str(rd.get("confirmacion","") if rd else ""),key=f"ca_{r['id']}",placeholder="ej. HB-123456789")
-            try: _mv2 = float(rd.get("monto",0) or 0) if rd else 0.0
-            except: _mv2 = 0.0
-            with c4: nm=st.number_input("Monto total € (→ se suma a Gastos automáticamente)",value=_mv2,min_value=0.0,step=1.0,key=f"ma_{r['id']}")
-            nn=st.text_area("Notas",value=str(rd.get("notas_int","") if rd else ""),key=f"na_{r['id']}",height=50,placeholder="Ej: Check-in 15hs · Pedir habitación alta...")
+            with c3: nc=st.text_input("N° confirmación",value=str(rd.get("confirmacion","") if rd else ""),key=f"ca_{r['id']}")
+            try: _mv = float(rd.get("monto",0) or 0) if rd else 0.0
+            except: _mv = 0.0
+            with c4: nm=st.number_input("Monto total €",value=_mv,min_value=0.0,step=1.0,key=f"ma_{r['id']}")
+            nn=st.text_area("Notas",value=str(rd.get("notas_int","") if rd else ""),key=f"na_{r['id']}",height=50)
             if st.form_submit_button("💾 Guardar — tu pareja lo ve al instante",use_container_width=True):
-                if save_res(r["id"],ne,tipo,nu,nc,nm,nn):
-                    st.success("✅ Guardado — visible ahora y en Gastos"); st.rerun()
+                if save_res(r["id"],ne,tipo,nu,nc,nm,nn): st.success("✅ Guardado"); st.rerun()
         st.write("")
 
 # ══ TRANSPORTES ══════════════════════════════════════════════════════════════
 with tab_trans:
-    M('<div class="sh"><div class="sh-t">Transportes</div><div class="sh-m">En orden cronológico · Con links de compra</div></div>')
-    _al("<strong>💡 Truco:</strong> Comprar con 60 días de anticipación puede ser 4x más barato. Frecciarossa Roma→Nápoles: €9 anticipado vs €55 último momento.", "alg")
+    M('<div class="sh"><div class="sh-t">🚄 Transportes</div><div class="sh-m">En orden cronológico · ✅ ya comprados · Links de compra</div></div>')
+    _al("<strong>💡</strong> Los marcados ✅ ya están pagados. El resto comprar cuanto antes — el precio sube cerca de la fecha.", "alg")
     for icon,route,detail,price,url in TRANSPORTES:
         _tcard(icon,route,detail,price,url)
 
-# ══ GASTOS ═══════════════════════════════════════════════════════════════════
+# ══ GASTOS ════════════════════════════════════════════════════════════════════
 with tab_gas_t:
-    M('<div class="sh"><div class="sh-t">Tracker de Gastos</div><div class="sh-m">Los alojamientos se sincronizan automáticamente · Agregá gastos adicionales aquí</div></div>')
-    PRES=4350.0
+    M('<div class="sh"><div class="sh-t">💰 Tracker de Gastos</div><div class="sh-m">Los alojamientos se sincronizan automáticamente</div></div>')
+    PRES=4500.0
     cats={"Alojamiento":0,"Transporte":0,"Entradas":0,"Comidas":0,"Otros":0}
     if not df_gas.empty and "monto" in df_gas.columns and "categoria" in df_gas.columns:
         for _,rg in df_gas.iterrows():
@@ -1175,10 +915,9 @@ with tab_gas_t:
     c5.metric("🍽️ Comidas",f"€{cats['Comidas']:,.0f}")
     M(f'<div class="prog-o"><div class="prog-i" style="width:{pct}%"></div></div><div style="font-size:0.72rem;color:#6B7A8D;margin-top:3px">€{tg:,.0f} de €{PRES:,.0f} presupuestados ({pct}%)</div>')
     st.write("")
-    _al("<strong>ℹ️ Nota:</strong> Los alojamientos cargados en la pestaña Hoteles aparecen aquí automáticamente con prefijo <code>res_</code>. No hace falta duplicarlos.", "alb")
     with st.form("fg"):
         cd,cc2,cm=st.columns([3,2,1])
-        with cd: gd=st.text_input("Descripción",placeholder="ej. Trenes Trenitalia · Entradas Uffizi")
+        with cd: gd=st.text_input("Descripción",placeholder="ej. Entradas Uffizi")
         with cc2: gc=st.selectbox("Categoría",["Alojamiento","Transporte","Entradas","Comidas","Otros"])
         with cm: gm=st.number_input("€",min_value=0.0,step=1.0)
         if st.form_submit_button("➕ Agregar gasto",use_container_width=True):
@@ -1190,33 +929,31 @@ with tab_gas_t:
         df_s=df_gas[["id","descripcion","categoria","monto","fecha"]].copy()
         df_s["monto"]=pd.to_numeric(df_s["monto"],errors="coerce").map("€{:,.0f}".format)
         st.dataframe(df_s.drop("id",axis=1),use_container_width=True,hide_index=True)
-        di=st.text_input("ID a eliminar (solo gastos manuales — NO eliminar los res_XXX)",placeholder="ej. g0510143022")
+        di=st.text_input("ID a eliminar (NO eliminar los res_XXX)",placeholder="ej. g0510143022")
         if st.button("🗑️ Eliminar") and di:
-            if di.strip().startswith("res_"):
-                st.warning("⚠️ Los gastos de alojamiento (res_XXX) se gestionan desde la pestaña Hoteles.")
+            if di.strip().startswith("res_"): st.warning("⚠️ Los gastos de alojamiento se gestionan desde la pestaña Hoteles.")
             else:
                 if del_g(di.strip()): st.success("Eliminado ✓"); st.rerun()
-    else: st.info("Aún no hay gastos. ¡Cargá el primero desde Hoteles o aquí!")
 
 # ══ PRESUPUESTO ══════════════════════════════════════════════════════════════
 with tab_pres:
-    M('<div class="sh"><div class="sh-t">Presupuesto estimado</div><div class="sh-m">Para 2 personas · 20 días · Sin vuelos</div></div>')
+    M('<div class="sh"><div class="sh-t">📊 Presupuesto estimado</div><div class="sh-m">Para 2 personas · 21 días · Sin vuelos</div></div>')
     c1,c2,c3,c4=st.columns(4)
-    c1.metric("🏨 Alojamiento","~€1.790","20 noches · €90 prom.")
-    c2.metric("🚄 Transportes","~€500","Trenes + ferries")
-    c3.metric("🎟️ Entradas","~€350","Para 2 personas")
-    c4.metric("🍽️ Comidas","~€1.200","€60/día")
+    c1.metric("🏨 Alojamiento","~€1.790","21 noches · €85 prom.")
+    c2.metric("🚄 Transportes","~€600","Trenes · ferries · vaporetti")
+    c3.metric("🎟️ Entradas","~€400","Para 2 personas")
+    c4.metric("🍽️ Comidas","~€1.300","€62/día para 2")
     st.write("")
     c5,c6=st.columns(2)
-    c5.metric("🛍️ Extras","~€400","Compras, pádel, etc.")
-    c6.metric("💶 TOTAL","~€4.240","Para 2 · sin vuelos")
+    c5.metric("🛍️ Extras","~€450","Compras · pádel · imprevistos")
+    c6.metric("💶 TOTAL","~€4.540","Para 2 · sin vuelos")
     st.write("")
     PRES_FILAS=[
-        ("Milán","2","€80","€160"),("La Spezia","2","€75","€150"),
-        ("Florencia","4","€100","€400"),("Roma","4","€88","€350"),
+        ("Milán","2","€80","€160"),("La Spezia/CT","2","€75","€150"),
+        ("Florencia","4","€100","€400"),("Roma","4","€88","€352"),
         ("Nápoles","1","€80","€80"),("Bari","2","€95","€190"),
-        ("Venecia","2","€100","€200"),("Zurich","3","€100","€300"),
-        ("TOTAL","20","~€91","~€1.825"),
+        ("Venecia","2","€110","€220"),("Zürich","3","€145","€435"),
+        ("TOTAL","20","~€100","~€1.987"),
     ]
     rows="".join(f'<tr{"class=tot" if c=="TOTAL" else ""}><td>{c}</td><td style="text-align:center">{n}</td><td style="text-align:center">{p}</td><td style="text-align:center;font-weight:700">{t}</td></tr>' for c,n,p,t in PRES_FILAS)
     M(f'<div style="border:1px solid #EDE7DC;border-radius:10px;overflow:hidden"><table class="bta"><thead><tr><th>Ciudad</th><th style="text-align:center">Noches</th><th style="text-align:center">€/noche</th><th style="text-align:center">Total</th></tr></thead><tbody>{rows}</tbody></table></div>')
@@ -1226,19 +963,17 @@ with tab_pres:
     with col1: cuenta=st.number_input("Cuenta €",min_value=0.0,step=0.50,value=40.0)
     with col2: coperto=st.number_input("Coperto €/persona",min_value=0.0,step=0.50,value=2.0)
     with col3: personas=st.number_input("Personas",min_value=1,max_value=10,value=2)
-    total_real=cuenta+(coperto*personas)
-    M(f'<div class="al alg" style="text-align:center;font-size:1rem"><strong>Total a pagar: €{total_real:.2f}</strong> (cuenta €{cuenta:.2f} + coperto €{coperto*personas:.2f})</div>')
+    M(f'<div class="al alg" style="text-align:center"><strong>Total a pagar: €{cuenta+(coperto*personas):.2f}</strong> (cuenta €{cuenta:.2f} + coperto €{coperto*personas:.2f})</div>')
 
 # ══ CHECKLIST ════════════════════════════════════════════════════════════════
 with tab_chk_t:
-    M('<div class="sh"><div class="sh-t">✅ Checklist Pre-Viaje</div><div class="sh-m">Marcá cada item como completado — ambos ven el progreso en tiempo real</div></div>')
+    M('<div class="sh"><div class="sh-t">✅ Checklist Pre-Viaje</div><div class="sh-m">Marcá cada item — ambos ven el progreso en tiempo real</div></div>')
     if not df_chk.empty and "item" in df_chk.columns:
         done_count=len(df_chk[df_chk["done"].astype(str)=="1"])
         total_count=len(df_chk)
         pct_chk=int(done_count/total_count*100) if total_count>0 else 0
-        M(f'<div class="prog-o"><div class="prog-i" style="width:{pct_chk}%"></div></div><div style="font-size:0.78rem;color:#6B7A8D;margin:4px 0 1rem">{done_count} de {total_count} items completados ({pct_chk}%)</div>')
-        cats_chk=df_chk["categoria"].unique() if "categoria" in df_chk.columns else []
-        for cat in cats_chk:
+        M(f'<div class="prog-o"><div class="prog-i" style="width:{pct_chk}%"></div></div><div style="font-size:0.78rem;color:#6B7A8D;margin:4px 0 1rem">{done_count} de {total_count} completados ({pct_chk}%)</div>')
+        for cat in df_chk["categoria"].unique():
             items=df_chk[df_chk["categoria"]==cat]
             cat_done=len(items[items["done"].astype(str)=="1"])
             M(f'<div style="font-size:0.78rem;font-weight:700;color:#3D4A5C;margin:1rem 0 4px">{cat} ({cat_done}/{len(items)})</div><div class="dc" style="margin-bottom:0.5rem">')
@@ -1246,17 +981,15 @@ with tab_chk_t:
                 is_done=str(item.get("done","0"))=="1"
                 icon="✅" if is_done else "⬜"
                 style="opacity:0.5;text-decoration:line-through" if is_done else ""
-                item_id=str(item.get("id",""))
                 M(f'<div class="check-item" style="{style}">{icon} {item.get("item","")}</div>')
-                if st.button(f"{'↩️ Desmarcar' if is_done else '✅ Marcar'}",key=f"chk_{item_id}"):
-                    if toggle_check(item_id,item.get("done","0")): st.rerun()
+                if st.button(f"{'↩️ Desmarcar' if is_done else '✅ Marcar'}",key=f"chk_{item.get('id','')}"):
+                    if toggle_check(str(item.get("id","")),item.get("done","0")): st.rerun()
             M('</div>')
     else:
         st.info("Cargando checklist...")
-        if st.button("🔄 Inicializar checklist"):
-            init_checklist(); st.rerun()
+        if st.button("🔄 Inicializar checklist"): init_checklist(); st.rerun()
 
-# ══ FRASES ═══════════════════════════════════════════════════════════════════
+# ══ FRASES ════════════════════════════════════════════════════════════════════
 with tab_frases:
     M('<div class="sh"><div class="sh-t">🇮🇹 Frases esenciales</div><div class="sh-m">Las frases que realmente usarás · Con pronunciación fonética · Funciona sin internet</div></div>')
     col_it,col_ch=st.columns([2,1])
@@ -1268,12 +1001,11 @@ with tab_frases:
             if cat==cat_sel:
                 M(f'<div class="frase-card"><div class="frase-es">{es}</div><div class="frase-it">{it}</div><div class="frase-fn">🔊 {fon}</div></div>')
     with col_ch:
-        M('<div style="font-size:1rem;font-weight:700;color:#3D4A5C;margin-bottom:0.75rem">🇨🇭 Alemán suizo (Zurich)</div>')
+        M('<div style="font-size:1rem;font-weight:700;color:#3D4A5C;margin-bottom:0.75rem">🇨🇭 Alemán suizo</div>')
         for _,es,de,fon in FRASES_SUIZO:
             M(f'<div class="frase-card"><div class="frase-es">{es}</div><div class="frase-it">{de}</div><div class="frase-fn">🔊 {fon}</div></div>')
-    _al("<strong>💡 Tip:</strong> Lo que agrada a los italianos es intentar aunque sea 'Grazie' y 'Per favore'. En Zurich la mayoría habla inglés perfectamente.", "alb")
 
-# ══ TIPS ═════════════════════════════════════════════════════════════════════
+# ══ TIPS ══════════════════════════════════════════════════════════════════════
 with tab_tips:
     M('<div class="sh"><div class="sh-t">💡 Tips esenciales</div><div class="sh-m">Lo que marca la diferencia entre turista y viajero</div></div>')
     cols=st.columns(3)
@@ -1289,7 +1021,7 @@ with tab_notas_t:
         nt=st.text_area("Nueva nota",height=80,placeholder="Escribí algo — tu pareja lo ve al instante...")
         ct,ca=st.columns(2)
         with ct: ntag=st.selectbox("Categoría",["💡 Idea","⚠️ Importante","🍽️ Restaurante","🏨 Hotel","🎾 Pádel","🛍️ Compras","📝 General"])
-        with ca: naut=st.selectbox("Quién",["Adilson","Esposa"])
+        with ca: naut=st.selectbox("Quién",["Adilson","Mirtha"])
         if st.form_submit_button("📤 Publicar nota",use_container_width=True):
             if nt.strip():
                 if add_nota(nt.strip(),ntag,naut): st.success("Publicado ✓"); st.rerun()
